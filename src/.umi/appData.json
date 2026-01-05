@@ -1,0 +1,3822 @@
+{
+  "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+  "pkg": {
+    "name": "ant-design-pro",
+    "version": "6.0.0",
+    "private": true,
+    "description": "An out-of-box UI solution for enterprise applications",
+    "scripts": {
+      "analyze": "cross-env ANALYZE=1 max build",
+      "build": "max build",
+      "deploy": "npm run build && npm run gh-pages",
+      "dev": "npm run start:dev",
+      "gh-pages": "gh-pages -d dist",
+      "i18n-remove": "pro i18n-remove --locale=zh-CN --write",
+      "postinstall": "max setup",
+      "jest": "jest",
+      "lint": "npm run lint:js && npm run lint:prettier && npm run tsc",
+      "lint-staged": "lint-staged",
+      "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+      "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ",
+      "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+      "lint:prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\" --end-of-line auto",
+      "openapi": "max openapi",
+      "prepare": "husky install",
+      "prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\"",
+      "preview": "npm run build && max preview --port 8000",
+      "record": "cross-env NODE_ENV=development REACT_APP_ENV=test max record --scene=login",
+      "serve": "umi-serve",
+      "start": "cross-env UMI_ENV=dev max dev",
+      "start:dev": "cross-env REACT_APP_ENV=dev MOCK=none UMI_ENV=dev max dev",
+      "start:no-mock": "cross-env MOCK=none UMI_ENV=dev max dev",
+      "start:pre": "cross-env REACT_APP_ENV=pre UMI_ENV=dev max dev",
+      "start:test": "cross-env REACT_APP_ENV=test MOCK=none UMI_ENV=dev max dev",
+      "test": "jest",
+      "test:coverage": "npm run jest -- --coverage",
+      "test:update": "npm run jest -- -u",
+      "tsc": "tsc --noEmit"
+    },
+    "lint-staged": {
+      "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+      "**/*.{js,jsx,tsx,ts,less,md,json}": [
+        "prettier --write"
+      ]
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 10"
+    ],
+    "dependencies": {
+      "@ant-design/charts": "^2.6.7",
+      "@ant-design/icons": "^4.8.1",
+      "@ant-design/pro-components": "^2.6.48",
+      "@uiw/react-md-editor": "^4.0.11",
+      "@umijs/route-utils": "^2.2.2",
+      "antd": "^5.13.2",
+      "antd-style": "^3.6.1",
+      "classnames": "^2.5.1",
+      "lodash": "^4.17.21",
+      "moment": "^2.30.1",
+      "omit.js": "^2.0.2",
+      "querystring": "^0.2.1",
+      "rc-menu": "^9.12.4",
+      "rc-util": "^5.38.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-helmet-async": "^1.3.0"
+    },
+    "devDependencies": {
+      "@ant-design/pro-cli": "^3.3.0",
+      "@testing-library/react": "^13.4.0",
+      "@types/classnames": "^2.3.1",
+      "@types/express": "^4.17.21",
+      "@types/history": "^4.7.11",
+      "@types/jest": "^29.5.11",
+      "@types/lodash": "^4.14.202",
+      "@types/react": "^18.3.22",
+      "@types/react-dom": "^18.3.7",
+      "@types/react-helmet": "^6.1.11",
+      "@umijs/fabric": "^2.14.1",
+      "@umijs/lint": "^4.1.1",
+      "@umijs/max": "^4.1.1",
+      "cross-env": "^7.0.3",
+      "eslint": "^8.56.0",
+      "express": "^4.18.2",
+      "gh-pages": "^3.2.3",
+      "husky": "^7.0.4",
+      "jest": "^29.7.0",
+      "jest-environment-jsdom": "^29.7.0",
+      "lint-staged": "^10.5.4",
+      "mockjs": "^1.1.0",
+      "prettier": "^2.8.8",
+      "react-dev-inspector": "^1.9.0",
+      "swagger-ui-dist": "^4.19.1",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.3.3",
+      "umi-presets-pro": "^2.0.3",
+      "umi-serve": "^1.9.11"
+    },
+    "engines": {
+      "node": ">=12.0.0"
+    },
+    "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+  },
+  "pkgPath": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\package.json",
+  "plugins": {
+    "./node_modules/@umijs/core/dist/service/servicePlugin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/core/dist/service/servicePlugin.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/core/dist/service/servicePlugin",
+      "key": "servicePlugin"
+    },
+    "@umijs/preset-umi": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 7
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/index.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "@umijs/preset-umi",
+      "key": "umi"
+    },
+    "./node_modules/@umijs/max/dist/preset": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/max/dist/preset.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/max/dist/preset",
+      "key": "preset"
+    },
+    "umi-presets-pro": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            1
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "preset",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/umi-presets-pro/dist/index.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "umi-presets-pro",
+      "key": "umiPresetsPro"
+    },
+    "./node_modules/@umijs/preset-umi/dist/registerMethods": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            0
+          ]
+        },
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/registerMethods.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/registerMethods",
+      "key": "registerMethods"
+    },
+    "@umijs/did-you-know": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            1
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/did-you-know/dist/plugin.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "@umijs/did-you-know",
+      "key": "umijsDidYouKnow"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/404/404": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyRoutes": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/404/404.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/404/404",
+      "key": "404"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/appData/appData": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            18
+          ]
+        },
+        "register": 19
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/appData/appData.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/appData/appData",
+      "key": "appData"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/appData/umiInfo": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/appData/umiInfo.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/appData/umiInfo",
+      "key": "umiInfo"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/check/check": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onCheckConfig": [
+            0
+          ],
+          "onCheck": [
+            0
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/check/check.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/check/check",
+      "key": "check"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/check/babel722": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onCheck": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/check/babel722.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/check/babel722",
+      "key": "babel722"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/codeSplitting/codeSplitting": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/codeSplitting/codeSplitting.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/codeSplitting/codeSplitting",
+      "key": "codeSplitting"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/configPlugins/configPlugins": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ]
+        },
+        "register": 8
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/configPlugins/configPlugins.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/configPlugins/configPlugins",
+      "key": "configPlugins"
+    },
+    "virtual: config-title": {
+      "id": "virtual: config-title",
+      "key": "title",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-styles": {
+      "id": "virtual: config-styles",
+      "key": "styles",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-scripts": {
+      "id": "virtual: config-scripts",
+      "key": "scripts",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-routes": {
+      "id": "virtual: config-routes",
+      "key": "routes",
+      "config": {
+        "onChange": "regenerateTmpFiles"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-routeLoader": {
+      "id": "virtual: config-routeLoader",
+      "key": "routeLoader",
+      "config": {
+        "default": {
+          "moduleType": "esm"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-reactRouter5Compat": {
+      "id": "virtual: config-reactRouter5Compat",
+      "key": "reactRouter5Compat",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-presets": {
+      "id": "virtual: config-presets",
+      "key": "presets",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-plugins": {
+      "id": "virtual: config-plugins",
+      "key": "plugins",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-npmClient": {
+      "id": "virtual: config-npmClient",
+      "key": "npmClient",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-mountElementId": {
+      "id": "virtual: config-mountElementId",
+      "key": "mountElementId",
+      "config": {
+        "default": "root"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-metas": {
+      "id": "virtual: config-metas",
+      "key": "metas",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-links": {
+      "id": "virtual: config-links",
+      "key": "links",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-historyWithQuery": {
+      "id": "virtual: config-historyWithQuery",
+      "key": "historyWithQuery",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-history": {
+      "id": "virtual: config-history",
+      "key": "history",
+      "config": {
+        "default": {
+          "type": "browser"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-headScripts": {
+      "id": "virtual: config-headScripts",
+      "key": "headScripts",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-esbuildMinifyIIFE": {
+      "id": "virtual: config-esbuildMinifyIIFE",
+      "key": "esbuildMinifyIIFE",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-conventionRoutes": {
+      "id": "virtual: config-conventionRoutes",
+      "key": "conventionRoutes",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-conventionLayout": {
+      "id": "virtual: config-conventionLayout",
+      "key": "conventionLayout",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-base": {
+      "id": "virtual: config-base",
+      "key": "base",
+      "config": {
+        "default": "/"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-analyze": {
+      "id": "virtual: config-analyze",
+      "key": "analyze",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-writeToDisk": {
+      "id": "virtual: config-writeToDisk",
+      "key": "writeToDisk",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-transformRuntime": {
+      "id": "virtual: config-transformRuntime",
+      "key": "transformRuntime",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-theme": {
+      "id": "virtual: config-theme",
+      "key": "theme",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-targets": {
+      "id": "virtual: config-targets",
+      "key": "targets",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-svgr": {
+      "id": "virtual: config-svgr",
+      "key": "svgr",
+      "config": {
+        "default": {}
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-svgo": {
+      "id": "virtual: config-svgo",
+      "key": "svgo",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-stylusLoader": {
+      "id": "virtual: config-stylusLoader",
+      "key": "stylusLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-styleLoader": {
+      "id": "virtual: config-styleLoader",
+      "key": "styleLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-srcTranspilerOptions": {
+      "id": "virtual: config-srcTranspilerOptions",
+      "key": "srcTranspilerOptions",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-srcTranspiler": {
+      "id": "virtual: config-srcTranspiler",
+      "key": "srcTranspiler",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-sassLoader": {
+      "id": "virtual: config-sassLoader",
+      "key": "sassLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-runtimePublicPath": {
+      "id": "virtual: config-runtimePublicPath",
+      "key": "runtimePublicPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-purgeCSS": {
+      "id": "virtual: config-purgeCSS",
+      "key": "purgeCSS",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-publicPath": {
+      "id": "virtual: config-publicPath",
+      "key": "publicPath",
+      "config": {
+        "default": "/"
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-proxy": {
+      "id": "virtual: config-proxy",
+      "key": "proxy",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-postcssLoader": {
+      "id": "virtual: config-postcssLoader",
+      "key": "postcssLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-outputPath": {
+      "id": "virtual: config-outputPath",
+      "key": "outputPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-normalCSSLoaderModules": {
+      "id": "virtual: config-normalCSSLoaderModules",
+      "key": "normalCSSLoaderModules",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-mfsu": {
+      "id": "virtual: config-mfsu",
+      "key": "mfsu",
+      "config": {
+        "default": {
+          "strategy": "eager"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-mdx": {
+      "id": "virtual: config-mdx",
+      "key": "mdx",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-manifest": {
+      "id": "virtual: config-manifest",
+      "key": "manifest",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-lessLoader": {
+      "id": "virtual: config-lessLoader",
+      "key": "lessLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-jsMinifierOptions": {
+      "id": "virtual: config-jsMinifierOptions",
+      "key": "jsMinifierOptions",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-jsMinifier": {
+      "id": "virtual: config-jsMinifier",
+      "key": "jsMinifier",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-inlineLimit": {
+      "id": "virtual: config-inlineLimit",
+      "key": "inlineLimit",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-ignoreMomentLocale": {
+      "id": "virtual: config-ignoreMomentLocale",
+      "key": "ignoreMomentLocale",
+      "config": {
+        "default": true
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-https": {
+      "id": "virtual: config-https",
+      "key": "https",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-hash": {
+      "id": "virtual: config-hash",
+      "key": "hash",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-forkTSChecker": {
+      "id": "virtual: config-forkTSChecker",
+      "key": "forkTSChecker",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-fastRefresh": {
+      "id": "virtual: config-fastRefresh",
+      "key": "fastRefresh",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraPostCSSPlugins": {
+      "id": "virtual: config-extraPostCSSPlugins",
+      "key": "extraPostCSSPlugins",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraBabelPresets": {
+      "id": "virtual: config-extraBabelPresets",
+      "key": "extraBabelPresets",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraBabelPlugins": {
+      "id": "virtual: config-extraBabelPlugins",
+      "key": "extraBabelPlugins",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-extraBabelIncludes": {
+      "id": "virtual: config-extraBabelIncludes",
+      "key": "extraBabelIncludes",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-externals": {
+      "id": "virtual: config-externals",
+      "key": "externals",
+      "config": {
+        "default": {}
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-esm": {
+      "id": "virtual: config-esm",
+      "key": "esm",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-devtool": {
+      "id": "virtual: config-devtool",
+      "key": "devtool",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-depTranspiler": {
+      "id": "virtual: config-depTranspiler",
+      "key": "depTranspiler",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-define": {
+      "id": "virtual: config-define",
+      "key": "define",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-deadCode": {
+      "id": "virtual: config-deadCode",
+      "key": "deadCode",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssPublicPath": {
+      "id": "virtual: config-cssPublicPath",
+      "key": "cssPublicPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssMinifierOptions": {
+      "id": "virtual: config-cssMinifierOptions",
+      "key": "cssMinifierOptions",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssMinifier": {
+      "id": "virtual: config-cssMinifier",
+      "key": "cssMinifier",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssLoaderModules": {
+      "id": "virtual: config-cssLoaderModules",
+      "key": "cssLoaderModules",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cssLoader": {
+      "id": "virtual: config-cssLoader",
+      "key": "cssLoader",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-copy": {
+      "id": "virtual: config-copy",
+      "key": "copy",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-checkDepCssModules": {
+      "id": "virtual: config-checkDepCssModules",
+      "key": "checkDepCssModules",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-chainWebpack": {
+      "id": "virtual: config-chainWebpack",
+      "key": "chainWebpack",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-cacheDirectoryPath": {
+      "id": "virtual: config-cacheDirectoryPath",
+      "key": "cacheDirectoryPath",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-babelLoaderCustomize": {
+      "id": "virtual: config-babelLoaderCustomize",
+      "key": "babelLoaderCustomize",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-autoprefixer": {
+      "id": "virtual: config-autoprefixer",
+      "key": "autoprefixer",
+      "config": {},
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-autoCSSModules": {
+      "id": "virtual: config-autoCSSModules",
+      "key": "autoCSSModules",
+      "config": {
+        "default": true
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "virtual: config-alias": {
+      "id": "virtual: config-alias",
+      "key": "alias",
+      "config": {
+        "default": {
+          "umi": "@@/exports",
+          "react": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react",
+          "react-dom": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-dom",
+          "react-router": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-router",
+          "react-router-dom": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-router-dom"
+        }
+      },
+      "type": "plugin",
+      "enableBy": "register",
+      "time": {
+        "hooks": {},
+        "register": 0
+      }
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/crossorigin/crossorigin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/crossorigin/crossorigin.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/crossorigin/crossorigin",
+      "key": "crossorigin"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/depsOnDemand/depsOnDemand": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onStart": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/depsOnDemand/depsOnDemand.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/depsOnDemand/depsOnDemand",
+      "key": "depsOnDemand"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/devTool/devTool": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/devTool/devTool.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/devTool/devTool",
+      "key": "devTool"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/esbuildHelperChecker/esbuildHelperChecker": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 62
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/esbuildHelperChecker/esbuildHelperChecker.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/esbuildHelperChecker/esbuildHelperChecker",
+      "key": "esbuildHelperChecker"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/esmi/esmi": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 112
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/esmi/esmi.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/esmi/esmi",
+      "key": "esmi"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/exportStatic/exportStatic": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 17
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/exportStatic/exportStatic.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/exportStatic/exportStatic",
+      "key": "exportStatic"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/favicons/favicons": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/favicons/favicons.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/favicons/favicons",
+      "key": "favicons"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/helmet/helmet": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/helmet/helmet.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/helmet/helmet",
+      "key": "helmet"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/icons/icons": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/icons/icons.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/icons/icons",
+      "key": "icons"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/mock/mock": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 29
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/mock/mock.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/mock/mock",
+      "key": "mock"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/mpa/mpa": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/mpa/mpa.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/mpa/mpa",
+      "key": "mpa"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/okam/okam": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/okam/okam.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/okam/okam",
+      "key": "okam"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/overrides/overrides": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/overrides/overrides.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/overrides/overrides",
+      "key": "overrides"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/phantomDependency/phantomDependency": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/phantomDependency/phantomDependency.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/phantomDependency/phantomDependency",
+      "key": "phantomDependency"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            1
+          ]
+        },
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill",
+      "key": "polyfill"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/polyfill/publicPathPolyfill",
+      "key": "publicPathPolyfill"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/prepare/prepare": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/prepare/prepare.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/prepare/prepare",
+      "key": "prepare"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/routePrefetch/routePrefetch": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/routePrefetch/routePrefetch.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/routePrefetch/routePrefetch",
+      "key": "routePrefetch"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/terminal/terminal": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/terminal/terminal.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/terminal/terminal",
+      "key": "terminal"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/tmpFiles": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/tmpFiles/tmpFiles.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/tmpFiles",
+      "key": "tmpFiles"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/clientLoader/clientLoader": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/clientLoader/clientLoader.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/clientLoader/clientLoader",
+      "key": "clientLoader"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/routeProps/routeProps": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/routeProps/routeProps.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/routeProps/routeProps",
+      "key": "routeProps"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/ssr/ssr": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/ssr/ssr.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/ssr/ssr",
+      "key": "ssr"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/configTypes": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/tmpFiles/configTypes.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/tmpFiles/configTypes",
+      "key": "configTypes"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/transform/transform": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/transform/transform.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/transform/transform",
+      "key": "transform"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/lowImport/lowImport": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/lowImport/lowImport.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/lowImport/lowImport",
+      "key": "lowImport"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/vite/vite": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/vite/vite.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/vite/vite",
+      "key": "vite"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute",
+      "key": "apiRoute"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/monorepo/redirect": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 17
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/monorepo/redirect.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/monorepo/redirect",
+      "key": "monorepoRedirect"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/test/test": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/test/test.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/test/test",
+      "key": "test"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/clickToComponent/clickToComponent",
+      "key": "clickToComponent"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/legacy/legacy": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/legacy/legacy.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/legacy/legacy",
+      "key": "legacy"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/classPropertiesLoose/classPropertiesLoose",
+      "key": "classPropertiesLoose"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/webpack/webpack": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/webpack/webpack.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/webpack/webpack",
+      "key": "preset-umi:webpack"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/swc/swc": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "addOnDemandDeps": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/swc/swc.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/swc/swc",
+      "key": "swc"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/ui/ui": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/ui/ui.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/ui/ui",
+      "key": "ui"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/mako/mako": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/mako/mako.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/mako/mako",
+      "key": "mako"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/hmrGuardian/hmrGuardian",
+      "key": "hmrGuardian"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad",
+      "key": "routePreloadOnLoad"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/forget/forget": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/forget/forget.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/forget/forget",
+      "key": "forget"
+    },
+    "./node_modules/@umijs/preset-umi/dist/features/bundler/bundler": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/bundler/bundler.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/features/bundler/bundler",
+      "key": "preset-umi:bundler"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/build": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 5
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/build.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/build",
+      "key": "build"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/config/config": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 29
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/config/config.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/config/config",
+      "key": "config"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/dev/dev": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            21
+          ],
+          "onStart": [
+            0
+          ]
+        },
+        "register": 32
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/dev/dev.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/dev/dev",
+      "key": "dev"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/help": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/help.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/help",
+      "key": "help"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/lint": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/lint.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/lint",
+      "key": "lint"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/setup": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/setup.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/setup",
+      "key": "setup"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/deadcode": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/deadcode.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/deadcode",
+      "key": "deadcode"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/version": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/version.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/version",
+      "key": "version"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/page": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/page.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/page",
+      "key": "generator:page"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/prettier": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/prettier.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/prettier",
+      "key": "generator:prettier"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/tsconfig": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/tsconfig.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/tsconfig",
+      "key": "generator:tsconfig"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/jest": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/jest.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/jest",
+      "key": "generator:jest"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/tailwindcss": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/tailwindcss.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/tailwindcss",
+      "key": "generator:tailwindcss"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/dva": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/dva.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/dva",
+      "key": "generator:dva"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/component": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/component.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/component",
+      "key": "generator:component"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/mock": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/mock.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/mock",
+      "key": "generator:mock"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/cypress": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/cypress.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/cypress",
+      "key": "generator:cypress"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/api": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/api.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/api",
+      "key": "generator:api"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/generators/precommit": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/generators/precommit.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/generators/precommit",
+      "key": "generator:precommit"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/plugin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/plugin.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/plugin",
+      "key": "command:plugin"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/verify-commit": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/verify-commit.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/verify-commit",
+      "key": "verifyCommit"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/preview": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 16
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/preview.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/preview",
+      "key": "preview"
+    },
+    "./node_modules/@umijs/preset-umi/dist/commands/mfsu/mfsu": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/mfsu/mfsu.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/preset-umi/dist/commands/mfsu/mfsu",
+      "key": "mfsu-cli"
+    },
+    "@umijs/plugin-run": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugin-run/dist/index.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "@umijs/plugin-run",
+      "key": "run"
+    },
+    "./node_modules/@umijs/plugins/dist/access": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/access.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/access",
+      "key": "access"
+    },
+    "./node_modules/@umijs/plugins/dist/analytics": {
+      "config": {
+        "onChange": "reload"
+      },
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/analytics.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/analytics",
+      "key": "analytics"
+    },
+    "./node_modules/@umijs/plugins/dist/antd": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            2
+          ],
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 4
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/antd.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/antd",
+      "key": "antd"
+    },
+    "./node_modules/@umijs/plugins/dist/dva": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 6
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/dva.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/dva",
+      "key": "dva"
+    },
+    "./node_modules/@umijs/plugins/dist/initial-state": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/initial-state.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/initial-state",
+      "key": "initialState"
+    },
+    "./node_modules/@umijs/plugins/dist/layout": {
+      "config": {
+        "onChange": "regenerateTmpFiles"
+      },
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ],
+          "addLayouts": [
+            0
+          ],
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/layout.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/layout",
+      "key": "layout"
+    },
+    "./node_modules/@umijs/plugins/dist/locale": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/locale.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/locale",
+      "key": "locale"
+    },
+    "./node_modules/@umijs/plugins/dist/mf": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 3
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/mf.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/mf",
+      "key": "mf"
+    },
+    "./node_modules/@umijs/plugins/dist/model": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/model.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/model",
+      "key": "model"
+    },
+    "./node_modules/@umijs/plugins/dist/moment2dayjs": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/moment2dayjs.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/moment2dayjs",
+      "key": "moment2dayjs"
+    },
+    "./node_modules/@umijs/plugins/dist/qiankun": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/qiankun.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/qiankun",
+      "key": "qiankun"
+    },
+    "./node_modules/@umijs/plugins/dist/qiankun/master": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/qiankun/master.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/qiankun/master",
+      "key": "qiankun-master"
+    },
+    "./node_modules/@umijs/plugins/dist/qiankun/slave": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/qiankun/slave.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/qiankun/slave",
+      "key": "qiankun-slave"
+    },
+    "./node_modules/@umijs/plugins/dist/react-query": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/react-query.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/react-query",
+      "key": "reactQuery"
+    },
+    "./node_modules/@umijs/plugins/dist/request": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/request.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/request",
+      "key": "request"
+    },
+    "./node_modules/@umijs/plugins/dist/styled-components": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 2
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/styled-components.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/styled-components",
+      "key": "styledComponents"
+    },
+    "./node_modules/@umijs/plugins/dist/tailwindcss": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/tailwindcss.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/tailwindcss",
+      "key": "tailwindcss"
+    },
+    "./node_modules/@umijs/plugins/dist/valtio": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/valtio.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/plugins/dist/valtio",
+      "key": "valtio"
+    },
+    "./node_modules/@umijs/max/dist/plugins/maxAlias": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/max/dist/plugins/maxAlias.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/max/dist/plugins/maxAlias",
+      "key": "maxAlias"
+    },
+    "./node_modules/@umijs/max/dist/plugins/maxAppData": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyAppData": [
+            0
+          ]
+        },
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/max/dist/plugins/maxAppData.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/max/dist/plugins/maxAppData",
+      "key": "maxAppData"
+    },
+    "./node_modules/@umijs/max/dist/plugins/maxChecker": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "onCheckPkgJSON": [
+            0
+          ]
+        },
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/max/dist/plugins/maxChecker.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/max/dist/plugins/maxChecker",
+      "key": "maxChecker"
+    },
+    "./node_modules/umi-presets-pro/dist/features/proconfig": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ]
+        },
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/umi-presets-pro/dist/features/proconfig.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/umi-presets-pro/dist/features/proconfig",
+      "key": "proconfig"
+    },
+    "./node_modules/umi-presets-pro/dist/features/maxtabs": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 0
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/umi-presets-pro/dist/features/maxtabs.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/umi-presets-pro/dist/features/maxtabs",
+      "key": "maxtabs"
+    },
+    "@umijs/max-plugin-openapi": {
+      "config": {},
+      "time": {
+        "hooks": {
+          "modifyRoutes": [
+            0
+          ],
+          "onStart": [
+            0
+          ]
+        },
+        "register": 181
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/max-plugin-openapi/dist/index.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "@umijs/max-plugin-openapi",
+      "key": "openAPI"
+    },
+    "./node_modules/@alita/plugins/dist/keepalive": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 132
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@alita/plugins/dist/keepalive.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@alita/plugins/dist/keepalive",
+      "key": "keepalive"
+    },
+    "./node_modules/@alita/plugins/dist/tabs-layout": {
+      "config": {
+        "onChange": "regenerateTmpFiles"
+      },
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "config",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@alita/plugins/dist/tabs-layout.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@alita/plugins/dist/tabs-layout",
+      "key": "tabsLayout"
+    },
+    "@umijs/request-record": {
+      "config": {
+        "default": {
+          "mock": {
+            "outputDir": "./mock",
+            "fileName": "requestRecord.mock.js",
+            "usingRole": "default"
+          },
+          "outputDir": "./types"
+        }
+      },
+      "time": {
+        "hooks": {
+          "modifyConfig": [
+            0
+          ],
+          "modifyAppData": [
+            1
+          ]
+        },
+        "register": 41
+      },
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/request-record/dist/cjs/index.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "@umijs/request-record",
+      "key": "requestRecord"
+    },
+    "./node_modules/@umijs/core/dist/service/generatePlugin": {
+      "config": {},
+      "time": {
+        "hooks": {},
+        "register": 1
+      },
+      "enableBy": "register",
+      "type": "plugin",
+      "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/core/dist/service/generatePlugin.js",
+      "cwd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter",
+      "id": "./node_modules/@umijs/core/dist/service/generatePlugin",
+      "key": "generatePlugin"
+    }
+  },
+  "presets": [],
+  "name": "dev",
+  "args": {
+    "_": []
+  },
+  "userConfig": {
+    "hash": true,
+    "routes": [
+      {
+        "path": "/user",
+        "layout": false,
+        "routes": [
+          {
+            "name": "login",
+            "path": "/user/login",
+            "component": "./User/Login"
+          },
+          {
+            "name": "register",
+            "path": "/user/register",
+            "component": "./User/Register"
+          }
+        ]
+      },
+      {
+        "path": "/admin",
+        "name": "管理中心",
+        "icon": "crown",
+        "access": "canAdmin",
+        "component": "./Admin",
+        "routes": [
+          {
+            "path": "/admin/article",
+            "name": "文章管理",
+            "icon": "FileAdd",
+            "component": "./Article"
+          },
+          {
+            "path": "/admin/comment",
+            "name": "评论管理",
+            "icon": "Message",
+            "component": "./Comment"
+          },
+          {
+            "path": "/admin/user-manage",
+            "name": "用户管理",
+            "icon": "User",
+            "component": "./Admin/UserManage"
+          },
+          {
+            "component": "./404"
+          }
+        ]
+      },
+      {
+        "path": "/",
+        "name": "行为统计",
+        "icon": "BarChart",
+        "component": "./Statistics"
+      },
+      {
+        "path": "*",
+        "layout": false,
+        "component": "./404"
+      }
+    ],
+    "theme": {
+      "root-entry-name": "variable"
+    },
+    "ignoreMomentLocale": true,
+    "proxy": {
+      "/api": {
+        "target": "http://localhost:8080",
+        "changeOrigin": true
+      }
+    },
+    "fastRefresh": true,
+    "model": {},
+    "initialState": {},
+    "title": "XFishBlog",
+    "layout": {
+      "locale": false,
+      "navTheme": "light",
+      "colorPrimary": "#1890ff",
+      "layout": "mix",
+      "contentWidth": "Fluid",
+      "fixedHeader": false,
+      "fixSiderbar": true,
+      "colorWeak": false,
+      "title": "XFishBlog",
+      "pwa": true,
+      "logo": "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+      "iconfontUrl": "",
+      "token": {}
+    },
+    "moment2dayjs": {
+      "preset": "antd",
+      "plugins": [
+        "duration"
+      ]
+    },
+    "antd": {},
+    "request": {},
+    "access": {},
+    "headScripts": [
+      {
+        "src": "/scripts/loading.js",
+        "async": true
+      }
+    ],
+    "presets": [
+      "umi-presets-pro"
+    ],
+    "openAPI": [
+      {
+        "requestLibPath": "import { request } from '@umijs/max'",
+        "schemaPath": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\config\\oneapi.json",
+        "mock": false
+      },
+      {
+        "requestLibPath": "import { request } from '@umijs/max'",
+        "schemaPath": "https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json",
+        "projectName": "swagger"
+      }
+    ],
+    "mfsu": {
+      "strategy": "normal"
+    },
+    "esbuildMinifyIIFE": true,
+    "requestRecord": {}
+  },
+  "mainConfigFile": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\config\\config.ts",
+  "config": {
+    "routeLoader": {
+      "moduleType": "esm"
+    },
+    "mountElementId": "root",
+    "history": {
+      "type": "browser"
+    },
+    "base": "/",
+    "svgr": {},
+    "publicPath": "/",
+    "mfsu": {
+      "strategy": "normal"
+    },
+    "ignoreMomentLocale": true,
+    "externals": {},
+    "autoCSSModules": true,
+    "alias": {
+      "umi": "@@/exports",
+      "react": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react",
+      "react-dom": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-dom",
+      "react-router": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-router",
+      "react-router-dom": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-router-dom",
+      "@": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src",
+      "@@": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi",
+      "regenerator-runtime": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\@umijs\\preset-umi\\node_modules\\regenerator-runtime",
+      "antd": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\antd",
+      "moment": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\dayjs",
+      "@umijs/max": "@@/exports"
+    },
+    "requestRecord": {
+      "mock": {
+        "outputDir": "./mock",
+        "fileName": "requestRecord.mock.js",
+        "usingRole": "default"
+      },
+      "outputDir": "./types"
+    },
+    "hash": true,
+    "routes": [
+      {
+        "path": "/user",
+        "layout": false,
+        "routes": [
+          {
+            "name": "login",
+            "path": "/user/login",
+            "component": "./User/Login"
+          },
+          {
+            "name": "register",
+            "path": "/user/register",
+            "component": "./User/Register"
+          }
+        ]
+      },
+      {
+        "path": "/admin",
+        "name": "管理中心",
+        "icon": "crown",
+        "access": "canAdmin",
+        "component": "./Admin",
+        "routes": [
+          {
+            "path": "/admin/article",
+            "name": "文章管理",
+            "icon": "FileAdd",
+            "component": "./Article"
+          },
+          {
+            "path": "/admin/comment",
+            "name": "评论管理",
+            "icon": "Message",
+            "component": "./Comment"
+          },
+          {
+            "path": "/admin/user-manage",
+            "name": "用户管理",
+            "icon": "User",
+            "component": "./Admin/UserManage"
+          },
+          {
+            "component": "./404"
+          }
+        ]
+      },
+      {
+        "path": "/",
+        "name": "行为统计",
+        "icon": "BarChart",
+        "component": "./Statistics"
+      },
+      {
+        "path": "*",
+        "layout": false,
+        "component": "./404"
+      }
+    ],
+    "theme": {
+      "blue-base": "#1890ff",
+      "blue-1": "#e6f7ff",
+      "blue-2": "#bae7ff",
+      "blue-3": "#91d5ff",
+      "blue-4": "#69c0ff",
+      "blue-5": "#40a9ff",
+      "blue-6": "#1890ff",
+      "blue-7": "#096dd9",
+      "blue-8": "#0050b3",
+      "blue-9": "#003a8c",
+      "blue-10": "#002766",
+      "purple-base": "#722ed1",
+      "purple-1": "#f9f0ff",
+      "purple-2": "#efdbff",
+      "purple-3": "#d3adf7",
+      "purple-4": "#b37feb",
+      "purple-5": "#9254de",
+      "purple-6": "#722ed1",
+      "purple-7": "#531dab",
+      "purple-8": "#391085",
+      "purple-9": "#22075e",
+      "purple-10": "#120338",
+      "cyan-base": "#13c2c2",
+      "cyan-1": "#e6fffb",
+      "cyan-2": "#b5f5ec",
+      "cyan-3": "#87e8de",
+      "cyan-4": "#5cdbd3",
+      "cyan-5": "#36cfc9",
+      "cyan-6": "#13c2c2",
+      "cyan-7": "#08979c",
+      "cyan-8": "#006d75",
+      "cyan-9": "#00474f",
+      "cyan-10": "#002329",
+      "green-base": "#52c41a",
+      "green-1": "#f6ffed",
+      "green-2": "#d9f7be",
+      "green-3": "#b7eb8f",
+      "green-4": "#95de64",
+      "green-5": "#73d13d",
+      "green-6": "#52c41a",
+      "green-7": "#389e0d",
+      "green-8": "#237804",
+      "green-9": "#135200",
+      "green-10": "#092b00",
+      "magenta-base": "#eb2f96",
+      "magenta-1": "#fff0f6",
+      "magenta-2": "#ffd6e7",
+      "magenta-3": "#ffadd2",
+      "magenta-4": "#ff85c0",
+      "magenta-5": "#f759ab",
+      "magenta-6": "#eb2f96",
+      "magenta-7": "#c41d7f",
+      "magenta-8": "#9e1068",
+      "magenta-9": "#780650",
+      "magenta-10": "#520339",
+      "pink-base": "#eb2f96",
+      "pink-1": "#fff0f6",
+      "pink-2": "#ffd6e7",
+      "pink-3": "#ffadd2",
+      "pink-4": "#ff85c0",
+      "pink-5": "#f759ab",
+      "pink-6": "#eb2f96",
+      "pink-7": "#c41d7f",
+      "pink-8": "#9e1068",
+      "pink-9": "#780650",
+      "pink-10": "#520339",
+      "red-base": "#f5222d",
+      "red-1": "#fff1f0",
+      "red-2": "#ffccc7",
+      "red-3": "#ffa39e",
+      "red-4": "#ff7875",
+      "red-5": "#ff4d4f",
+      "red-6": "#f5222d",
+      "red-7": "#cf1322",
+      "red-8": "#a8071a",
+      "red-9": "#820014",
+      "red-10": "#5c0011",
+      "orange-base": "#fa8c16",
+      "orange-1": "#fff7e6",
+      "orange-2": "#ffe7ba",
+      "orange-3": "#ffd591",
+      "orange-4": "#ffc069",
+      "orange-5": "#ffa940",
+      "orange-6": "#fa8c16",
+      "orange-7": "#d46b08",
+      "orange-8": "#ad4e00",
+      "orange-9": "#873800",
+      "orange-10": "#612500",
+      "yellow-base": "#fadb14",
+      "yellow-1": "#feffe6",
+      "yellow-2": "#ffffb8",
+      "yellow-3": "#fffb8f",
+      "yellow-4": "#fff566",
+      "yellow-5": "#ffec3d",
+      "yellow-6": "#fadb14",
+      "yellow-7": "#d4b106",
+      "yellow-8": "#ad8b00",
+      "yellow-9": "#876800",
+      "yellow-10": "#614700",
+      "volcano-base": "#fa541c",
+      "volcano-1": "#fff2e8",
+      "volcano-2": "#ffd8bf",
+      "volcano-3": "#ffbb96",
+      "volcano-4": "#ff9c6e",
+      "volcano-5": "#ff7a45",
+      "volcano-6": "#fa541c",
+      "volcano-7": "#d4380d",
+      "volcano-8": "#ad2102",
+      "volcano-9": "#871400",
+      "volcano-10": "#610b00",
+      "geekblue-base": "#2f54eb",
+      "geekblue-1": "#f0f5ff",
+      "geekblue-2": "#d6e4ff",
+      "geekblue-3": "#adc6ff",
+      "geekblue-4": "#85a5ff",
+      "geekblue-5": "#597ef7",
+      "geekblue-6": "#2f54eb",
+      "geekblue-7": "#1d39c4",
+      "geekblue-8": "#10239e",
+      "geekblue-9": "#061178",
+      "geekblue-10": "#030852",
+      "lime-base": "#a0d911",
+      "lime-1": "#fcffe6",
+      "lime-2": "#f4ffb8",
+      "lime-3": "#eaff8f",
+      "lime-4": "#d3f261",
+      "lime-5": "#bae637",
+      "lime-6": "#a0d911",
+      "lime-7": "#7cb305",
+      "lime-8": "#5b8c00",
+      "lime-9": "#3f6600",
+      "lime-10": "#254000",
+      "gold-base": "#faad14",
+      "gold-1": "#fffbe6",
+      "gold-2": "#fff1b8",
+      "gold-3": "#ffe58f",
+      "gold-4": "#ffd666",
+      "gold-5": "#ffc53d",
+      "gold-6": "#faad14",
+      "gold-7": "#d48806",
+      "gold-8": "#ad6800",
+      "gold-9": "#874d00",
+      "gold-10": "#613400",
+      "preset-colors": "pink, magenta, red, volcano, orange, yellow, gold, cyan, lime, green, blue, geekblue,",
+      "theme": "default",
+      "ant-prefix": "ant",
+      "html-selector": "html",
+      "primary-color": "#1890ff",
+      "primary-color-hover": "#40a9ff",
+      "primary-color-active": "#096dd9",
+      "primary-color-outline": "rgba(24, 144, 255, 0.2)",
+      "processing-color": "#1890ff",
+      "info-color": "#1890ff",
+      "info-color-deprecated-bg": "#e6f7ff",
+      "info-color-deprecated-border": "#91d5ff",
+      "success-color": "#52c41a",
+      "success-color-hover": "#73d13d",
+      "success-color-active": "#389e0d",
+      "success-color-outline": "rgba(82, 196, 26, 0.2)",
+      "success-color-deprecated-bg": "#f6ffed",
+      "success-color-deprecated-border": "#b7eb8f",
+      "warning-color": "#faad14",
+      "warning-color-hover": "#ffc53d",
+      "warning-color-active": "#d48806",
+      "warning-color-outline": "rgba(250, 173, 20, 0.2)",
+      "warning-color-deprecated-bg": "#fffbe6",
+      "warning-color-deprecated-border": "#ffe58f",
+      "error-color": "#ff4d4f",
+      "error-color-hover": "#ff7875",
+      "error-color-active": "#d9363e",
+      "error-color-outline": "rgba(255, 77, 79, 0.2)",
+      "error-color-deprecated-bg": "#fff2f0",
+      "error-color-deprecated-border": "#ffccc7",
+      "highlight-color": "#ff4d4f",
+      "normal-color": "#d9d9d9",
+      "white": "#fff",
+      "black": "#000",
+      "primary-1": "#e6f7ff",
+      "primary-2": "#bae7ff",
+      "primary-3": "#91d5ff",
+      "primary-4": "#69c0ff",
+      "primary-5": "#40a9ff",
+      "primary-6": "#1890ff",
+      "primary-7": "#096dd9",
+      "primary-8": "#0050b3",
+      "primary-9": "#003a8c",
+      "primary-10": "#002766",
+      "component-background": "#fff",
+      "popover-background": "#fff",
+      "popover-customize-border-color": "#f0f0f0",
+      "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      "code-family": "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace",
+      "text-color": "rgba(0, 0, 0, 0.85)",
+      "text-color-secondary": "rgba(0, 0, 0, 0.45)",
+      "text-color-inverse": "#fff",
+      "icon-color": "inherit",
+      "icon-color-hover": "rgba(0, 0, 0, 0.75)",
+      "heading-color": "rgba(0, 0, 0, 0.85)",
+      "text-color-dark": "rgba(255, 255, 255, 0.85)",
+      "text-color-secondary-dark": "rgba(255, 255, 255, 0.65)",
+      "text-selection-bg": "#1890ff",
+      "font-variant-base": "tabular-nums",
+      "font-feature-settings-base": "tnum",
+      "font-size-base": "14px",
+      "font-size-lg": "16px",
+      "font-size-sm": "12px",
+      "heading-1-size": "38px",
+      "heading-2-size": "30px",
+      "heading-3-size": "24px",
+      "heading-4-size": "20px",
+      "heading-5-size": "16px",
+      "line-height-base": "1.5715",
+      "border-radius-base": "2px",
+      "border-radius-sm": "2px",
+      "control-border-radius": "2px",
+      "arrow-border-radius": "2px",
+      "padding-lg": "24px",
+      "padding-md": "16px",
+      "padding-sm": "12px",
+      "padding-xs": "8px",
+      "padding-xss": "4px",
+      "control-padding-horizontal": "12px",
+      "control-padding-horizontal-sm": "8px",
+      "margin-lg": "24px",
+      "margin-md": "16px",
+      "margin-sm": "12px",
+      "margin-xs": "8px",
+      "margin-xss": "4px",
+      "height-base": "32px",
+      "height-lg": "40px",
+      "height-sm": "24px",
+      "item-active-bg": "#e6f7ff",
+      "item-hover-bg": "#f5f5f5",
+      "iconfont-css-prefix": "anticon",
+      "link-color": "#1890ff",
+      "link-hover-color": "#40a9ff",
+      "link-active-color": "#096dd9",
+      "link-decoration": "none",
+      "link-hover-decoration": "none",
+      "link-focus-decoration": "none",
+      "link-focus-outline": "0",
+      "ease-base-out": "cubic-bezier(0.7, 0.3, 0.1, 1)",
+      "ease-base-in": "cubic-bezier(0.9, 0, 0.3, 0.7)",
+      "ease-out": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "ease-in": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+      "ease-in-out": "cubic-bezier(0.645, 0.045, 0.355, 1)",
+      "ease-out-back": "cubic-bezier(0.12, 0.4, 0.29, 1.46)",
+      "ease-in-back": "cubic-bezier(0.71, -0.46, 0.88, 0.6)",
+      "ease-in-out-back": "cubic-bezier(0.71, -0.46, 0.29, 1.46)",
+      "ease-out-circ": "cubic-bezier(0.08, 0.82, 0.17, 1)",
+      "ease-in-circ": "cubic-bezier(0.6, 0.04, 0.98, 0.34)",
+      "ease-in-out-circ": "cubic-bezier(0.78, 0.14, 0.15, 0.86)",
+      "ease-out-quint": "cubic-bezier(0.23, 1, 0.32, 1)",
+      "ease-in-quint": "cubic-bezier(0.755, 0.05, 0.855, 0.06)",
+      "ease-in-out-quint": "cubic-bezier(0.86, 0, 0.07, 1)",
+      "border-color-base": "#d9d9d9",
+      "border-color-split": "#f0f0f0",
+      "border-color-inverse": "#fff",
+      "border-width-base": "1px",
+      "border-style-base": "solid",
+      "outline-blur-size": "0",
+      "outline-width": "2px",
+      "outline-color": "#1890ff",
+      "outline-fade": "20%",
+      "background-color-light": "#fafafa",
+      "background-color-base": "#f5f5f5",
+      "disabled-color": "rgba(0, 0, 0, 0.25)",
+      "disabled-bg": "#f5f5f5",
+      "disabled-active-bg": "#e6e6e6",
+      "disabled-color-dark": "rgba(255, 255, 255, 0.35)",
+      "shadow-color": "rgba(0, 0, 0, 0.15)",
+      "shadow-color-inverse": "#fff",
+      "box-shadow-base": "0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05)",
+      "shadow-1-up": "0 -6px 16px -8px rgba(0, 0, 0, 0.08), 0 -9px 28px 0 rgba(0, 0, 0, 0.05), 0 -12px 48px 16px rgba(0, 0, 0, 0.03)",
+      "shadow-1-down": "0 6px 16px -8px rgba(0, 0, 0, 0.08), 0 9px 28px 0 rgba(0, 0, 0, 0.05), 0 12px 48px 16px rgba(0, 0, 0, 0.03)",
+      "shadow-1-left": "-6px 0 16px -8px rgba(0, 0, 0, 0.08), -9px 0 28px 0 rgba(0, 0, 0, 0.05), -12px 0 48px 16px rgba(0, 0, 0, 0.03)",
+      "shadow-1-right": "6px 0 16px -8px rgba(0, 0, 0, 0.08), 9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03)",
+      "shadow-2": "0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05)",
+      "btn-font-weight": "400",
+      "btn-border-radius-base": "2px",
+      "btn-border-radius-sm": "2px",
+      "btn-border-width": "1px",
+      "btn-border-style": "solid",
+      "btn-shadow": "0 2px 0 rgba(0, 0, 0, 0.015)",
+      "btn-primary-shadow": "0 2px 0 rgba(0, 0, 0, 0.045)",
+      "btn-text-shadow": "0 -1px 0 rgba(0, 0, 0, 0.12)",
+      "btn-primary-color": "#fff",
+      "btn-primary-bg": "#1890ff",
+      "btn-default-color": "rgba(0, 0, 0, 0.85)",
+      "btn-default-bg": "#fff",
+      "btn-default-border": "#d9d9d9",
+      "btn-danger-color": "#fff",
+      "btn-danger-bg": "#ff4d4f",
+      "btn-danger-border": "#ff4d4f",
+      "btn-disable-color": "rgba(0, 0, 0, 0.25)",
+      "btn-disable-bg": "#f5f5f5",
+      "btn-disable-border": "#d9d9d9",
+      "btn-default-ghost-color": "#fff",
+      "btn-default-ghost-bg": "transparent",
+      "btn-default-ghost-border": "#fff",
+      "btn-font-size-lg": "16px",
+      "btn-font-size-sm": "14px",
+      "btn-padding-horizontal-base": "15px",
+      "btn-padding-horizontal-lg": "15px",
+      "btn-padding-horizontal-sm": "7px",
+      "btn-height-base": "32px",
+      "btn-height-lg": "40px",
+      "btn-height-sm": "24px",
+      "btn-line-height": "1.5715",
+      "btn-circle-size": "32px",
+      "btn-circle-size-lg": "40px",
+      "btn-circle-size-sm": "24px",
+      "btn-square-size": "32px",
+      "btn-square-size-lg": "40px",
+      "btn-square-size-sm": "24px",
+      "btn-square-only-icon-size": "16px",
+      "btn-square-only-icon-size-sm": "14px",
+      "btn-square-only-icon-size-lg": "18px",
+      "btn-group-border": "#40a9ff",
+      "btn-link-hover-bg": "transparent",
+      "btn-text-hover-bg": "rgba(0, 0, 0, 0.018)",
+      "checkbox-size": "16px",
+      "checkbox-color": "#1890ff",
+      "checkbox-check-color": "#fff",
+      "checkbox-check-bg": "#fff",
+      "checkbox-border-width": "1px",
+      "checkbox-border-radius": "2px",
+      "checkbox-group-item-margin-right": "8px",
+      "descriptions-bg": "#fafafa",
+      "descriptions-title-margin-bottom": "20px",
+      "descriptions-default-padding": "16px 24px",
+      "descriptions-middle-padding": "12px 24px",
+      "descriptions-small-padding": "8px 16px",
+      "descriptions-item-padding-bottom": "16px",
+      "descriptions-item-trailing-colon": "true",
+      "descriptions-item-label-colon-margin-right": "8px",
+      "descriptions-item-label-colon-margin-left": "2px",
+      "descriptions-extra-color": "rgba(0, 0, 0, 0.85)",
+      "divider-text-padding": "1em",
+      "divider-orientation-margin": "5%",
+      "divider-color": "rgba(0, 0, 0, 0.06)",
+      "divider-vertical-gutter": "8px",
+      "dropdown-selected-color": "#1890ff",
+      "dropdown-menu-submenu-disabled-bg": "#fff",
+      "dropdown-selected-bg": "#e6f7ff",
+      "empty-font-size": "14px",
+      "radio-size": "16px",
+      "radio-top": "0.2em",
+      "radio-border-width": "1px",
+      "radio-dot-size": "8px",
+      "radio-dot-color": "#1890ff",
+      "radio-dot-disabled-color": "rgba(0, 0, 0, 0.2)",
+      "radio-solid-checked-color": "#fff",
+      "radio-button-bg": "#fff",
+      "radio-button-checked-bg": "#fff",
+      "radio-button-color": "rgba(0, 0, 0, 0.85)",
+      "radio-button-hover-color": "#40a9ff",
+      "radio-button-active-color": "#096dd9",
+      "radio-button-padding-horizontal": "15px",
+      "radio-disabled-button-checked-bg": "#e6e6e6",
+      "radio-disabled-button-checked-color": "rgba(0, 0, 0, 0.25)",
+      "radio-wrapper-margin-right": "8px",
+      "screen-xs": "480px",
+      "screen-xs-min": "480px",
+      "screen-sm": "576px",
+      "screen-sm-min": "576px",
+      "screen-md": "768px",
+      "screen-md-min": "768px",
+      "screen-lg": "992px",
+      "screen-lg-min": "992px",
+      "screen-xl": "1200px",
+      "screen-xl-min": "1200px",
+      "screen-xxl": "1600px",
+      "screen-xxl-min": "1600px",
+      "screen-xs-max": "575px",
+      "screen-sm-max": "767px",
+      "screen-md-max": "991px",
+      "screen-lg-max": "1199px",
+      "screen-xl-max": "1599px",
+      "grid-columns": "24",
+      "layout-header-background": "#001529",
+      "layout-header-height": "64px",
+      "layout-header-padding": "0 50px",
+      "layout-header-color": "rgba(0, 0, 0, 0.85)",
+      "layout-footer-padding": "24px 50px",
+      "layout-footer-background": "#f0f2f5",
+      "layout-sider-background": "#001529",
+      "layout-trigger-height": "48px",
+      "layout-trigger-background": "#002140",
+      "layout-trigger-color": "#fff",
+      "layout-zero-trigger-width": "36px",
+      "layout-zero-trigger-height": "42px",
+      "layout-sider-background-light": "#fff",
+      "layout-trigger-background-light": "#fff",
+      "layout-trigger-color-light": "rgba(0, 0, 0, 0.85)",
+      "zindex-badge": "auto",
+      "zindex-table-fixed": "2",
+      "zindex-affix": "10",
+      "zindex-back-top": "10",
+      "zindex-picker-panel": "10",
+      "zindex-popup-close": "10",
+      "zindex-modal": "1000",
+      "zindex-modal-mask": "1000",
+      "zindex-message": "1010",
+      "zindex-notification": "1010",
+      "zindex-popover": "1030",
+      "zindex-dropdown": "1050",
+      "zindex-picker": "1050",
+      "zindex-popoconfirm": "1060",
+      "zindex-tooltip": "1070",
+      "zindex-image": "1080",
+      "animation-duration-slow": "0.3s",
+      "animation-duration-base": "0.2s",
+      "animation-duration-fast": "0.1s",
+      "collapse-panel-border-radius": "2px",
+      "dropdown-menu-bg": "#fff",
+      "dropdown-vertical-padding": "5px",
+      "dropdown-edge-child-vertical-padding": "4px",
+      "dropdown-font-size": "14px",
+      "dropdown-line-height": "22px",
+      "label-required-color": "#ff4d4f",
+      "label-color": "rgba(0, 0, 0, 0.85)",
+      "form-warning-input-bg": "#fff",
+      "form-item-margin-bottom": "24px",
+      "form-item-trailing-colon": "true",
+      "form-vertical-label-padding": "0 0 8px",
+      "form-vertical-label-margin": "0",
+      "form-item-label-font-size": "14px",
+      "form-item-label-height": "32px",
+      "form-item-label-colon-margin-right": "8px",
+      "form-item-label-colon-margin-left": "2px",
+      "form-error-input-bg": "#fff",
+      "input-height-base": "32px",
+      "input-height-lg": "40px",
+      "input-height-sm": "24px",
+      "input-padding-horizontal": "11px",
+      "input-padding-horizontal-base": "11px",
+      "input-padding-horizontal-sm": "7px",
+      "input-padding-horizontal-lg": "11px",
+      "input-padding-vertical-base": "4px",
+      "input-padding-vertical-sm": "0px",
+      "input-padding-vertical-lg": "6.5px",
+      "input-placeholder-color": "#bfbfbf",
+      "input-color": "rgba(0, 0, 0, 0.85)",
+      "input-icon-color": "rgba(0, 0, 0, 0.85)",
+      "input-border-color": "#d9d9d9",
+      "input-bg": "#fff",
+      "input-number-hover-border-color": "#40a9ff",
+      "input-number-handler-active-bg": "#f4f4f4",
+      "input-number-handler-hover-bg": "#40a9ff",
+      "input-number-handler-bg": "#fff",
+      "input-number-handler-border-color": "#d9d9d9",
+      "input-addon-bg": "#fafafa",
+      "input-hover-border-color": "#40a9ff",
+      "input-disabled-bg": "#f5f5f5",
+      "input-outline-offset": "0 0",
+      "input-icon-hover-color": "rgba(0, 0, 0, 0.85)",
+      "input-disabled-color": "rgba(0, 0, 0, 0.25)",
+      "mentions-dropdown-bg": "#fff",
+      "mentions-dropdown-menu-item-hover-bg": "#fff",
+      "select-border-color": "#d9d9d9",
+      "select-item-selected-color": "rgba(0, 0, 0, 0.85)",
+      "select-item-selected-font-weight": "600",
+      "select-dropdown-bg": "#fff",
+      "select-item-selected-bg": "#e6f7ff",
+      "select-item-active-bg": "#f5f5f5",
+      "select-dropdown-vertical-padding": "5px",
+      "select-dropdown-font-size": "14px",
+      "select-dropdown-line-height": "22px",
+      "select-dropdown-height": "32px",
+      "select-background": "#fff",
+      "select-clear-background": "#fff",
+      "select-selection-item-bg": "#f5f5f5",
+      "select-selection-item-border-color": "#f0f0f0",
+      "select-single-item-height-lg": "40px",
+      "select-multiple-item-height": "24px",
+      "select-multiple-item-height-lg": "32px",
+      "select-multiple-item-spacing-half": "2px",
+      "select-multiple-disabled-background": "#f5f5f5",
+      "select-multiple-item-disabled-color": "#bfbfbf",
+      "select-multiple-item-disabled-border-color": "#d9d9d9",
+      "cascader-bg": "#fff",
+      "cascader-item-selected-bg": "#e6f7ff",
+      "cascader-menu-bg": "#fff",
+      "cascader-menu-border-color-split": "#f0f0f0",
+      "cascader-dropdown-vertical-padding": "5px",
+      "cascader-dropdown-edge-child-vertical-padding": "4px",
+      "cascader-dropdown-font-size": "14px",
+      "cascader-dropdown-line-height": "22px",
+      "anchor-bg": "transparent",
+      "anchor-border-color": "#f0f0f0",
+      "anchor-link-top": "4px",
+      "anchor-link-left": "16px",
+      "anchor-link-padding": "4px 0 4px 16px",
+      "tooltip-max-width": "250px",
+      "tooltip-color": "#fff",
+      "tooltip-bg": "rgba(0, 0, 0, 0.75)",
+      "tooltip-arrow-width": "11.3137085px",
+      "tooltip-distance": "14.3137085px",
+      "tooltip-arrow-color": "rgba(0, 0, 0, 0.75)",
+      "tooltip-border-radius": "2px",
+      "popover-bg": "#fff",
+      "popover-color": "rgba(0, 0, 0, 0.85)",
+      "popover-min-width": "177px",
+      "popover-min-height": "32px",
+      "popover-arrow-width": "11.3137085px",
+      "popover-arrow-color": "#fff",
+      "popover-arrow-outer-color": "#fff",
+      "popover-distance": "15.3137085px",
+      "popover-padding-horizontal": "16px",
+      "modal-header-padding-vertical": "16px",
+      "modal-header-padding-horizontal": "24px",
+      "modal-header-bg": "#fff",
+      "modal-header-padding": "16px 24px",
+      "modal-header-border-width": "1px",
+      "modal-header-border-style": "solid",
+      "modal-header-title-line-height": "22px",
+      "modal-header-title-font-size": "16px",
+      "modal-header-border-color-split": "#f0f0f0",
+      "modal-header-close-size": "54px",
+      "modal-content-bg": "#fff",
+      "modal-heading-color": "rgba(0, 0, 0, 0.85)",
+      "modal-close-color": "rgba(0, 0, 0, 0.45)",
+      "modal-footer-bg": "transparent",
+      "modal-footer-border-color-split": "#f0f0f0",
+      "modal-footer-border-style": "solid",
+      "modal-footer-padding-vertical": "10px",
+      "modal-footer-padding-horizontal": "16px",
+      "modal-footer-border-width": "1px",
+      "modal-mask-bg": "rgba(0, 0, 0, 0.45)",
+      "modal-confirm-title-font-size": "16px",
+      "modal-border-radius": "2px",
+      "progress-default-color": "#1890ff",
+      "progress-remaining-color": "#f5f5f5",
+      "progress-info-text-color": "rgba(0, 0, 0, 0.85)",
+      "progress-radius": "100px",
+      "progress-steps-item-bg": "#f3f3f3",
+      "progress-text-font-size": "1em",
+      "progress-text-color": "rgba(0, 0, 0, 0.85)",
+      "progress-circle-text-font-size": "1em",
+      "menu-inline-toplevel-item-height": "40px",
+      "menu-item-height": "40px",
+      "menu-item-group-height": "1.5715",
+      "menu-collapsed-width": "80px",
+      "menu-bg": "#fff",
+      "menu-popup-bg": "#fff",
+      "menu-item-color": "rgba(0, 0, 0, 0.85)",
+      "menu-inline-submenu-bg": "#fafafa",
+      "menu-highlight-color": "#1890ff",
+      "menu-highlight-danger-color": "#ff4d4f",
+      "menu-item-active-bg": "#e6f7ff",
+      "menu-item-active-danger-bg": "#fff1f0",
+      "menu-item-active-border-width": "3px",
+      "menu-item-group-title-color": "rgba(0, 0, 0, 0.45)",
+      "menu-item-vertical-margin": "4px",
+      "menu-item-font-size": "14px",
+      "menu-item-boundary-margin": "8px",
+      "menu-item-padding-horizontal": "20px",
+      "menu-item-padding": "0 20px",
+      "menu-horizontal-line-height": "46px",
+      "menu-icon-margin-right": "10px",
+      "menu-icon-size": "14px",
+      "menu-icon-size-lg": "16px",
+      "menu-item-group-title-font-size": "14px",
+      "menu-dark-color": "rgba(255, 255, 255, 0.65)",
+      "menu-dark-danger-color": "#ff4d4f",
+      "menu-dark-bg": "#001529",
+      "menu-dark-arrow-color": "#fff",
+      "menu-dark-inline-submenu-bg": "#000c17",
+      "menu-dark-highlight-color": "#fff",
+      "menu-dark-item-active-bg": "#1890ff",
+      "menu-dark-item-active-danger-bg": "#ff4d4f",
+      "menu-dark-selected-item-icon-color": "#fff",
+      "menu-dark-selected-item-text-color": "#fff",
+      "menu-dark-item-hover-bg": "transparent",
+      "spin-dot-size-sm": "14px",
+      "spin-dot-size": "20px",
+      "spin-dot-size-lg": "32px",
+      "table-bg": "#fff",
+      "table-header-bg": "#fafafa",
+      "table-header-color": "rgba(0, 0, 0, 0.85)",
+      "table-header-sort-bg": "#f5f5f5",
+      "table-row-hover-bg": "#fafafa",
+      "table-selected-row-color": "inherit",
+      "table-selected-row-bg": "#e6f7ff",
+      "table-selected-row-hover-bg": "#dcf4ff",
+      "table-expanded-row-bg": "#fbfbfb",
+      "table-padding-vertical": "16px",
+      "table-padding-horizontal": "16px",
+      "table-padding-vertical-md": "12px",
+      "table-padding-horizontal-md": "8px",
+      "table-padding-vertical-sm": "8px",
+      "table-padding-horizontal-sm": "8px",
+      "table-border-color": "#f0f0f0",
+      "table-border-radius-base": "2px",
+      "table-footer-bg": "#fafafa",
+      "table-footer-color": "rgba(0, 0, 0, 0.85)",
+      "table-header-bg-sm": "#fafafa",
+      "table-font-size": "14px",
+      "table-font-size-md": "14px",
+      "table-font-size-sm": "14px",
+      "table-header-cell-split-color": "rgba(0, 0, 0, 0.06)",
+      "table-header-sort-active-bg": "rgba(0, 0, 0, 0.04)",
+      "table-fixed-header-sort-active-bg": "#f5f5f5",
+      "table-header-filter-active-bg": "rgba(0, 0, 0, 0.04)",
+      "table-filter-btns-bg": "inherit",
+      "table-filter-dropdown-bg": "#fff",
+      "table-expand-icon-bg": "#fff",
+      "table-selection-column-width": "32px",
+      "table-sticky-scroll-bar-bg": "rgba(0, 0, 0, 0.35)",
+      "table-sticky-scroll-bar-radius": "4px",
+      "tag-border-radius": "2px",
+      "tag-default-bg": "#fafafa",
+      "tag-default-color": "rgba(0, 0, 0, 0.85)",
+      "tag-font-size": "12px",
+      "tag-line-height": "20px",
+      "picker-bg": "#fff",
+      "picker-basic-cell-hover-color": "#f5f5f5",
+      "picker-basic-cell-active-with-range-color": "#e6f7ff",
+      "picker-basic-cell-hover-with-range-color": "#cbe6ff",
+      "picker-basic-cell-disabled-bg": "rgba(0, 0, 0, 0.04)",
+      "picker-border-color": "#f0f0f0",
+      "picker-date-hover-range-border-color": "#7ec1ff",
+      "picker-date-hover-range-color": "#cbe6ff",
+      "picker-time-panel-column-width": "56px",
+      "picker-time-panel-column-height": "224px",
+      "picker-time-panel-cell-height": "28px",
+      "picker-panel-cell-height": "24px",
+      "picker-panel-cell-width": "36px",
+      "picker-text-height": "40px",
+      "picker-panel-without-time-cell-height": "66px",
+      "calendar-bg": "#fff",
+      "calendar-input-bg": "#fff",
+      "calendar-border-color": "#fff",
+      "calendar-item-active-bg": "#e6f7ff",
+      "calendar-column-active-bg": "rgba(230, 247, 255, 0.2)",
+      "calendar-full-bg": "#fff",
+      "calendar-full-panel-bg": "#fff",
+      "carousel-dot-width": "16px",
+      "carousel-dot-height": "3px",
+      "carousel-dot-active-width": "24px",
+      "badge-height": "20px",
+      "badge-height-sm": "14px",
+      "badge-dot-size": "6px",
+      "badge-font-size": "12px",
+      "badge-font-size-sm": "12px",
+      "badge-font-weight": "normal",
+      "badge-status-size": "6px",
+      "badge-text-color": "#fff",
+      "badge-color": "#ff4d4f",
+      "rate-star-color": "#fadb14",
+      "rate-star-bg": "#f0f0f0",
+      "rate-star-size": "20px",
+      "rate-star-hover-scale": "scale(1.1)",
+      "card-head-color": "rgba(0, 0, 0, 0.85)",
+      "card-head-background": "transparent",
+      "card-head-font-size": "16px",
+      "card-head-font-size-sm": "14px",
+      "card-head-padding": "16px",
+      "card-head-padding-sm": "8px",
+      "card-head-height": "48px",
+      "card-head-height-sm": "36px",
+      "card-inner-head-padding": "12px",
+      "card-padding-base": "24px",
+      "card-padding-base-sm": "12px",
+      "card-actions-background": "#fff",
+      "card-actions-li-margin": "12px 0",
+      "card-skeleton-bg": "#cfd8dc",
+      "card-background": "#fff",
+      "card-shadow": "0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09)",
+      "card-radius": "2px",
+      "card-head-tabs-margin-bottom": "-17px",
+      "card-head-extra-color": "rgba(0, 0, 0, 0.85)",
+      "comment-bg": "inherit",
+      "comment-padding-base": "16px 0",
+      "comment-nest-indent": "44px",
+      "comment-font-size-base": "14px",
+      "comment-font-size-sm": "12px",
+      "comment-author-name-color": "rgba(0, 0, 0, 0.45)",
+      "comment-author-time-color": "#ccc",
+      "comment-action-color": "rgba(0, 0, 0, 0.45)",
+      "comment-action-hover-color": "#595959",
+      "comment-actions-margin-bottom": "inherit",
+      "comment-actions-margin-top": "12px",
+      "comment-content-detail-p-margin-bottom": "inherit",
+      "tabs-card-head-background": "#fafafa",
+      "tabs-card-height": "40px",
+      "tabs-card-active-color": "#1890ff",
+      "tabs-card-horizontal-padding": "8px 16px",
+      "tabs-card-horizontal-padding-sm": "6px 16px",
+      "tabs-card-horizontal-padding-lg": "7px 16px 6px",
+      "tabs-title-font-size": "14px",
+      "tabs-title-font-size-lg": "16px",
+      "tabs-title-font-size-sm": "14px",
+      "tabs-ink-bar-color": "#1890ff",
+      "tabs-bar-margin": "0 0 16px 0",
+      "tabs-horizontal-gutter": "32px",
+      "tabs-horizontal-margin": "0 0 0 32px",
+      "tabs-horizontal-margin-rtl": "0 0 0 32px",
+      "tabs-horizontal-padding": "12px 0",
+      "tabs-horizontal-padding-lg": "16px 0",
+      "tabs-horizontal-padding-sm": "8px 0",
+      "tabs-vertical-padding": "8px 24px",
+      "tabs-vertical-margin": "16px 0 0 0",
+      "tabs-scrolling-size": "32px",
+      "tabs-highlight-color": "#1890ff",
+      "tabs-hover-color": "#40a9ff",
+      "tabs-active-color": "#096dd9",
+      "tabs-card-gutter": "2px",
+      "tabs-card-tab-active-border-top": "2px solid transparent",
+      "back-top-color": "#fff",
+      "back-top-bg": "rgba(0, 0, 0, 0.45)",
+      "back-top-hover-bg": "rgba(0, 0, 0, 0.85)",
+      "avatar-size-base": "32px",
+      "avatar-size-lg": "40px",
+      "avatar-size-sm": "24px",
+      "avatar-font-size-base": "18px",
+      "avatar-font-size-lg": "24px",
+      "avatar-font-size-sm": "14px",
+      "avatar-bg": "#ccc",
+      "avatar-color": "#fff",
+      "avatar-border-radius": "2px",
+      "avatar-group-overlapping": "-8px",
+      "avatar-group-space": "3px",
+      "avatar-group-border-color": "#fff",
+      "switch-height": "22px",
+      "switch-sm-height": "16px",
+      "switch-min-width": "44px",
+      "switch-sm-min-width": "28px",
+      "switch-disabled-opacity": "0.4",
+      "switch-color": "#1890ff",
+      "switch-bg": "#fff",
+      "switch-shadow-color": "rgba(0, 35, 11, 0.2)",
+      "switch-padding": "2px",
+      "switch-inner-margin-min": "7px",
+      "switch-inner-margin-max": "25px",
+      "switch-sm-inner-margin-min": "5px",
+      "switch-sm-inner-margin-max": "18px",
+      "pagination-item-bg": "#fff",
+      "pagination-item-size": "32px",
+      "pagination-item-size-sm": "24px",
+      "pagination-font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      "pagination-font-weight-active": "500",
+      "pagination-item-bg-active": "#fff",
+      "pagination-item-link-bg": "#fff",
+      "pagination-item-disabled-color-active": "rgba(0, 0, 0, 0.25)",
+      "pagination-item-disabled-bg-active": "#e6e6e6",
+      "pagination-item-input-bg": "#fff",
+      "pagination-mini-options-size-changer-top": "0px",
+      "page-header-padding": "24px",
+      "page-header-padding-vertical": "16px",
+      "page-header-padding-breadcrumb": "12px",
+      "page-header-content-padding-vertical": "12px",
+      "page-header-back-color": "#000",
+      "page-header-ghost-bg": "inherit",
+      "page-header-heading-title": "20px",
+      "page-header-heading-sub-title": "14px",
+      "page-header-tabs-tab-font-size": "16px",
+      "breadcrumb-base-color": "rgba(0, 0, 0, 0.45)",
+      "breadcrumb-last-item-color": "rgba(0, 0, 0, 0.85)",
+      "breadcrumb-font-size": "14px",
+      "breadcrumb-icon-font-size": "14px",
+      "breadcrumb-link-color": "rgba(0, 0, 0, 0.45)",
+      "breadcrumb-link-color-hover": "rgba(0, 0, 0, 0.85)",
+      "breadcrumb-separator-color": "rgba(0, 0, 0, 0.45)",
+      "breadcrumb-separator-margin": "0 8px",
+      "slider-margin": "10px 6px 10px",
+      "slider-rail-background-color": "#f5f5f5",
+      "slider-rail-background-color-hover": "#e1e1e1",
+      "slider-track-background-color": "#91d5ff",
+      "slider-track-background-color-hover": "#69c0ff",
+      "slider-handle-border-width": "2px",
+      "slider-handle-background-color": "#fff",
+      "slider-handle-color": "#91d5ff",
+      "slider-handle-color-hover": "#69c0ff",
+      "slider-handle-color-focus": "#46a6ff",
+      "slider-handle-color-focus-shadow": "rgba(24, 144, 255, 0.12)",
+      "slider-handle-color-tooltip-open": "#1890ff",
+      "slider-handle-size": "14px",
+      "slider-handle-margin-top": "-5px",
+      "slider-handle-shadow": "0",
+      "slider-dot-border-color": "#f0f0f0",
+      "slider-dot-border-color-active": "#8cc8ff",
+      "slider-disabled-color": "rgba(0, 0, 0, 0.25)",
+      "slider-disabled-background-color": "#fff",
+      "tree-bg": "#fff",
+      "tree-title-height": "24px",
+      "tree-child-padding": "18px",
+      "tree-directory-selected-color": "#fff",
+      "tree-directory-selected-bg": "#1890ff",
+      "tree-node-hover-bg": "#f5f5f5",
+      "tree-node-selected-bg": "#bae7ff",
+      "collapse-header-padding": "12px 16px",
+      "collapse-header-padding-extra": "40px",
+      "collapse-header-bg": "#fafafa",
+      "collapse-content-padding": "16px",
+      "collapse-content-bg": "#fff",
+      "collapse-header-arrow-left": "16px",
+      "skeleton-color": "rgba(190, 190, 190, 0.2)",
+      "skeleton-to-color": "rgba(129, 129, 129, 0.24)",
+      "skeleton-paragraph-margin-top": "28px",
+      "skeleton-paragraph-li-margin-top": "16px",
+      "skeleton-paragraph-li-height": "16px",
+      "skeleton-title-height": "16px",
+      "skeleton-title-paragraph-margin-top": "24px",
+      "transfer-header-height": "40px",
+      "transfer-item-height": "32px",
+      "transfer-disabled-bg": "#f5f5f5",
+      "transfer-list-height": "200px",
+      "transfer-item-hover-bg": "#f5f5f5",
+      "transfer-item-selected-hover-bg": "#dcf4ff",
+      "transfer-item-padding-vertical": "6px",
+      "transfer-list-search-icon-top": "12px",
+      "message-notice-content-padding": "10px 16px",
+      "message-notice-content-bg": "#fff",
+      "wave-animation-width": "6px",
+      "alert-success-border-color": "#b7eb8f",
+      "alert-success-bg-color": "#f6ffed",
+      "alert-success-icon-color": "#52c41a",
+      "alert-info-border-color": "#91d5ff",
+      "alert-info-bg-color": "#e6f7ff",
+      "alert-info-icon-color": "#1890ff",
+      "alert-warning-border-color": "#ffe58f",
+      "alert-warning-bg-color": "#fffbe6",
+      "alert-warning-icon-color": "#faad14",
+      "alert-error-border-color": "#ffccc7",
+      "alert-error-bg-color": "#fff2f0",
+      "alert-error-icon-color": "#ff4d4f",
+      "alert-message-color": "rgba(0, 0, 0, 0.85)",
+      "alert-text-color": "rgba(0, 0, 0, 0.85)",
+      "alert-close-color": "rgba(0, 0, 0, 0.45)",
+      "alert-close-hover-color": "rgba(0, 0, 0, 0.75)",
+      "alert-no-icon-padding-vertical": "8px",
+      "alert-with-description-no-icon-padding-vertical": "15px",
+      "alert-with-description-padding-vertical": "15px",
+      "alert-with-description-padding": "15px 15px 15px 24px",
+      "alert-icon-top": "12.0005px",
+      "alert-with-description-icon-size": "24px",
+      "list-header-background": "transparent",
+      "list-footer-background": "transparent",
+      "list-empty-text-padding": "16px",
+      "list-item-padding": "12px 0",
+      "list-item-padding-sm": "8px 16px",
+      "list-item-padding-lg": "16px 24px",
+      "list-item-meta-margin-bottom": "16px",
+      "list-item-meta-avatar-margin-right": "16px",
+      "list-item-meta-title-margin-bottom": "12px",
+      "list-customize-card-bg": "#fff",
+      "list-item-meta-description-font-size": "14px",
+      "statistic-title-font-size": "14px",
+      "statistic-content-font-size": "24px",
+      "statistic-unit-font-size": "24px",
+      "statistic-font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+      "drawer-header-padding": "16px 24px",
+      "drawer-bg": "#fff",
+      "drawer-footer-padding-vertical": "10px",
+      "drawer-footer-padding-horizontal": "16px",
+      "drawer-header-close-size": "56px",
+      "drawer-title-font-size": "16px",
+      "drawer-title-line-height": "22px",
+      "timeline-width": "2px",
+      "timeline-color": "#f0f0f0",
+      "timeline-dot-border-width": "2px",
+      "timeline-dot-color": "#1890ff",
+      "timeline-dot-bg": "#fff",
+      "timeline-item-padding-bottom": "20px",
+      "typography-title-font-weight": "600",
+      "typography-title-margin-top": "1.2em",
+      "typography-title-margin-bottom": "0.5em",
+      "upload-actions-color": "rgba(0, 0, 0, 0.45)",
+      "process-tail-color": "#f0f0f0",
+      "steps-nav-arrow-color": "rgba(0, 0, 0, 0.25)",
+      "steps-background": "#fff",
+      "steps-icon-size": "32px",
+      "steps-icon-custom-size": "32px",
+      "steps-icon-custom-top": "0px",
+      "steps-icon-custom-font-size": "24px",
+      "steps-icon-top": "-0.5px",
+      "steps-icon-font-size": "16px",
+      "steps-icon-margin": "0 8px 0 0",
+      "steps-title-line-height": "32px",
+      "steps-small-icon-size": "24px",
+      "steps-small-icon-margin": "0 8px 0 0",
+      "steps-dot-size": "8px",
+      "steps-dot-top": "2px",
+      "steps-current-dot-size": "10px",
+      "steps-description-max-width": "140px",
+      "steps-nav-content-max-width": "auto",
+      "steps-vertical-icon-width": "16px",
+      "steps-vertical-tail-width": "16px",
+      "steps-vertical-tail-width-sm": "12px",
+      "notification-bg": "#fff",
+      "notification-padding-vertical": "16px",
+      "notification-padding-horizontal": "24px",
+      "result-title-font-size": "24px",
+      "result-subtitle-font-size": "14px",
+      "result-icon-font-size": "72px",
+      "result-extra-margin": "24px 0 0 0",
+      "image-size-base": "48px",
+      "image-font-size-base": "24px",
+      "image-bg": "#f5f5f5",
+      "image-color": "#fff",
+      "image-mask-font-size": "16px",
+      "image-preview-operation-size": "18px",
+      "image-preview-operation-color": "rgba(255, 255, 255, 0.85)",
+      "image-preview-operation-disabled-color": "rgba(255, 255, 255, 0.25)",
+      "segmented-bg": "rgba(0, 0, 0, 0.04)",
+      "segmented-hover-bg": "rgba(0, 0, 0, 0.06)",
+      "segmented-selected-bg": "#fff",
+      "segmented-label-color": "rgba(0, 0, 0, 0.65)",
+      "segmented-label-hover-color": "#262626",
+      "root-entry-name": "variable"
+    },
+    "proxy": {
+      "/api": {
+        "target": "http://localhost:8080",
+        "changeOrigin": true
+      }
+    },
+    "fastRefresh": true,
+    "model": {},
+    "initialState": {},
+    "title": "XFishBlog",
+    "layout": {
+      "locale": false,
+      "navTheme": "light",
+      "colorPrimary": "#1890ff",
+      "layout": "mix",
+      "contentWidth": "Fluid",
+      "fixedHeader": false,
+      "fixSiderbar": true,
+      "colorWeak": false,
+      "title": "XFishBlog",
+      "pwa": true,
+      "logo": "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+      "iconfontUrl": "",
+      "token": {}
+    },
+    "moment2dayjs": {
+      "preset": "antd",
+      "plugins": [
+        "duration"
+      ]
+    },
+    "antd": {},
+    "request": {},
+    "access": {},
+    "headScripts": [
+      {
+        "src": "/scripts/loading.js",
+        "async": true
+      }
+    ],
+    "presets": [
+      "umi-presets-pro"
+    ],
+    "openAPI": [
+      {
+        "requestLibPath": "import { request } from '@umijs/max'",
+        "schemaPath": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\config\\oneapi.json",
+        "mock": false
+      },
+      {
+        "requestLibPath": "import { request } from '@umijs/max'",
+        "schemaPath": "https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json",
+        "projectName": "swagger"
+      }
+    ],
+    "esbuildMinifyIIFE": true,
+    "targets": {
+      "chrome": 80
+    },
+    "define": {
+      "ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION": "",
+      "REACT_APP_ENV": "dev"
+    }
+  },
+  "routes": {
+    "1": {
+      "path": "/user",
+      "layout": false,
+      "id": "1",
+      "absPath": "/user"
+    },
+    "2": {
+      "name": "login",
+      "path": "/user/login",
+      "file": "@/pages/User/Login/index.tsx",
+      "parentId": "1",
+      "id": "2",
+      "absPath": "/user/login",
+      "__content": "import { Footer } from '@/components';\nimport { SYSTEM_LOGO } from '@/constants';\nimport { login } from '@/services/ant-design-pro/api';\nimport { LockOutlined, UserOutlined } from '@ant-design/icons';\nimport { LoginForm, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';\nimport { Helmet, history, Link, useModel } from '@umijs/max';\nimport { Divider, message, Space, Tabs } from 'antd';\nimport { createStyles } from 'antd-style';\nimport React, { useState } from 'react';\nimport { flushSync } from 'react-dom';\nimport Settings from '../../../../config/defaultSettings';\n\nconst useStyles = createStyles(({ token }) => {\n  return {\n    action: {\n      marginLeft: '8px',\n      color: 'rgba(0, 0, 0, 0.2)',\n      fontSize: '24px',\n      verticalAlign: 'middle',\n      cursor: 'pointer',\n      transition: 'color 0.3s',\n      '&:hover': {\n        color: token.colorPrimaryActive,\n      },\n    },\n    lang: {\n      width: 42,\n      height: 42,\n      lineHeight: '42px',\n      position: 'fixed',\n      right: 16,\n      borderRadius: token.borderRadius,\n      ':hover': {\n        backgroundColor: token.colorBgTextHover,\n      },\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'column',\n      height: '100vh',\n      overflow: 'auto',\n      backgroundImage:\n        \"url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')\",\n      backgroundSize: '100% 100%',\n    },\n  };\n});\n\n\n\nconst Login: React.FC = () => {\n  const [type, setType] = useState<string>('account');\n  const { initialState, setInitialState } = useModel('@@initialState');\n  const { styles } = useStyles();\n  console.log('请输入用户名');\n  const fetchUserInfo = async () => {\n    const userInfo = await initialState?.fetchUserInfo?.();\n    if (userInfo) {\n      flushSync(() => {\n        setInitialState((s) => ({\n          ...s,\n          currentUser: userInfo,\n        }));\n      });\n    }\n  };\n\n  const handleSubmit = async (values: API.LoginParams) => {\n    try {\n      // 直接传递values给login函数，api.ts中会处理参数转换\n      const user = await login(values);\n\n      if (user) {\n        message.success('登录成功！');\n        await fetchUserInfo();\n        const urlParams = new URL(window.location.href).searchParams;\n        history.push(urlParams.get('redirect') || '/');\n        return;\n      }\n      message.error(user?.message || '登录失败，请重试！');\n    } catch (error) {\n      console.log(error);\n      message.error('登录失败，请重试！');\n    }\n  };\n\n  return (\n    <div className={styles.container}>\n      <Helmet>\n        <title>&apos;登录页&apos; - {Settings.title}</title>\n      </Helmet>\n\n      <div\n        style={{\n          flex: '1',\n          padding: '32px 0',\n        }}\n      >\n        <LoginForm\n          contentStyle={{\n            minWidth: 280,\n            maxWidth: '75vw',\n          }}\n          logo={<img alt=\"logo\" src={SYSTEM_LOGO} />}\n          title=\"小鱼博客后台管理中心\"\n          subTitle={\n            <a href=\"https://www.xfishblog.cn/\" target=\"_blank\" rel=\"noreferrer\">\n              欢迎登录小鱼博客后台管理中心\n            </a>\n          }\n          initialValues={{\n            autoLogin: true,\n          }}\n          onFinish={async (values) => {\n            await handleSubmit(values as API.LoginParams);\n          }}\n        >\n          <Tabs\n            activeKey={type}\n            onChange={setType}\n            centered\n            items={[\n              {\n                key: 'account',\n                label: '账户密码登录',\n              },\n            ]}\n          />\n          {type === 'account' && (\n            <>\n              <ProFormText\n                name=\"userAccount\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入账号\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入账号!',\n                  },\n                ]}\n              />\n              <ProFormText.Password\n                name=\"userPassword\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <LockOutlined />,\n                }}\n                placeholder=\"请输入密码\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入密码！',\n                  },\n                  {\n                    type: 'string',\n                    min: 4,\n                    message: '密码长度不能小于4位！',\n                  },\n                ]}\n              />\n            </>\n          )}\n\n          <div\n            style={{\n              marginBottom: 24,\n            }}\n          >\n            <Space split={<Divider type=\"vertical\" />}>\n              <ProFormCheckbox noStyle name=\"autoLogin\">\n                自动登录\n              </ProFormCheckbox>\n\n              <a\n                style={{\n                  float: 'right',\n                }}\n              >\n                忘记密码\n              </a>\n              <Link to=\"/user/register\">注册</Link>\n            </Space>\n          </div>\n        </LoginForm>\n      </div>\n      <Footer />\n    </div>\n  );\n};\n\nexport default Login;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/User/Login/index.tsx"
+    },
+    "3": {
+      "name": "register",
+      "path": "/user/register",
+      "file": "@/pages/User/Register/index.tsx",
+      "parentId": "1",
+      "id": "3",
+      "absPath": "/user/register",
+      "__content": "import { Footer } from '@/components';\nimport { register } from '@/services/ant-design-pro/api';\nimport { LockOutlined, UserOutlined } from '@ant-design/icons';\nimport { SYSTEM_LOGO } from '@/constants';\nimport { LoginForm, ProFormText } from '@ant-design/pro-components';\nimport { history, useModel, Helmet } from '@umijs/max';\nimport { message, Tabs } from 'antd';\nimport Settings from '../../../../config/defaultSettings';\nimport React, { useState } from 'react';\nimport { flushSync } from 'react-dom';\nimport { createStyles } from 'antd-style';\n\nconst useStyles = createStyles(({ token }) => {\n  return {\n    action: {\n      marginLeft: '8px',\n      color: 'rgba(0, 0, 0, 0.2)',\n      fontSize: '24px',\n      verticalAlign: 'middle',\n      cursor: 'pointer',\n      transition: 'color 0.3s',\n      '&:hover': {\n        color: token.colorPrimaryActive,\n      },\n    },\n    lang: {\n      width: 42,\n      height: 42,\n      lineHeight: '42px',\n      position: 'fixed',\n      right: 16,\n      borderRadius: token.borderRadius,\n      ':hover': {\n        backgroundColor: token.colorBgTextHover,\n      },\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'column',\n      height: '100vh',\n      overflow: 'auto',\n      backgroundImage:\n        \"url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')\",\n      backgroundSize: '100% 100%',\n    },\n  };\n});\n\n\n\nconst Register: React.FC = () => {\n  const [type, setType] = useState<string>('account');\n  const { initialState, setInitialState } = useModel('@@initialState');\n  const { styles } = useStyles();\n  const fetchUserInfo = async () => {\n    const userInfo = await initialState?.fetchUserInfo?.();\n    if (userInfo) {\n      flushSync(() => {\n        setInitialState((s) => ({\n          ...s,\n          currentUser: userInfo,\n        }));\n      });\n    }\n  };\n\n  const handleSubmit = async (values: API.RegisterParams) => {\n    const { userPassword, checkPassword } = values;\n    if (userPassword !== checkPassword) {\n      message.error('两次输入的密码不一致！');\n      return;\n    }\n\n    try {\n      // 直接传递values给register函数，api.ts中会处理参数转换\n      const response = await register(values);\n      // 后端 code 判断，成功时跳转\n      if (response) {\n        message.success('注册成功！');\n        // 更新用户信息\n        await fetchUserInfo();\n        const urlParams = new URL(window.location.href).searchParams;\n        history.push(urlParams.get('redirect') || '/');\n        return;\n      }\n      // 如果 response 为 null 或 undefined，说明被拦截器处理了错误，不需要重复提示\n    } catch (error: any) {\n      // 只显示网络错误，注册失败的错误已在拦截器中处理\n      if (!error.info?.errorMessage) {\n        message.error('网络错误，请稍后重试');\n      }\n    }\n  };\n\n  return (\n    <div className={styles.container}>\n      <Helmet>\n        <title>&apos;登录页&apos; - {Settings.title}</title>\n      </Helmet>\n\n      <div\n        style={{\n          flex: '1',\n          padding: '32px 0',\n        }}\n      >\n        <LoginForm\n          contentStyle={{\n            minWidth: 280,\n            maxWidth: '75vw',\n          }}\n          submitter={{\n            searchConfig: {\n              submitText: '注册',\n            },\n          }}\n          logo={<img alt=\"logo\" src={SYSTEM_LOGO} />}\n          title=\"小鱼博客后台管理中心\"\n          subTitle={\n            <a href=\"https://www.xfishblog.cn/\" target=\"_blank\" rel=\"noreferrer\">\n              欢迎注册小鱼博客后台管理中心\n            </a>\n          }\n          initialValues={{\n            autoLogin: true,\n          }}\n          onFinish={async (values) => {\n            await handleSubmit(values as API.RegisterParams);\n          }}\n        >\n          <Tabs\n            activeKey={type}\n            onChange={setType}\n            centered\n            items={[\n              {\n                key: 'account',\n                label: '账户密码注册',\n              },\n            ]}\n          />\n\n          {type === 'account' && (\n            <>\n              <ProFormText\n                name=\"userAccount\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入账号\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入账号!',\n                  },\n                ]}\n              />\n              <ProFormText\n                name=\"nickname\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入昵称\"\n                rules={[\n                  {\n                    required: false,\n                    message: '请输入昵称!',\n                  },\n                ]}\n              />\n              <ProFormText\n                name=\"email\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入邮箱\"\n                rules={[\n                  {\n                    type: 'email',\n                    message: '请输入有效的邮箱地址!',\n                  },\n                ]}\n              />\n              <ProFormText\n                name=\"phone\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入手机号\"\n                rules={[\n                  {\n                    pattern: /^1[3-9]\\d{9}$/,\n                    message: '请输入有效的手机号!',\n                  },\n                ]}\n              />\n              <ProFormText.Password\n                name=\"userPassword\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <LockOutlined />,\n                }}\n                placeholder=\"请输入密码\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入密码！',\n                  },\n                  {\n                    type: 'string',\n                    min: 4,\n                    message: '密码长度不能小于4位！',\n                  },\n                ]}\n              />\n              <ProFormText.Password\n                name=\"checkPassword\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <LockOutlined />,\n                }}\n                placeholder=\"请再次输入密码\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入密码！',\n                  },\n                  {\n                    type: 'string',\n                    min: 4,\n                    message: '密码长度不能小于4位！',\n                  },\n                ]}\n              />\n            </>\n          )}\n        </LoginForm>\n      </div>\n      <Footer />\n    </div>\n  );\n};\n\nexport default Register;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/User/Register/index.tsx"
+    },
+    "4": {
+      "path": "/admin",
+      "name": "管理中心",
+      "icon": "crown",
+      "access": "canAdmin",
+      "file": "@/pages/Admin.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "4",
+      "absPath": "/admin",
+      "__content": "import { PageContainer } from '@ant-design/pro-components';\nimport React from 'react';\nimport { Outlet } from '@umijs/max';\nconst Admin: React.FC = () => {\n  return (\n    <PageContainer>\n      <Outlet></Outlet>\n      {/* <Card>\n        <Alert\n          message={intl.formatMessage({\n            id: 'pages.welcome.alertMessage',\n            defaultMessage: 'Faster and stronger heavy-duty components have been released.',\n          })}\n          type=\"success\"\n          showIcon\n          banner\n          style={{\n            margin: -12,\n            marginBottom: 48,\n          }}\n        />\n        <Typography.Title level={2} style={{ textAlign: 'center' }}>\n          <SmileTwoTone /> Ant Design Pro <HeartTwoTone twoToneColor=\"#eb2f96\" /> You\n        </Typography.Title>\n      </Card>\n      <p style={{ textAlign: 'center', marginTop: 24 }}>\n        Want to add more pages? Please refer to{' '}\n        <a href=\"https://pro.ant.design/docs/block-cn\" target=\"_blank\" rel=\"noopener noreferrer\">\n          use block\n        </a>\n        。\n      </p> */}\n    </PageContainer>\n  );\n};\n\nexport default Admin;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Admin.tsx"
+    },
+    "5": {
+      "path": "/admin/article",
+      "name": "文章管理",
+      "icon": "FileAdd",
+      "file": "@/pages/Article/index.tsx",
+      "parentId": "4",
+      "id": "5",
+      "absPath": "/admin/article",
+      "__content": "import React, { useState, useRef } from 'react';\nimport { PlusOutlined, EditOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable, TableDropdown } from '@ant-design/pro-components';\nimport { Button, Tag, Space, message, Drawer, Modal, Tooltip, Card } from 'antd';\nimport { MDEditor } from '@uiw/react-md-editor';\nimport {\n  queryArticles,\n  createArticle,\n  updateArticle,\n  deleteArticle,\n  updateArticleStatus,\n} from '@/services/blog-api';\nimport ArticleEditor from './Editor';\nimport type { Article } from '@/types/blog';\n\nconst ArticleList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);\n  const [editModalOpen, setEditModalOpen] = useState<boolean>(false);\n  const [previewDrawerOpen, setPreviewDrawerOpen] = useState<boolean>(false);\n  const [currentArticle, setCurrentArticle] = useState<Article | null>(null);\n  const [editorContent, setEditorContent] = useState('');\n\n  const handleCreate = async (values: Article) => {\n    try {\n      await createArticle(values);\n      message.success('创建成功');\n      setCreateModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('创建失败');\n    }\n  };\n\n  const handleUpdate = async (values: Article) => {\n    if (!currentArticle) return;\n    try {\n      await updateArticle(currentArticle.id, values);\n      message.success('更新成功');\n      setEditModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('更新失败');\n    }\n  };\n\n  const handleDelete = async (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这篇文章吗？此操作不可恢复。',\n      onOk: async () => {\n        try {\n          await deleteArticle(id);\n          message.success('删除成功');\n          actionRef.current?.reload();\n        } catch (error) {\n          message.error('删除失败');\n        }\n      },\n    });\n  };\n\n  const handleStatusChange = async (id: number, status: number) => {\n    try {\n      await updateArticleStatus(id, status);\n      message.success('状态更新成功');\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('状态更新失败');\n    }\n  };\n\n  const handlePreview = (record: Article) => {\n    setCurrentArticle(record);\n    setPreviewDrawerOpen(true);\n  };\n\n  const handleEdit = (record: Article) => {\n    setCurrentArticle(record);\n    setEditorContent(record.content || '');\n    setEditModalOpen(true);\n  };\n\n  const columns: ProColumns<Article>[] = [\n    {\n      title: 'ID',\n      dataIndex: 'id',\n      width: 80,\n      fixed: 'left',\n    },\n    {\n      title: '标题',\n      dataIndex: 'title',\n      fixed: 'left',\n      width: 200,\n      render: (_, record) => <a onClick={() => handlePreview(record)}>{record.title}</a>,\n    },\n    {\n      title: '分类',\n      dataIndex: 'category',\n      width: 100,\n    },\n    {\n      title: '标签',\n      dataIndex: 'tags',\n      width: 150,\n      render: (_, record) => (\n        <Space wrap>\n          {record.tags?.map((tag: string) => (\n            <Tag key={tag} color=\"blue\">\n              {tag}\n            </Tag>\n          ))}\n        </Space>\n      ),\n    },\n    {\n      title: '状态',\n      dataIndex: 'status',\n      width: 100,\n      valueEnum: {\n        0: { text: '草稿', status: 'default' },\n        1: { text: '已发布', status: 'success' },\n        2: { text: '已下架', status: 'error' },\n      },\n    },\n    {\n      title: '浏览量',\n      dataIndex: 'viewCount',\n      width: 80,\n      sorter: true,\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'likeCount',\n      width: 80,\n      sorter: true,\n    },\n    {\n      title: '创建时间',\n      dataIndex: 'createTime',\n      width: 180,\n      valueType: 'dateTime',\n      sorter: true,\n    },\n    {\n      title: '更新时间',\n      dataIndex: 'updateTime',\n      width: 180,\n      valueType: 'dateTime',\n      sorter: true,\n    },\n    {\n      title: '操作',\n      key: 'action',\n      width: 200,\n      fixed: 'right',\n      render: (_, record) => (\n        <Space size=\"small\">\n          <Tooltip title=\"预览\">\n            <Button type=\"text\" icon={<EyeOutlined />} onClick={() => handlePreview(record)} />\n          </Tooltip>\n          <Tooltip title=\"编辑\">\n            <Button type=\"text\" icon={<EditOutlined />} onClick={() => handleEdit(record)} />\n          </Tooltip>\n          <Tooltip title=\"删除\">\n            <Button\n              type=\"text\"\n              danger\n              icon={<DeleteOutlined />}\n              onClick={() => handleDelete(record.id)}\n            />\n          </Tooltip>\n          <TableDropdown\n            onSelect={(key) => {\n              if (key === 'publish') {\n                handleStatusChange(record.id, 1);\n              } else if (key === 'draft') {\n                handleStatusChange(record.id, 0);\n              } else if (key === 'unpublish') {\n                handleStatusChange(record.id, 2);\n              }\n            }}\n            menus={[\n              { key: 'publish', label: '发布' },\n              { key: 'draft', label: '设为草稿' },\n              { key: 'unpublish', label: '下架' },\n            ]}\n          />\n        </Space>\n      ),\n    },\n  ];\n\n  return (\n    <>\n      <ProTable<Article>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"文章管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"create\"\n            type=\"primary\"\n            icon={<PlusOutlined />}\n            onClick={() => {\n              setCurrentArticle(null);\n              setEditorContent('');\n              setCreateModalOpen(true);\n            }}\n          >\n            新建文章\n          </Button>,\n        ]}\n        request={async (params) => {\n          const response = await queryArticles(params);\n          return {\n            data: response.data || [],\n            total: response.total || 0,\n            success: response.code === 0,\n          };\n        }}\n        scroll={{ x: 1400 }}\n      />\n\n      <ArticleEditor\n        open={createModalOpen}\n        article={null}\n        initialContent={editorContent}\n        onSubmit={handleCreate}\n        onCancel={() => {\n          setCreateModalOpen(false);\n          setEditorContent('');\n        }}\n      />\n\n      <ArticleEditor\n        open={editModalOpen}\n        article={currentArticle}\n        initialContent={editorContent}\n        onSubmit={handleUpdate}\n        onCancel={() => {\n          setEditModalOpen(false);\n          setCurrentArticle(null);\n          setEditorContent('');\n        }}\n      />\n\n      <Drawer\n        title=\"文章预览\"\n        width={800}\n        open={previewDrawerOpen}\n        onClose={() => {\n          setPreviewDrawerOpen(false);\n          setCurrentArticle(null);\n        }}\n        footer={\n          <Space style={{ float: 'right' }}>\n            <Button onClick={() => setPreviewDrawerOpen(false)}>关闭</Button>\n          </Space>\n        }\n      >\n        {currentArticle && (\n          <div>\n            <Card bordered={false} style={{ marginBottom: 16 }}>\n              <h1 style={{ margin: 0, fontSize: 24, fontWeight: 'bold' }}>{currentArticle.title}</h1>\n              <Space style={{ margin: '16px 0' }}>\n                <Tag color=\"blue\">{currentArticle.category}</Tag>\n                {currentArticle.tags?.map((tag: string) => (\n                  <Tag key={tag}>{tag}</Tag>\n                ))}\n                <Tag color=\"green\">{currentArticle.viewCount || 0} 浏览</Tag>\n                <Tag color=\"red\">{currentArticle.likeCount || 0} 点赞</Tag>\n                <Tag color=\"orange\">{currentArticle.commentCount || 0} 评论</Tag>\n              </Space>\n              <div style={{ color: '#666', fontSize: 14, marginBottom: 16 }}>\n                <span>作者：{currentArticle.authorName || '未知'}</span>\n                <span style={{ margin: '0 8px' }}>|</span>\n                <span>创建时间：{currentArticle.createTime}</span>\n                {currentArticle.updateTime && (\n                  <>\n                    <span style={{ margin: '0 8px' }}>|</span>\n                    <span>更新时间：{currentArticle.updateTime}</span>\n                  </>\n                )}\n              </div>\n            </Card>\n            <Card title=\"文章内容\" bordered={false}>\n              <div data-color-mode=\"light\">\n                <MDEditor.Markdown\n                  source={currentArticle.content || ''}\n                  style={{\n                    padding: '16px',\n                    minHeight: '300px',\n                  }}\n                />\n              </div>\n            </Card>\n          </div>\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default ArticleList;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Article/index.tsx"
+    },
+    "6": {
+      "path": "/admin/comment",
+      "name": "评论管理",
+      "icon": "Message",
+      "file": "@/pages/Comment/index.tsx",
+      "parentId": "4",
+      "id": "6",
+      "absPath": "/admin/comment",
+      "__content": "import React, { useState, useRef } from 'react';\nimport {\n  CheckCircleOutlined,\n  CloseCircleOutlined,\n  DeleteOutlined,\n  ExclamationCircleOutlined,\n  MessageOutlined,\n} from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { Badge, Button, Tag, Space, message, Modal, Drawer, Input, Tooltip, Checkbox } from 'antd';\nimport {\n  queryComments,\n  updateCommentStatus,\n  deleteComment,\n  handleReport,\n  replyComment,\n} from '@/services/blog-api';\nimport AuditModal from './AuditModal';\nimport type { Comment } from '@/types/blog';\n\nconst { TextArea } = Input;\n\nconst CommentList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [auditModalOpen, setAuditModalOpen] = useState<boolean>(false);\n  const [replyDrawerOpen, setReplyDrawerOpen] = useState<boolean>(false);\n  const [currentComment, setCurrentComment] = useState<Comment | null>(null);\n  const [replyContent, setReplyContent] = useState('');\n  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);\n  const [tableData, setTableData] = useState<Comment[]>([]);\n\n  // 刷新表格数据\n  const refreshTable = () => {\n    actionRef.current?.reload();\n  };\n\n  const handleAudit = (record: Comment, status: number) => {\n    Modal.confirm({\n      title: status === 1 ? '通过审核' : '拒绝审核',\n      content: status === 1 ? '确定通过这条评论的审核吗？' : '确定拒绝这条评论吗？',\n      onOk: async () => {\n        try {\n          await updateCommentStatus(record.id, status);\n          message.success('审核操作成功');\n          refreshTable();\n        } catch (error) {\n          message.error('审核操作失败');\n        }\n      },\n    });\n  };\n\n  const handleDelete = (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这条评论吗？',\n      onOk: async () => {\n        try {\n          await deleteComment(id);\n          message.success('删除成功');\n          refreshTable();\n        } catch (error) {\n          message.error('删除失败');\n        }\n      },\n    });\n  };\n\n  // 批量审核功能\n  const handleBatchAudit = (status: number) => {\n    if (selectedRowKeys.length === 0) {\n      message.warning('请先选择要审核的评论');\n      return;\n    }\n    Modal.confirm({\n      title: '批量审核',\n      content: `确定要批量${status === 1 ? '通过' : '拒绝'}选中的 ${\n        selectedRowKeys.length\n      } 条评论吗？`,\n      onOk: async () => {\n        try {\n          // 使用 Promise.all 并行处理，提高效率\n          await Promise.all(\n            selectedRowKeys.map(id => updateCommentStatus(Number(id), status))\n          );\n          message.success('批量审核成功');\n          setSelectedRowKeys([]);\n          refreshTable();\n        } catch (error) {\n          message.error('批量审核失败');\n        }\n      },\n    });\n  };\n\n  // 批量删除功能\n  const handleBatchDelete = () => {\n    if (selectedRowKeys.length === 0) {\n      message.warning('请先选择要删除的评论');\n      return;\n    }\n    Modal.confirm({\n      title: '批量删除评论',\n      content: `确定要删除选中的 ${selectedRowKeys.length} 条评论吗？此操作不可恢复。`,\n      onOk: async () => {\n        try {\n          // 使用 Promise.all 并行处理，提高效率\n          await Promise.all(\n            selectedRowKeys.map(id => deleteComment(Number(id)))\n          );\n          message.success('批量删除成功');\n          setSelectedRowKeys([]);\n          refreshTable();\n        } catch (error) {\n          message.error('批量删除失败');\n        }\n      },\n    });\n  };\n\n  const handleReportHandle = async (\n    record: Comment,\n    handleType: number,\n    reason?: string,\n    notifyUser?: boolean\n  ) => {\n    try {\n      await handleReport(record.id, handleType, reason);\n      message.success('举报处理成功');\n      refreshTable();\n    } catch (error) {\n      message.error('举报处理失败');\n    }\n  };\n\n  const handleReply = (record: Comment) => {\n    setCurrentComment(record);\n    setReplyDrawerOpen(true);\n  };\n\n  // 提交评论回复\n  const submitReply = async () => {\n    if (!currentComment || !replyContent.trim()) {\n      message.warning('请输入回复内容');\n      return;\n    }\n    try {\n      await replyComment(currentComment.id, { content: replyContent });\n      message.success('回复成功');\n      setReplyDrawerOpen(false);\n      setReplyContent('');\n      setCurrentComment(null);\n      refreshTable();\n    } catch (error) {\n      message.error('回复失败');\n    }\n  };\n\n  const getStatusTag = (status: number) => {\n    switch (status) {\n      case 0:\n        return <Badge status=\"warning\" text=\"待审核\" />;\n      case 1:\n        return <Badge status=\"success\" text=\"已通过\" />;\n      case 2:\n        return <Badge status=\"error\" text=\"已拒绝\" />;\n      default:\n        return <Tag>未知</Tag>;\n    }\n  };\n\n  const handleSelectAll = (checked: boolean) => {\n    if (checked) {\n      setSelectedRowKeys(tableData.map((item) => item.id));\n    } else {\n      setSelectedRowKeys([]);\n    }\n  };\n\n  const handleSelectRow = (record: Comment, checked: boolean) => {\n    if (checked) {\n      setSelectedRowKeys([...selectedRowKeys, record.id]);\n    } else {\n      setSelectedRowKeys(selectedRowKeys.filter((key) => key !== record.id));\n    }\n  };\n\n  // 判断是否全选\n  const isAllSelected = tableData.length > 0 && selectedRowKeys.length === tableData.length;\n  const isIndeterminate = selectedRowKeys.length > 0 && selectedRowKeys.length < tableData.length;\n\n  const columns: ProColumns<Comment>[] = [\n    {\n      title: (\n        <Checkbox\n          checked={isAllSelected}\n          indeterminate={isIndeterminate}\n          onChange={(e) => handleSelectAll(e.target.checked)}\n        />\n      ),\n      dataIndex: 'checkbox',\n      width: 50,\n      render: (_, record) => (\n        <Checkbox\n          checked={selectedRowKeys.includes(record.id)}\n          onChange={(e) => handleSelectRow(record, e.target.checked)}\n        />\n      ),\n    },\n    {\n      title: 'ID',\n      dataIndex: 'id',\n      width: 80,\n      search: false,\n    },\n    {\n      title: '评论内容',\n      dataIndex: 'content',\n      width: 300,\n      ellipsis: true,\n      search: {\n        type: 'text',\n      },\n    },\n    {\n      title: '评论文章',\n      dataIndex: 'articleTitle',\n      width: 150,\n      ellipsis: true,\n      search: {\n        type: 'text',\n      },\n    },\n    {\n      title: '评论用户',\n      dataIndex: 'userName',\n      width: 100,\n      render: (_, record) => record.userName || record.authorName,\n      search: {\n        type: 'text',\n      },\n    },\n    {\n      title: '状态',\n      dataIndex: 'status',\n      width: 100,\n      valueEnum: {\n        0: { text: '待审核', status: 'warning' },\n        1: { text: '已通过', status: 'success' },\n        2: { text: '已拒绝', status: 'error' },\n        3: { text: '已删除', status: 'default' },\n      },\n      render: (_, record) => (\n        <Space>\n          {getStatusTag(record.status)}\n          {(record.reportCount ?? 0) > 0 && (\n            <Tooltip title={`${record.reportCount}条举报`}>\n              <Badge count={record.reportCount} size=\"small\" />\n            </Tooltip>\n          )}\n        </Space>\n      ),\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'likeCount',\n      width: 80,\n      sorter: true,\n      search: false,\n    },\n    {\n      title: '回复数',\n      dataIndex: 'replyCount',\n      width: 80,\n      search: false,\n    },\n    {\n      title: '评论时间',\n      dataIndex: 'createTime',\n      width: 180,\n      valueType: 'dateTimeRange',\n      sorter: true,\n    },\n    {\n      title: '操作',\n      key: 'action',\n      width: 220,\n      render: (_, record) => (\n        <Space size=\"small\">\n          {record.status === 0 && (\n            <>\n              <Tooltip title=\"通过\">\n                <Button\n                  type=\"text\"\n                  icon={<CheckCircleOutlined style={{ color: '#52c41a' }} />}\n                  onClick={() => handleAudit(record, 1)}\n                />\n              </Tooltip>\n              <Tooltip title=\"拒绝\">\n                <Button\n                  type=\"text\"\n                  icon={<CloseCircleOutlined style={{ color: '#ff4d4f' }} />}\n                  onClick={() => handleAudit(record, 2)}\n                />\n              </Tooltip>\n            </>\n          )}\n          <Tooltip title=\"回复\">\n            <Button type=\"text\" icon={<MessageOutlined />} onClick={() => handleReply(record)} />\n          </Tooltip>\n          {(record.reportCount ?? 0) > 0 && (\n            <Tooltip title=\"处理举报\">\n              <Button\n                type=\"text\"\n                icon={<ExclamationCircleOutlined style={{ color: '#faad14' }} />}\n                onClick={() => {\n                  setCurrentComment(record);\n                  setAuditModalOpen(true);\n                }}\n              />\n            </Tooltip>\n          )}\n          <Tooltip title=\"删除\">\n            <Button\n              type=\"text\"\n              danger\n              icon={<DeleteOutlined />}\n              onClick={() => handleDelete(record.id)}\n            />\n          </Tooltip>\n        </Space>\n      ),\n      search: false,\n    },\n  ];\n\n  return (\n    <>\n      <ProTable<Comment>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"评论管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"batch-pass\"\n            icon={<CheckCircleOutlined />}\n            onClick={() => handleBatchAudit(1)}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量通过\n          </Button>,\n          <Button\n            key=\"batch-reject\"\n            icon={<CloseCircleOutlined />}\n            onClick={() => handleBatchAudit(2)}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量拒绝\n          </Button>,\n          <Button\n            key=\"batch-delete\"\n            icon={<DeleteOutlined />}\n            danger\n            onClick={handleBatchDelete}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量删除\n          </Button>,\n        ]}\n        rowSelection={{\n          selectedRowKeys,\n          onChange: (keys) => setSelectedRowKeys(keys),\n        }}\n        request={async (params) => {\n          const response = await queryComments(params);\n          const data = response.data || [];\n          setTableData(data);\n          return {\n            data,\n            total: response.total || 0,\n            success: response.code === 0,\n          };\n        }}\n      />\n\n      <AuditModal\n        open={auditModalOpen}\n        comment={currentComment}\n        onSubmit={handleReportHandle}\n        onCancel={() => {\n          setAuditModalOpen(false);\n          setCurrentComment(null);\n        }}\n      />\n\n      <Drawer\n        title=\"回复评论\"\n        width={500}\n        open={replyDrawerOpen}\n        onClose={() => {\n          setReplyDrawerOpen(false);\n          setReplyContent('');\n          setCurrentComment(null);\n        }}\n        footer={\n          <Space style={{ float: 'right' }}>\n            <Button onClick={() => setReplyDrawerOpen(false)}>取消</Button>\n            <Button type=\"primary\" onClick={submitReply}>\n              发送回复\n            </Button>\n          </Space>\n        }\n      >\n        {currentComment && (\n          <div>\n            <div\n              style={{ marginBottom: 16, padding: '8px', background: '#f5f5f5', borderRadius: 4 }}\n            >\n              <div style={{ marginBottom: 8 }}>\n                <strong>原文评论：</strong>\n                {currentComment.userName || currentComment.authorName}\n              </div>\n              <div>{currentComment.content}</div>\n            </div>\n            <TextArea\n              rows={4}\n              placeholder=\"请输入回复内容\"\n              value={replyContent}\n              onChange={(e) => setReplyContent(e.target.value)}\n            />\n          </div>\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default CommentList;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Comment/index.tsx"
+    },
+    "7": {
+      "path": "/admin/user-manage",
+      "name": "用户管理",
+      "icon": "User",
+      "file": "@/pages/Admin/UserManage/index.tsx",
+      "parentId": "4",
+      "id": "7",
+      "absPath": "/admin/user-manage",
+      "__content": "import { searchUser } from '@/services/ant-design-pro/api';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { useRef } from 'react';\n\nconst columns: ProColumns<API.CurrentUser>[] = [\n  {\n    dataIndex: 'id',\n    valueType: 'indexBorder',\n    width: 48,\n  },\n  {\n    title: '用户名',\n    dataIndex: 'username',\n    copyable: true,\n  },\n  {\n    title: '用户角色',\n    dataIndex: 'role',\n    valueEnum: {\n      admin: { text: '管理员', status: 'success' },\n      user: { text: '普通用户', status: 'processing' },\n    },\n  },\n  {\n    title: '用户昵称',\n    dataIndex: 'nickname',\n    copyable: true,\n  },\n  {\n    title: '邮箱',\n    dataIndex: 'email',\n    copyable: true,\n  },\n  {\n    title: '状态',\n    dataIndex: 'status',\n    valueEnum: {\n      active: { text: '正常', status: 'success' },\n      frozen: { text: '冻结', status: 'error' },\n    },\n  },\n  {\n    title: '头像',\n    dataIndex: 'avatar',\n    render: (_, entity) => (\n      <img\n        src={entity.avatar || '/default-avatar.png'}\n        alt=\"avatar\"\n        style={{\n          width: 32,\n          height: 32,\n          borderRadius: '50%',\n        }}\n      />\n    ),\n  },\n  {\n    title: '注册时间',\n    dataIndex: 'registeredAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.registeredAt) return '-';\n      return new Date(entity.registeredAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '最后登录时间',\n    dataIndex: 'lastLoginAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.lastLoginAt) return '-';\n      return new Date(entity.lastLoginAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '创建时间',\n    dataIndex: 'createdAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.createdAt) return '-';\n      return new Date(entity.createdAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '更新时间',\n    dataIndex: 'updatedAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.updatedAt) return '-';\n      return new Date(entity.updatedAt).toLocaleString('zh-CN');\n    },\n  },\n];\n\nexport default () => {\n  const actionRef = useRef<ActionType>();\n\n  return (\n    <ProTable<API.CurrentUser>\n      columns={columns}\n      actionRef={actionRef}\n      cardBordered\n      rowSelection={{\n        // 复选框配置\n        alwaysShowAlert: false,\n        // 全选配置\n        getCheckboxProps: (record) => ({\n          disabled: !record, // 只禁用空记录\n        }),\n      }}\n      request={async (params = {}, sort = {}) => {\n        try {\n          // 提取搜索参数，排除分页和排序参数\n          const { current, pageSize, ...searchParams } = params;\n\n          // 构建查询参数\n          const queryParams: Record<string, any> = {\n            ...searchParams,\n            // 处理排序参数\n            sortField: Object.keys(sort)[0] || '',\n            sortOrder: sort[Object.keys(sort)[0]] || '',\n          };\n\n          // 只有在明确传递时才添加分页参数\n          if (current) queryParams.current = current;\n          if (pageSize) queryParams.pageSize = pageSize;\n\n          const userList: API.SearchUserResponse = await searchUser(queryParams);\n\n          // 错误处理\n          if (userList.code !== 0) {\n            return {\n              data: [],\n              total: 0,\n              success: false,\n            };\n          }\n\n          // 处理数据记录\n          const records = userList.data?.records || [];\n          const processedRecords = records.map(record => ({\n            ...record,\n            // 确保所有时间戳字段都有值\n            registeredAt: record.registeredAt || record.createdAt || '',\n            lastLoginAt: record.lastLoginAt || '',\n            createdAt: record.createdAt || record.createdAt || '',\n            updatedAt: record.updatedAt || record.updatedAt || '',\n          }));\n\n          return {\n            data: processedRecords,\n            total: userList.data?.total || records.length,\n            success: true,\n            current: userList.data?.current || current || 1,\n            pageSize: userList.data?.pageSize || pageSize || 10,\n          };\n        } catch (error) {\n          console.error('获取用户列表失败:', error);\n          return {\n            data: [],\n            total: 0,\n            success: false,\n          };\n        }\n      }}\n      rowKey=\"id\"\n      search={{\n        labelWidth: 'auto',\n      }}\n      options={{\n        setting: {\n          listsHeight: 400,\n        },\n      }}\n      form={{\n        syncToUrl: (values, type) => {\n          if (type === 'get') {\n            return {\n              ...values,\n              created_at: [values.startTime, values.endTime],\n            };\n          }\n          return values;\n        },\n      }}\n      pagination={{\n        pageSize: 10,\n        showSizeChanger: true,\n        showQuickJumper: true,\n        showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,\n      }}\n      dateFormatter=\"string\"\n      headerTitle=\"当前用户列表\"\n    />\n  );\n};\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Admin/UserManage/index.tsx"
+    },
+    "8": {
+      "file": "@/pages/404.tsx",
+      "parentId": "4",
+      "id": "8",
+      "absPath": "/admin",
+      "__content": "import { history } from '@umijs/max';\nimport { Button, Result } from 'antd';\nimport React from 'react';\n\nconst NoFoundPage: React.FC = () => (\n  <Result\n    status=\"404\"\n    title=\"404\"\n    subTitle=\"抱歉，您访问的页面不存在。\"\n    extra={\n      <Button type=\"primary\" onClick={() => history.push('/')}>\n        返回首页\n      </Button>\n    }\n  />\n);\n\nexport default NoFoundPage;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/404.tsx"
+    },
+    "9": {
+      "path": "/",
+      "name": "行为统计",
+      "icon": "BarChart",
+      "file": "@/pages/Statistics/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "9",
+      "absPath": "/",
+      "__content": "import React, { useState, useEffect } from 'react';\nimport { Card, Row, Col, Statistic, Select, Table, Tag } from 'antd';\nimport {\n  ArrowUpOutlined,\n  EyeOutlined,\n  LikeOutlined,\n  MessageOutlined,\n  UserOutlined,\n} from '@ant-design/icons';\nimport { Line, Column, Pie } from '@ant-design/charts';\nimport {\n  getVisitStatistics,\n  getLikeStatistics,\n  getCommentStatistics,\n  getOverviewStatistics,\n  getVisitSources,\n} from '@/services/blog-api';\nimport type { VisitData, LikeItem, CommentStats, OverviewData, VisitSource } from '@/types/blog';\n\nconst StatisticsPage: React.FC = () => {\n  const [loading, setLoading] = useState(true);\n  const [timeRange, setTimeRange] = useState('7days');\n  const [overview, setOverview] = useState<OverviewData | null>(null);\n  const [visitData, setVisitData] = useState<VisitData[]>([]);\n  const [visitSources, setVisitSources] = useState<VisitSource[]>([]);\n  const [likeData, setLikeData] = useState<LikeItem[]>([]);\n  const [commentStats, setCommentStats] = useState<CommentStats | null>(null);\n\n  const fetchData = async () => {\n    setLoading(true);\n    try {\n      const [overviewRes, visitRes, visitSourceRes, likeRes, commentRes] = await Promise.all([\n        getOverviewStatistics(),\n        getVisitStatistics({ range: timeRange }),\n        getVisitSources({ range: timeRange }),\n        getLikeStatistics(),\n        getCommentStatistics(),\n      ]);\n\n      setOverview(overviewRes.data);\n      setVisitData(visitRes.data || []);\n      setVisitSources(visitSourceRes.data || []);\n      setLikeData(likeRes.data || []);\n      setCommentStats(commentRes.data);\n    } catch (error) {\n      console.error('获取统计数据失败:', error);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  useEffect(() => {\n    fetchData();\n  }, [timeRange]);\n\n  // 统一图表主题配置\n  const chartTheme = {\n    colors: ['#1890ff', '#52c41a', '#faad14', '#f5222d', '#722ed1'],\n    axis: {\n      label: { style: { fill: '#666' } },\n      tickLine: { style: { stroke: '#e8e8e8' } },\n      line: { style: { stroke: '#e8e8e8' } },\n    },\n    tooltip: {\n      backgroundColor: 'rgba(0, 0, 0, 0.85)',\n      textStyle: { color: '#fff' },\n      padding: [8, 12],\n      borderRadius: 4,\n    },\n  };\n\n  // 访问量趋势图配置\n  const visitChartConfig = {\n    data: visitData,\n    xField: 'date',\n    yField: 'visits',\n    smooth: true,\n    color: chartTheme.colors[0],\n    point: {\n      size: 3,\n      shape: 'circle',\n      style: {\n        fill: chartTheme.colors[0],\n        stroke: '#fff',\n        lineWidth: 2,\n      },\n    },\n    area: {\n      style: {\n        fill: `l(270) 0:#ffffff 1:${chartTheme.colors[0]}20`\n      }\n    },\n    xAxis: {\n      label: {\n        style: { fill: chartTheme.axis.label.style.fill },\n      },\n      tickLine: {\n        style: chartTheme.axis.tickLine.style,\n      },\n      line: {\n        style: chartTheme.axis.line.style,\n      },\n    },\n    yAxis: {\n      label: {\n        style: { fill: chartTheme.axis.label.style.fill },\n      },\n      tickLine: {\n        style: chartTheme.axis.tickLine.style,\n      },\n      line: {\n        style: chartTheme.axis.line.style,\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.date,\n          value: `${datum.visits} 次访问`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'path-in',\n        duration: 800,\n      },\n    },\n  };\n\n  // 评论状态分布饼图配置\n  const commentPieConfig = {\n    data: commentStats?.distribution || [\n      { type: '已发布', value: 60 },\n      { type: '待审核', value: 20 },\n      { type: '已拒绝', value: 10 },\n      { type: '已删除', value: 10 },\n    ],\n    angleField: 'value',\n    colorField: 'type',\n    color: chartTheme.colors,\n    radius: 0.8,\n    innerRadius: 0.6,\n    label: {\n      type: 'outer',\n      content: '{name}: {percentage}',\n      style: {\n        fill: '#666',\n        fontSize: 12,\n      },\n    },\n    legend: {\n      position: 'bottom',\n      itemName: {\n        style: { fill: '#666' },\n        fontSize: 12,\n      },\n    },\n    statistic: {\n      title: {\n        content: '评论总数',\n        style: { fontSize: 14, color: '#666' },\n      },\n      value: {\n        style: { fontSize: 24, fontWeight: 'bold' },\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.type,\n          value: `${datum.value} 条 (${datum.percentage})`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'scale-in',\n        duration: 600,\n      },\n    },\n  };\n\n  // 访问来源饼图配置\n  const visitSourcePieConfig = {\n    data: visitSources.map(source => ({\n      type: source.source,\n      value: source.count,\n    })) || [\n      { type: '直接访问', value: 50 },\n      { type: '搜索引擎', value: 30 },\n      { type: '外部链接', value: 20 },\n    ],\n    angleField: 'value',\n    colorField: 'type',\n    color: chartTheme.colors,\n    radius: 0.8,\n    innerRadius: 0.6,\n    label: {\n      type: 'outer',\n      content: '{name}: {percentage}',\n      style: {\n        fill: '#666',\n        fontSize: 12,\n      },\n    },\n    legend: {\n      position: 'bottom',\n      itemName: {\n        style: { fill: '#666' },\n        fontSize: 12,\n      },\n    },\n    statistic: {\n      title: {\n        content: '访问来源',\n        style: { fontSize: 14, color: '#666' },\n      },\n      value: {\n        style: { fontSize: 24, fontWeight: 'bold' },\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.type,\n          value: `${datum.value} 次访问 (${datum.percentage})`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'scale-in',\n        duration: 600,\n      },\n    },\n  };\n\n  const likeColumns = [\n    {\n      title: '排名',\n      dataIndex: 'rank',\n      width: 60,\n      render: (_, record, index) => <Tag color={index < 3 ? 'gold' : 'default'}>{index + 1}</Tag>,\n    },\n    {\n      title: '文章标题',\n      dataIndex: 'title',\n      ellipsis: true,\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'count',\n      width: 100,\n      sorter: (a: LikeItem, b: LikeItem) => b.count - a.count,\n    },\n  ];\n\n  return (\n    <div style={{ padding: 24 }}>\n      <Card\n        bordered={false}\n        style={{ marginBottom: 24 }}\n        extra={\n          <Select\n            value={timeRange}\n            onChange={setTimeRange}\n            style={{ width: 150 }}\n            options={[\n              { label: '最近7天', value: '7days' },\n              { label: '最近30天', value: '30days' },\n              { label: '最近90天', value: '90days' },\n            ]}\n          />\n        }\n      >\n        <Row gutter={[16, 16]}>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#e6f7ff' }}>\n              <Statistic\n                title=\"今日访问量\"\n                value={overview?.todayVisits || 0}\n                prefix={<EyeOutlined style={{ color: '#1890ff' }} />}\n                suffix=\"次\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.visitsGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#f6ffed' }}>\n              <Statistic\n                title=\"总点赞数\"\n                value={overview?.totalLikes || 0}\n                prefix={<LikeOutlined style={{ color: '#52c41a' }} />}\n                suffix=\"次\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.likesGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#fff7e6' }}>\n              <Statistic\n                title=\"总评论数\"\n                value={overview?.totalComments || 0}\n                prefix={<MessageOutlined style={{ color: '#fa8c16' }} />}\n                suffix=\"条\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.commentsGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#f9f0ff' }}>\n              <Statistic\n                title=\"活跃用户数\"\n                value={overview?.activeUsers || 0}\n                prefix={<UserOutlined style={{ color: '#722ed1' }} />}\n                suffix=\"人\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.usersGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n        </Row>\n      </Card>\n\n      <Row gutter={[24, 24]}>\n        <Col xs={24} lg={12}>\n          <Card title=\"访问量趋势\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Line {...visitChartConfig} />\n            </div>\n          </Card>\n        </Col>\n        <Col xs={24} lg={12}>\n          <Card title=\"点赞趋势\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Line\n                data={likeData.map(item => ({\n                  date: item.date,\n                  likes: item.likes,\n                })) || [\n                  { date: '2023-01-01', likes: 10 },\n                  { date: '2023-01-02', likes: 20 },\n                  { date: '2023-01-03', likes: 15 },\n                  { date: '2023-01-04', likes: 25 },\n                  { date: '2023-01-05', likes: 30 },\n                  { date: '2023-01-06', likes: 28 },\n                  { date: '2023-01-07', likes: 35 },\n                ]}\n                xField=\"date\"\n                yField=\"likes\"\n                smooth\n                color={chartTheme.colors[3]}\n                point={{\n                  size: 3,\n                  shape: 'circle',\n                  style: {\n                    fill: chartTheme.colors[3],\n                    stroke: '#fff',\n                    lineWidth: 2,\n                  },\n                }}\n                area={{\n                  style: {\n                    fill: `l(270) 0:#ffffff 1:${chartTheme.colors[3]}20`\n                  }\n                }}\n                xAxis={{\n                  label: {\n                    style: { fill: chartTheme.axis.label.style.fill },\n                  },\n                  tickLine: {\n                    style: chartTheme.axis.tickLine.style,\n                  },\n                  line: {\n                    style: chartTheme.axis.line.style,\n                  },\n                }}\n                yAxis={{\n                  label: {\n                    style: { fill: chartTheme.axis.label.style.fill },\n                  },\n                  tickLine: {\n                    style: chartTheme.axis.tickLine.style,\n                  },\n                  line: {\n                    style: chartTheme.axis.line.style,\n                  },\n                }}\n                tooltip={{\n                  formatter: (datum: any) => {\n                    return {\n                      name: datum.date,\n                      value: `${datum.likes} 个点赞`,\n                    };\n                  },\n                  backgroundColor: chartTheme.tooltip.backgroundColor,\n                  textStyle: chartTheme.tooltip.textStyle,\n                  padding: chartTheme.tooltip.padding,\n                  borderRadius: chartTheme.tooltip.borderRadius,\n                }}\n                animation={{\n                  appear: {\n                    animation: 'path-in',\n                    duration: 800,\n                  },\n                }}\n              />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24} lg={24}>\n          <Card title=\"评论状态分布\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Pie {...commentPieConfig} />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24} lg={12}>\n          <Card title=\"热门文章点赞排行\" bordered={false} loading={loading}>\n            <Table<LikeItem>\n              columns={likeColumns}\n              dataSource={likeData}\n              rowKey=\"id\"\n              pagination={false}\n              size=\"small\"\n            />\n          </Card>\n        </Col>\n        <Col xs={24} lg={12}>\n          <Card title=\"访问来源分析\" bordered={false} loading={loading}>\n            <div style={{ height: 300 }}>\n              <Pie {...visitSourcePieConfig} />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24}>\n          <Card title=\"评论活跃度分析\" bordered={false} loading={loading}>\n            <Row gutter={[16, 16]}>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"日均评论数\"\n                  value={commentStats?.dailyAverage || 0}\n                  suffix=\"条\"\n                  valueStyle={{ color: '#fa8c16' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"评论参与率\"\n                  value={commentStats?.participationRate || 0}\n                  suffix=\"%\"\n                  valueStyle={{ color: '#52c41a' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"平均回复数\"\n                  value={commentStats?.avgReplies || 0}\n                  suffix=\"条\"\n                  valueStyle={{ color: '#1890ff' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"评论热度指数\"\n                  value={commentStats?.heatIndex || 0}\n                  suffix=\"分\"\n                  valueStyle={{ color: '#722ed1' }}\n                />\n              </Col>\n            </Row>\n\n            <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n              <Col xs={24} lg={12}>\n                <h4 style={{ marginBottom: 16 }}>小时分布</h4>\n                <div style={{ height: 250 }}>\n                  <Column\n                  data={\n                    commentStats?.hourDistribution || Array.from({ length: 24 }, (_, i) => ({\n                      hour: i,\n                      count: Math.floor(Math.random() * 50) + 10,\n                    }))\n                  }\n                  xField=\"hour\"\n                  yField=\"count\"\n                  color={chartTheme.colors[2]}\n                  barSize={20}\n                  xAxis={{\n                    label: {\n                      style: { fill: chartTheme.axis.label.style.fill },\n                      formatter: (value: number) => `${value}:00`,\n                    },\n                    tickLine: {\n                      style: chartTheme.axis.tickLine.style,\n                    },\n                    line: {\n                      style: chartTheme.axis.line.style,\n                    },\n                    tickCount: 12,\n                  }}\n                  yAxis={{\n                    label: {\n                      style: { fill: chartTheme.axis.label.style.fill },\n                    },\n                    tickLine: {\n                      style: chartTheme.axis.tickLine.style,\n                    },\n                    line: {\n                      style: chartTheme.axis.line.style,\n                    },\n                  }}\n                  tooltip={{\n                    formatter: (datum: any) => {\n                      return {\n                        name: `${datum.hour}:00`,\n                        value: `${datum.count} 条评论`,\n                      };\n                    },\n                    backgroundColor: chartTheme.tooltip.backgroundColor,\n                    textStyle: chartTheme.tooltip.textStyle,\n                    padding: chartTheme.tooltip.padding,\n                    borderRadius: chartTheme.tooltip.borderRadius,\n                  }}\n                  animation={{\n                    appear: {\n                      animation: 'scale-in-y',\n                      duration: 800,\n                    },\n                  }}\n                />\n                </div>\n              </Col>\n              <Col xs={24} lg={12}>\n                <h4 style={{ marginBottom: 16 }}>热门评论文章</h4>\n                <Table\n                  columns={[\n                    {\n                      title: '排名',\n                      dataIndex: 'rank',\n                      width: 60,\n                      render: (_, record, index) => (\n                        <Tag color={index < 3 ? 'gold' : 'default'}>{index + 1}</Tag>\n                      ),\n                    },\n                    {\n                      title: '文章标题',\n                      dataIndex: 'title',\n                      ellipsis: true,\n                    },\n                    {\n                      title: '评论数',\n                      dataIndex: 'commentCount',\n                      width: 100,\n                      sorter: (a: any, b: any) => b.commentCount - a.commentCount,\n                    },\n                  ]}\n                  dataSource={\n                    commentStats?.topArticles || Array.from({ length: 5 }, (_, i) => ({\n                      id: i + 1,\n                      title: `测试文章 ${i + 1}`,\n                      commentCount: Math.floor(Math.random() * 100) + 10,\n                    }))\n                  }\n                  rowKey=\"id\"\n                  pagination={false}\n                  size=\"small\"\n                />\n              </Col>\n            </Row>\n          </Card>\n        </Col>\n      </Row>\n    </div>\n  );\n};\n\nexport default StatisticsPage;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Statistics/index.tsx"
+    },
+    "10": {
+      "path": "*",
+      "layout": false,
+      "file": "@/pages/404.tsx",
+      "id": "10",
+      "absPath": "/*",
+      "__content": "import { history } from '@umijs/max';\nimport { Button, Result } from 'antd';\nimport React from 'react';\n\nconst NoFoundPage: React.FC = () => (\n  <Result\n    status=\"404\"\n    title=\"404\"\n    subTitle=\"抱歉，您访问的页面不存在。\"\n    extra={\n      <Button type=\"primary\" onClick={() => history.push('/')}>\n        返回首页\n      </Button>\n    }\n  />\n);\n\nexport default NoFoundPage;\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/404.tsx"
+    },
+    "ant-design-pro-layout": {
+      "id": "ant-design-pro-layout",
+      "path": "/",
+      "file": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi/plugin-layout/Layout.tsx",
+      "absPath": "/",
+      "isLayout": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi/plugin-layout/Layout.tsx"
+    },
+    "umi/plugin/openapi": {
+      "path": "/umi/plugin/openapi",
+      "absPath": "/umi/plugin/openapi",
+      "id": "umi/plugin/openapi",
+      "file": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi/plugin-openapi/openapi.tsx"
+    }
+  },
+  "apiRoutes": {},
+  "hasSrcDir": true,
+  "npmClient": "cnpm",
+  "umi": {
+    "version": "4.4.11",
+    "name": "Umi Max",
+    "importSource": "@umijs/max",
+    "cliName": "max"
+  },
+  "bundleStatus": {
+    "done": false
+  },
+  "mfsuBundleStatus": {
+    "done": false
+  },
+  "react": {
+    "version": "18.3.1",
+    "path": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react"
+  },
+  "react-dom": {
+    "version": "18.3.1",
+    "path": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\react-dom"
+  },
+  "appJS": {
+    "path": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\src\\app.tsx",
+    "exports": [
+      "getInitialState",
+      "layout",
+      "request"
+    ]
+  },
+  "locale": "zh-CN",
+  "globalCSS": [
+    "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\src\\global.less"
+  ],
+  "globalJS": [
+    "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\src\\global.tsx"
+  ],
+  "overridesCSS": [],
+  "bundler": "webpack",
+  "framework": "react",
+  "typescript": {
+    "tsVersion": "5.8.3",
+    "tslibVersion": "2.8.1"
+  },
+  "faviconFiles": [],
+  "port": 8000,
+  "host": "0.0.0.0",
+  "ip": "10.21.250.189",
+  "antd": {
+    "pkgPath": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\antd",
+    "version": "5.25.2"
+  },
+  "pluginLayout": {
+    "pkgPath": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/pro-components",
+    "version": "2.8.7"
+  }
+}
