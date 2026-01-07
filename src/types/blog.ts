@@ -81,7 +81,7 @@ export interface Comment {
   authorEmail?: string;
   authorWebsite?: string;
   authorAvatar?: string;
-  status: number; // 0-待审核 1-已通过 2-已拒绝 3-已删除
+  status: string | number; // 支持字符串（后端）和数字（前端）
   ipAddress?: string;
   userAgent?: string;
   likeCount?: number;

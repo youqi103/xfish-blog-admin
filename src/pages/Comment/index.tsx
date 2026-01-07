@@ -5,11 +5,10 @@ import {
   DeleteOutlined,
   ExclamationCircleOutlined,
   MessageOutlined,
-  PlusOutlined,
 } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable } from '@ant-design/pro-components';
-import { Badge, Button, Tag, Space, message, Modal, Drawer, Input, Tooltip, Checkbox, Select } from 'antd';
+import { Badge, Button, Space, message, Modal, Drawer, Input, Tooltip } from 'antd';
 import {
   queryComments,
   updateCommentStatus,
@@ -129,12 +128,9 @@ const CommentList: React.FC = () => {
     notifyUser?: boolean
   ) => {
     try {
-      // 转换参数为后端期望的格式
-      // handleType: 1-忽略举报, 2-删除评论, 3-警告用户
-      // 后端auditStatus: 1-忽略, 2-删除, 3-警告
       await handleReport({
         id: record.id,
-        handleType: handleType, // 添加handleType参数
+        handleType: handleType,
         handleResult: reason || ''
       });
       message.success('举报处理成功');
@@ -157,7 +153,7 @@ const CommentList: React.FC = () => {
     try {
       await replyComment({
         commentId: currentComment.id,
-        articleId: currentComment.articleId, // 添加文章ID
+        articleId: currentComment.articleId,
         content: replyContent
       });
       message.success('回复成功');
@@ -170,48 +166,14 @@ const CommentList: React.FC = () => {
     }
   };
 
-  const handleSelectAll = (checked: boolean) => {
-    if (checked) {
-      setSelectedRowKeys(tableData.map((item) => item.id));
-    } else {
-      setSelectedRowKeys([]);
-    }
-  };
-
-  const handleSelectRow = (record: Comment, checked: boolean) => {
-    if (checked) {
-      setSelectedRowKeys([...selectedRowKeys, record.id]);
-    } else {
-      setSelectedRowKeys(selectedRowKeys.filter((key) => key !== record.id));
-    }
-  };
-
-  const isAllSelected = tableData.length > 0 && selectedRowKeys.length === tableData.length;
-  const isIndeterminate = selectedRowKeys.length > 0 && selectedRowKeys.length < tableData.length;
-
   const columns: ProColumns<Comment>[] = [
-    {
-      title: (
-        <Checkbox
-          checked={isAllSelected}
-          indeterminate={isIndeterminate}
-          onChange={(e) => handleSelectAll(e.target.checked)}
-        />
-      ),
-      dataIndex: 'checkbox',
-      width: 50,
-      render: (_, record) => (
-        <Checkbox
-          checked={selectedRowKeys.includes(record.id)}
-          onChange={(e) => handleSelectRow(record, e.target.checked)}
-        />
-      ),
-    },
     {
       title: 'ID',
       dataIndex: 'id',
-      valueType: 'indexBorder',
       width: 80,
+      fieldProps: {
+        placeholder: '请输入ID',
+      },
     },
     {
       title: '评论内容',
@@ -236,24 +198,27 @@ const CommentList: React.FC = () => {
       dataIndex: 'status',
       width: 100,
       valueEnum: {
-        0: { text: '待审核', status: 'warning' },
-        1: { text: '已通过', status: 'success' },
-        2: { text: '已拒绝', status: 'error' },
-        3: { text: '已删除', status: 'default' },
+        pending: { text: '待审核', status: 'warning' },
+        approved: { text: '已通过', status: 'success' },
+        rejected: { text: '已拒绝', status: 'error' },
+        spam: { text: '垃圾评论', status: 'default' },
       },
-      render: (_, record) => (
-        <Space>
-          {record.status === 0 && <Badge status="warning" text="待审核" />}
-          {record.status === 1 && <Badge status="success" text="已通过" />}
-          {record.status === 2 && <Badge status="error" text="已拒绝" />}
-          {record.status === 3 && <Badge status="default" text="已删除" />}
-          {(record.reportCount ?? 0) > 0 && (
-            <Tooltip title={`${record.reportCount}条举报`}>
-              <Badge count={record.reportCount} size="small" />
-            </Tooltip>
-          )}
-        </Space>
-      ),
+      render: (_, record) => {
+        const status = String(record.status);
+        return (
+          <Space>
+            {status === 'pending' && <Badge status="warning" text="待审核" />}
+            {status === 'approved' && <Badge status="success" text="已通过" />}
+            {status === 'rejected' && <Badge status="error" text="已拒绝" />}
+            {status === 'spam' && <Badge status="default" text="垃圾评论" />}
+            {(record.reportCount ?? 0) > 0 && (
+              <Tooltip title={`${record.reportCount}条举报`}>
+                <Badge count={record.reportCount} size="small" />
+              </Tooltip>
+            )}
+          </Space>
+        );
+      },
     },
     {
       title: '点赞数',

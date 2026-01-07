@@ -513,7 +513,7 @@ export async function queryComments(
     current?: number;
     pageSize?: number;
     articleId?: number;
-    status?: number;
+    status?: number | string;
     [key: string]: any;
   },
   options?: { [key: string]: any },
@@ -542,15 +542,22 @@ export async function queryComments(
 export async function updateCommentStatus(
   body: {
     id: number;
-    status: number;
+    status: number | string;
     [key: string]: any;
   },
   options?: { [key: string]: any },
 ) {
   // 转换参数为后端期望的格式
+  // 状态值：1-已通过(approved), 2-已拒绝(rejected)
+  const statusMap: Record<number, string> = {
+    1: 'approved',
+    2: 'rejected',
+  };
+  const statusValue = typeof body.status === 'number' ? statusMap[body.status] : body.status;
+
   const transformedBody = {
     commentId: body.id,
-    auditStatus: body.status,
+    auditStatus: typeof body.status === 'number' ? body.status : 1,
   };
   return request<API.BaseResponse>('/api/comment/status', {
     method: 'POST',
