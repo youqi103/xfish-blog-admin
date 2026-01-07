@@ -23,29 +23,11 @@ export interface Category {
   articleCount?: number;
   createTime?: string;
   updateTime?: string;
-  [key: string]: any;
 }
 
 // 分类列表响应
 export interface CategoryListResponse {
   data: Category[];
-  total: number;
-  success: boolean;
-}
-
-// 标签类型
-export interface Tag {
-  id: number;
-  name: string;
-  articleCount?: number;
-  createTime?: string;
-  updateTime?: string;
-  [key: string]: any;
-}
-
-// 标签列表响应
-export interface TagListResponse {
-  data: Tag[];
   total: number;
   success: boolean;
 }
@@ -56,25 +38,34 @@ export interface Article {
   title: string;
   content: string;
   summary?: string;
+  coverImage?: string;
   categoryId?: number;
   category?: string;
-  tags?: string[];
-  status: number; // 0-草稿 1-发布 2-隐藏
+  tags?: string[]; // 支持字符串（后端）和数组（前端）
+  status: string | number; // 支持字符串（后端）和数字（前端）
+  isMarkdown?: number;
   authorId?: number;
   authorName?: string;
   viewCount?: number;
   likeCount?: number;
   commentCount?: number;
   publishTime?: string;
+  publishedAt?: string;
   createTime?: string;
+  createdAt?: string;
   updateTime?: string;
+  updatedAt?: string;
+  allowComment?: number;
+  isTop?: number;
   [key: string]: any;
 }
 
 // 文章列表响应
 export interface ArticleListResponse {
-  data: Article[];
+  records: Article[];
   total: number;
+  size: number;
+  current: number;
   success: boolean;
 }
 
@@ -141,7 +132,14 @@ export interface VisitSourceResponse {
   total: number;
   success: boolean;
 }
-
+export interface Tag {
+  id: number;
+  name: string;
+  description?: string;
+  articleCount?: number;
+  createTime?: string;
+  updateTime?: string;
+}
 // 点赞统计响应
 export interface LikeStatisticsResponse {
   data: Array<{
@@ -217,12 +215,27 @@ export interface User {
   status: number; // 0-禁用 1-启用
   avatarUrl?: string;
   roleId?: number;
+  role?: number; // 兼容role属性，与roleId同义
   roleName?: string;
   createTime?: string;
   updateTime?: string;
+  // 添加密码字段，用于创建用户
+  password?: string;
   [key: string]: any;
 }
-
+// 基于代码使用场景推断的 UserLog 类型（可补充到 typing.d.ts 中）
+export interface UserLog {
+  id: number;
+  userId: number;
+  action: string;
+  details?: string;
+  content?: string;
+  ipAddress?: string;
+  ip?: string;
+  userAgent?: string;
+  createdAt?: string;
+  createTime?: string;
+}
 // 用户列表响应
 export interface UserListResponse {
   data: User[];
@@ -285,4 +298,3 @@ export enum StatusEnum {
   DISABLED = 0,
   ENABLED = 1,
 }
-

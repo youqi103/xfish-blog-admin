@@ -19,10 +19,9 @@ export function getRightRenderContent (opts: {
     );
   }
 
-  const showAvatar = opts.initialState?.currentUser?.avatar || opts.initialState?.currentUser?.username || opts.runtimeConfig.logout;
-  const disableAvatarImg = opts.initialState?.currentUser?.avatar === false;
+  const showAvatar = opts.initialState?.avatar || opts.initialState?.name || opts.runtimeConfig.logout;
+  const disableAvatarImg = opts.initialState?.avatar === false;
   const nameClassName = disableAvatarImg ? 'umi-plugin-layout-name umi-plugin-layout-hide-avatar-img' : 'umi-plugin-layout-name';
-  console.log(opts.initialState?.currentUser);
   const avatar =
     showAvatar ? (
       <span className="umi-plugin-layout-action">
@@ -32,13 +31,13 @@ export function getRightRenderContent (opts: {
               size="small"
               className="umi-plugin-layout-avatar"
               src={
-                opts.initialState?.currentUser?.avatar ||
+                opts.initialState?.avatar ||
                 "https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png"
               }
               alt="avatar"
             />
           ) : null}
-        <span className={nameClassName}>{opts.initialState?.currentUser?.username}</span>
+        <span className={nameClassName}>{opts.initialState?.name}</span>
       </span>
     ) : null;
 

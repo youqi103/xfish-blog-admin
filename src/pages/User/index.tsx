@@ -1,364 +1,217 @@
-import React, { useState, useRef } from 'react';
-import { PlusOutlined, EditOutlined, UserOutlined, LockOutlined } from '@ant-design/icons';
+import { searchUser } from '@/services/ant-design-pro/api';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
-import { ProTable, TableDropdown } from '@ant-design/pro-components';
-import { Button, Space, message, Modal, Drawer, Timeline, Avatar, Tooltip, Tag, Badge } from 'antd';
-import {
-  queryUsers,
-  createUser,
-  updateUser,
-  deleteUser,
-  updateUserRole,
-  updateUserStatus,
-  getUserLogs,
-} from '@/services/blog-api';
-import UserForm from './UserForm';
-import RoleModal from './RoleModal';
-import type { User, UserLog } from '@/types/blog';
+import { ProTable } from '@ant-design/pro-components';
+import { useRef } from 'react';
+import { message } from 'antd'; // 导入消息提示组件
 
-const UserList: React.FC = () => {
+// 表格列配置（完全保留你的原有配置）
+const columns: ProColumns<API.CurrentUser>[] = [
+  {
+    dataIndex: 'id',
+    valueType: 'indexBorder',
+    width: 48,
+  },
+  {
+    title: '用户名',
+    dataIndex: 'username',
+    copyable: true,
+  },
+  {
+    title: '用户角色',
+    dataIndex: 'role',
+    valueEnum: {
+      admin: { text: '管理员', status: 'success' },
+      user: { text: '普通用户', status: 'processing' },
+    },
+  },
+  {
+    title: '用户昵称',
+    dataIndex: 'nickname',
+    copyable: true,
+  },
+  {
+    title: '邮箱',
+    dataIndex: 'email',
+    copyable: true,
+  },
+  {
+    title: '状态',
+    dataIndex: 'status',
+    valueEnum: {
+      active: { text: '正常', status: 'success' },
+      frozen: { text: '冻结', status: 'error' },
+    },
+  },
+  {
+    title: '头像',
+    dataIndex: 'avatar',
+    render: (_, entity) => (
+      <img
+        src={entity.avatar || '/default-avatar.png'}
+        alt="avatar"
+        style={{
+          width: 32,
+          height: 32,
+          borderRadius: '50%',
+        }}
+      />
+    ),
+  },
+  {
+    title: '最后登录时间',
+    dataIndex: 'lastLoginAt',
+    valueType: 'dateTime',
+    sorter: true,
+    render: (_, entity) => {
+      if (!entity.lastLoginAt) return '-';
+      return new Date(entity.lastLoginAt).toLocaleString('zh-CN');
+    },
+  },
+  {
+    title: '创建时间',
+    dataIndex: 'createdAt',
+    valueType: 'dateTime',
+    sorter: true,
+    render: (_, entity) => {
+      if (!entity.createdAt) return '-';
+      return new Date(entity.createdAt).toLocaleString('zh-CN');
+    },
+  },
+  {
+    title: '更新时间',
+    dataIndex: 'updatedAt',
+    valueType: 'dateTime',
+    sorter: true,
+    render: (_, entity) => {
+      if (!entity.updatedAt) return '-';
+      return new Date(entity.updatedAt).toLocaleString('zh-CN');
+    },
+  },
+];
+
+export default () => {
   const actionRef = useRef<ActionType>();
-  const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);
-  const [editModalOpen, setEditModalOpen] = useState<boolean>(false);
-  const [roleModalOpen, setRoleModalOpen] = useState<boolean>(false);
-  const [logDrawerOpen, setLogDrawerOpen] = useState<boolean>(false);
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const [userLogs, setUserLogs] = useState<UserLog[]>([]);
-
-  const handleCreate = async (values: User) => {
-    try {
-      await createUser(values);
-      message.success('创建成功');
-      setCreateModalOpen(false);
-      actionRef.current?.reload();
-    } catch (error) {
-      message.error('创建失败');
-    }
-  };
-
-  const handleUpdate = async (values: User) => {
-    if (!currentUser) return;
-    try {
-      await updateUser(currentUser.id, values);
-      message.success('更新成功');
-      setEditModalOpen(false);
-      actionRef.current?.reload();
-    } catch (error) {
-      message.error('更新失败');
-    }
-  };
-
-  const handleDelete = (id: number) => {
-    Modal.confirm({
-      title: '确认删除',
-      content: '确定要删除这个用户吗？此操作不可恢复。',
-      onOk: async () => {
-        try {
-          await deleteUser(id);
-          message.success('删除成功');
-          actionRef.current?.reload();
-        } catch (error) {
-          message.error('删除失败');
-        }
-      },
-    });
-  };
-
-  const handleStatusChange = async (id: number, status: number) => {
-    try {
-      await updateUserStatus(id, status);
-      message.success('状态更新成功');
-      actionRef.current?.reload();
-    } catch (error) {
-      message.error('状态更新失败');
-    }
-  };
-
-  const handleRoleChange = async (id: number, roleId: number) => {
-    try {
-      await updateUserRole(id, roleId);
-      message.success('角色分配成功');
-      actionRef.current?.reload();
-    } catch (error) {
-      message.error('角色分配失败');
-    }
-  };
-
-  const handleViewLogs = async (record: User) => {
-    setCurrentUser(record);
-    setLogDrawerOpen(true);
-    setLogLoading(true);
-    try {
-      const response = await getUserLogs(record.id);
-      setUserLogs(response.data || []);
-    } catch (error) {
-      message.error('获取日志失败');
-    } finally {
-      setLogLoading(false);
-    }
-  };
-
-  const handleEdit = (record: User) => {
-    setCurrentUser(record);
-    setEditModalOpen(true);
-  };
-
-  const handleRole = (record: User) => {
-    setCurrentUser(record);
-    setRoleModalOpen(true);
-  };
-
-  const getStatusTag = (status: number) => {
-    switch (status) {
-      case 0:
-        return <Badge status="error" text="已冻结" />;
-      case 1:
-        return <Badge status="success" text="正常" />;
-      case 2:
-        return <Badge status="warning" text="待审核" />;
-      default:
-        return <Tag>未知</Tag>;
-    }
-  };
-
-  const getRoleTag = (role: number) => {
-    switch (role) {
-      case 0:
-        return <Tag color="default">普通用户</Tag>;
-      case 1:
-        return <Tag color="gold">管理员</Tag>;
-      case 2:
-        return <Tag color="purple">超级管理员</Tag>;
-      default:
-        return <Tag>未知</Tag>;
-    }
-  };
-
-  const columns: ProColumns<User>[] = [
-    {
-      title: 'ID',
-      dataIndex: 'id',
-      width: 80,
-      fixed: 'left',
-    },
-    {
-      title: '头像',
-      dataIndex: 'avatarUrl',
-      width: 60,
-      fixed: 'left',
-      render: (_, record) => <Avatar src={record.avatarUrl} icon={<UserOutlined />} size="small" />,
-    },
-    {
-      title: '用户名',
-      dataIndex: 'username',
-      width: 120,
-      fixed: 'left',
-      render: (_, record) => (
-        <Space>
-          <span>{record.username}</span>
-          {record.vipLevel > 0 && (
-            <Tag color="gold" style={{ margin: 0 }}>
-              VIP{record.vipLevel}
-            </Tag>
-          )}
-        </Space>
-      ),
-    },
-    {
-      title: '昵称',
-      dataIndex: 'nickname',
-      width: 120,
-    },
-    {
-      title: '邮箱',
-      dataIndex: 'email',
-      width: 180,
-      ellipsis: true,
-    },
-    {
-      title: '手机号',
-      dataIndex: 'phone',
-      width: 120,
-    },
-    {
-      title: '角色',
-      dataIndex: 'role',
-      width: 100,
-      valueEnum: {
-        0: { text: '普通用户', color: 'default' },
-        1: { text: '管理员', color: 'gold' },
-        2: { text: '超级管理员', color: 'purple' },
-      },
-      render: (_, record) => getRoleTag(record.role),
-    },
-    {
-      title: '状态',
-      dataIndex: 'status',
-      width: 100,
-      render: (_, record) => getStatusTag(record.status),
-    },
-    {
-      title: '积分',
-      dataIndex: 'points',
-      width: 80,
-      sorter: true,
-    },
-    {
-      title: '注册时间',
-      dataIndex: 'createTime',
-      width: 180,
-      valueType: 'dateTime',
-      sorter: true,
-    },
-    {
-      title: '最后登录',
-      dataIndex: 'lastLoginTime',
-      width: 180,
-      valueType: 'dateTime',
-    },
-    {
-      title: '操作',
-      key: 'action',
-      width: 200,
-      fixed: 'right',
-      render: (_, record) => (
-        <Space size="small">
-          <Tooltip title="编辑">
-            <Button type="text" icon={<EditOutlined />} onClick={() => handleEdit(record)} />
-          </Tooltip>
-          <Tooltip title="分配角色">
-            <Button type="text" icon={<LockOutlined />} onClick={() => handleRole(record)} />
-          </Tooltip>
-          <Tooltip title="操作日志">
-            <Button type="text" onClick={() => handleViewLogs(record)}>
-              日志
-            </Button>
-          </Tooltip>
-          <TableDropdown
-            onSelect={(key) => {
-              if (key === 'freeze') {
-                handleStatusChange(record.id, 0);
-              } else if (key === 'activate') {
-                handleStatusChange(record.id, 1);
-              } else if (key === 'delete') {
-                handleDelete(record.id);
-              }
-            }}
-            menus={[
-              { key: 'freeze', label: '冻结账户' },
-              { key: 'activate', label: '激活账户' },
-              { key: 'delete', label: '删除用户' },
-            ]}
-          />
-        </Space>
-      ),
-    },
-  ];
 
   return (
-    <>
-      <ProTable<User>
-        columns={columns}
-        actionRef={actionRef}
-        rowKey="id"
-        cardBordered
-        headerTitle="用户管理"
-        search={{
-          labelWidth: 'auto',
-          span: 6,
-        }}
-        form={{
-          syncToUrl: (values) => values,
-        }}
-        pagination={{
-          pageSize: 10,
-          showSizeChanger: true,
-          showQuickJumper: true,
-        }}
-        toolBarRender={() => [
-          <Button
-            key="create"
-            type="primary"
-            icon={<PlusOutlined />}
-            onClick={() => {
-              setCurrentUser(null);
-              setCreateModalOpen(true);
-            }}
-          >
-            新建用户
-          </Button>,
-        ]}
-        request={async (params) => {
-          const response = await queryUsers(params);
-          return {
-            data: response.data || [],
-            total: response.total || 0,
-            success: response.code === 0,
+    <ProTable<API.CurrentUser>
+      columns={columns}
+      actionRef={actionRef}
+      cardBordered
+      rowSelection={{
+        alwaysShowAlert: false,
+        getCheckboxProps: (record) => ({
+          disabled: !record,
+        }),
+        onChange: () => {}, // 兜底空函数，避免警告
+      }}
+      request={async (params = {}, sort = {}, filter = {}) => {
+        try {
+          const { current, pageSize, ...searchParams } = params;
+
+          const sortKey = Object.keys(sort)[0] || '';
+          const sortOrder = sort[sortKey] || '';
+
+          // 时间字段映射（前端字段名 -> 后端字段名）
+          const fieldMapping: Record<string, string> = {
+            registeredAt: 'registered_at',
+            lastLoginAt: 'last_login_at',
+            createdAt: 'created_at',
+            updatedAt: 'updated_at',
           };
-        }}
-        scroll={{ x: 1500 }}
-      />
 
-      <UserForm
-        open={createModalOpen}
-        user={null}
-        onSubmit={handleCreate}
-        onCancel={() => {
-          setCreateModalOpen(false);
-        }}
-      />
+          // 构建查询参数
+          const queryParams: Record<string, any> = {
+            ...searchParams,
+            ...filter,
+            sortField: fieldMapping[sortKey] || sortKey,
+            sortOrder: sortOrder,
+          };
 
-      <UserForm
-        open={editModalOpen}
-        user={currentUser}
-        onSubmit={handleUpdate}
-        onCancel={() => {
-          setEditModalOpen(false);
-          setCurrentUser(null);
-        }}
-      />
+          // 按需添加分页参数
+          if (current !== undefined && current !== null) {
+            queryParams.current = current;
+          }
+          if (pageSize !== undefined && pageSize !== null) {
+            queryParams.pageSize = pageSize;
+          }
 
-      <RoleModal
-        open={roleModalOpen}
-        user={currentUser}
-        onSubmit={handleRoleChange}
-        onCancel={() => {
-          setRoleModalOpen(false);
-          setCurrentUser(null);
-        }}
-      />
+          // 发起请求
+          const userList: API.UserPageData = await searchUser(queryParams);
+          console.log('userList', userList);
+          if (!userList || !Array.isArray(userList.records)) {
+            const errorMsg = '获取用户列表失败:接口未返回有效数据';
+            message.warning(errorMsg);
+            return {
+              data: [],
+              total: 0,
+              success: false,
+            };
+          }
 
-      <Drawer
-        title={`用户操作日志 - ${currentUser?.username}`}
-        width={600}
-        open={logDrawerOpen}
-        onClose={() => {
-          setLogDrawerOpen(false);
-          setCurrentUser(null);
-          setUserLogs([]);
-        }}
-      >
-        <Timeline
-          mode="left"
-          items={userLogs.map((log) => ({
-            color: log.action?.includes('登录')
-              ? 'green'
-              : log.action?.includes('删除')
-              ? 'red'
-              : 'blue',
-            label: log.createTime,
-            children: (
-              <div>
-                <div style={{ fontWeight: 'bold', marginBottom: 4 }}>{log.action}</div>
-                <div style={{ color: '#666', fontSize: 12 }}>{log.detail}</div>
-                <div style={{ color: '#999', fontSize: 12 }}>IP: {log.ip}</div>
-              </div>
-            ),
-          }))}
-        />
-      </Drawer>
-    </>
+          // 优化：增加类型断言，提升TS提示精准度
+         const processedRecords = userList.records.map(record => ({
+            ...record,
+            registeredAt: record.registeredAt || '',
+            lastLoginAt: record.lastLoginAt || '',
+            createdAt: record.createdAt || '',
+            updatedAt: record.updatedAt || '',
+            }));
+
+          // 修复：使用实际数据长度作为 total，避免后端返回 total: 0 导致的问题
+          const totalCount = userList.total || processedRecords.length;
+
+          // 返回 Pro Table 所需格式
+          return {
+            data: processedRecords,
+            total: totalCount,
+            success: true,
+            current: userList.current || current || 1,
+            pageSize: userList.size || pageSize || 10,
+          };
+        } catch (error) {
+          const errorMsg = '获取用户列表失败:网络异常';
+          message.error(errorMsg);
+          console.error(errorMsg, error);
+          return {
+            data: [],
+            total: 0,
+            success: false,
+          };
+        }
+      }}
+      rowKey="id"
+      search={{
+        labelWidth: 'auto',
+      }}
+      options={{
+        setting: {
+          listsHeight: 400,
+        },
+      }}
+      form={{
+        syncToUrl: (values, type) => {
+          if (type === 'get') {
+            // 修正：先判断 startTime/endTime 存在，再传递 created_at
+            const returnValues = { ...values };
+            if (values.startTime || values.endTime) {
+              returnValues.created_at = [values.startTime, values.endTime];
+            }
+            // 删除冗余的 startTime/endTime，避免重复传参
+            delete returnValues.startTime;
+            delete returnValues.endTime;
+            return returnValues;
+          }
+          return values;
+        },
+      }}
+      pagination={{
+        pageSize: 10,
+        showSizeChanger: true,
+        showQuickJumper: true,
+        showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,
+      }}
+      dateFormatter="string"
+      headerTitle="当前用户列表"
+    />
   );
 };
-
-export default UserList;

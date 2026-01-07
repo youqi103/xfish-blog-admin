@@ -1,26 +1,62 @@
-import React, { useState, useRef } from 'react';
-import { PlusOutlined, EditOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';
+import React, { useState, useRef, useEffect } from 'react';
+import { debounce } from 'lodash';
+import { PlusOutlined, EditOutlined, DeleteOutlined, EyeOutlined, SearchOutlined } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable, TableDropdown } from '@ant-design/pro-components';
-import { Button, Tag, Space, message, Drawer, Modal, Tooltip, Card } from 'antd';
-import { MDEditor } from '@uiw/react-md-editor';
+import { Button, Tag, Space, message, Drawer, Modal, Tooltip, Card, Select, Badge } from 'antd';
+import MDEditor from '@uiw/react-md-editor';
 import {
   queryArticles,
   createArticle,
   updateArticle,
   deleteArticle,
   updateArticleStatus,
-} from '@/services/blog-api';
+  queryAllCategories,
+  queryTagSuggestions,
+} from '@/services/ant-design-pro/api';
 import ArticleEditor from './Editor';
-import type { Article } from '@/types/blog';
+import type { Article, Category } from '@/types/blog';
+
 
 const ArticleList: React.FC = () => {
   const actionRef = useRef<ActionType>();
+  const [categoriesLoading, setCategoriesLoading] = useState(true);
   const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);
   const [editModalOpen, setEditModalOpen] = useState<boolean>(false);
   const [previewDrawerOpen, setPreviewDrawerOpen] = useState<boolean>(false);
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
   const [editorContent, setEditorContent] = useState('');
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [tagSuggestions, setTagSuggestions] = useState<string[]>([]);
+  const [searchingTags, setSearchingTags] = useState(false);
+  const categoriesLoadedRef = useRef(false);
+  const initialDataLoadedRef = useRef(false);
+
+  const fetchCategories = async () => {
+    try {
+      setCategoriesLoading(true);
+      const response = await queryAllCategories();
+      const categoryData = response?.data || [];
+      setCategories(categoryData);
+      categoriesLoadedRef.current = true;
+    } catch (error) {
+      console.error('加载分类列表失败:', error);
+      setCategories([]);
+    } finally {
+      setCategoriesLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    if (categoriesLoadedRef.current && !initialDataLoadedRef.current && actionRef.current) {
+      initialDataLoadedRef.current = true;
+      actionRef.current.reload();
+    }
+  }, [categoriesLoadedRef.current]);
 
   const handleCreate = async (values: Article) => {
     try {
@@ -28,8 +64,10 @@ const ArticleList: React.FC = () => {
       message.success('创建成功');
       setCreateModalOpen(false);
       actionRef.current?.reload();
-    } catch (error) {
-      message.error('创建失败');
+    } catch (error: any) {
+      console.error('创建文章失败:', error);
+      const errorMsg = error?.message || error?.description || '创建失败，请稍后重试';
+      message.error(errorMsg);
     }
   };
 
@@ -40,8 +78,10 @@ const ArticleList: React.FC = () => {
       message.success('更新成功');
       setEditModalOpen(false);
       actionRef.current?.reload();
-    } catch (error) {
-      message.error('更新失败');
+    } catch (error: any) {
+      console.error('更新文章失败:', error);
+      const errorMsg = error?.message || error?.description || '更新失败，请稍后重试';
+      message.error(errorMsg);
     }
   };
 
@@ -54,8 +94,10 @@ const ArticleList: React.FC = () => {
           await deleteArticle(id);
           message.success('删除成功');
           actionRef.current?.reload();
-        } catch (error) {
-          message.error('删除失败');
+        } catch (error: any) {
+          console.error('删除文章失败:', error);
+          const errorMsg = error?.message || error?.description || '删除失败，请稍后重试';
+          message.error(errorMsg);
         }
       },
     });
@@ -66,8 +108,10 @@ const ArticleList: React.FC = () => {
       await updateArticleStatus(id, status);
       message.success('状态更新成功');
       actionRef.current?.reload();
-    } catch (error) {
-      message.error('状态更新失败');
+    } catch (error: any) {
+      console.error('更新文章状态失败:', error);
+      const errorMsg = error?.message || error?.description || '状态更新失败，请稍后重试';
+      message.error(errorMsg);
     }
   };
 
@@ -78,8 +122,28 @@ const ArticleList: React.FC = () => {
 
   const handleEdit = (record: Article) => {
     setCurrentArticle(record);
+    // 确保内容是字符串
     setEditorContent(record.content || '');
     setEditModalOpen(true);
+  };
+
+  // 加载标签搜索建议
+  const fetchTagSuggestions = async (keyword: string) => {
+    if (!keyword || keyword.trim().length === 0) {
+      setTagSuggestions([]);
+      return;
+    }
+
+    setSearchingTags(true);
+    try {
+      const response = await queryTagSuggestions(keyword.trim());
+      setTagSuggestions(response.data || []);
+    } catch (error) {
+      console.error('加载标签建议失败:', error);
+      setTagSuggestions([]);
+    } finally {
+      setSearchingTags(false);
+    }
   };
 
   const columns: ProColumns<Article>[] = [
@@ -87,12 +151,10 @@ const ArticleList: React.FC = () => {
       title: 'ID',
       dataIndex: 'id',
       width: 80,
-      fixed: 'left',
     },
     {
       title: '标题',
       dataIndex: 'title',
-      fixed: 'left',
       width: 200,
       render: (_, record) => <a onClick={() => handlePreview(record)}>{record.title}</a>,
     },
@@ -116,15 +178,21 @@ const ArticleList: React.FC = () => {
       ),
     },
     {
-      title: '状态',
-      dataIndex: 'status',
-      width: 100,
-      valueEnum: {
-        0: { text: '草稿', status: 'default' },
-        1: { text: '已发布', status: 'success' },
-        2: { text: '已下架', status: 'error' },
-      },
-    },
+  title: '状态',
+  dataIndex: 'status',
+  width: 100,
+  render: (_, record) => {
+    const statusMap: Record<string, { color: string; text: string }> = {
+      'draft': { color: 'default', text: '草稿' },
+      'published': { color: 'success', text: '已发布' },
+      'unpublished': { color: 'error', text: '已下架' },
+    };
+    const config = statusMap[record.status] || { color: 'default', text: '未知' };
+    return (
+      <Badge status={config.color as any} text={config.text} />
+    );
+  },
+},
     {
       title: '浏览量',
       dataIndex: 'viewCount',
@@ -155,7 +223,6 @@ const ArticleList: React.FC = () => {
       title: '操作',
       key: 'action',
       width: 200,
-      fixed: 'right',
       render: (_, record) => (
         <Space size="small">
           <Tooltip title="预览">
@@ -172,7 +239,7 @@ const ArticleList: React.FC = () => {
               onClick={() => handleDelete(record.id)}
             />
           </Tooltip>
-          <TableDropdown
+          {/* <TableDropdown
             onSelect={(key) => {
               if (key === 'publish') {
                 handleStatusChange(record.id, 1);
@@ -182,16 +249,21 @@ const ArticleList: React.FC = () => {
                 handleStatusChange(record.id, 2);
               }
             }}
-            menus={[
-              { key: 'publish', label: '发布' },
-              { key: 'draft', label: '设为草稿' },
-              { key: 'unpublish', label: '下架' },
-            ]}
-          />
+            menu={{
+              items: [
+                { key: 'publish', label: '发布' },
+                { key: 'draft', label: '设为草稿' },
+                { key: 'unpublish', label: '下架' },
+              ],
+            }}
+          /> */}
         </Space>
       ),
     },
   ];
+const debouncedFetchTags = useRef(
+  debounce((value: string) => fetchTagSuggestions(value), 300)
+).current;
 
   return (
     <>
@@ -204,6 +276,54 @@ const ArticleList: React.FC = () => {
         search={{
           labelWidth: 'auto',
           span: 6,
+          render: (_: any, __: any, type: string) => {
+            if (type === 'simple') {
+              return (
+                <>
+                  <Select
+                    style={{ width: 200, marginRight: 16 }}
+                    placeholder="选择分类"
+                    allowClear
+                    showSearch
+                    options={categories.map(cat => ({
+                      label: cat.name,
+                      value: cat.id,
+                    }))}
+                    onChange={(value) => {
+                      _.setFieldsValue({ categoryId: value });
+                    }}
+                  />
+                  <Select
+                    mode="tags"
+                    style={{ width: 300, marginRight: 16 }}
+                    placeholder="输入标签"
+                    allowClear
+                    showSearch
+                    filterOption={false}
+                   onSearch={(value) => debouncedFetchTags(value)}
+                    notFoundContent={searchingTags ? <span>搜索中...</span> : null}
+                    options={tagSuggestions.map(tag => ({
+                      label: tag,
+                      value: tag,
+                    }))}
+                    onChange={(value) => {
+                      _.setFieldsValue({ tags: value });
+                    }}
+                  />
+                  <Button
+                    type="primary"
+                    icon={<SearchOutlined />}
+                    onClick={() => {
+                      _.submit();
+                    }}
+                  >
+                    搜索
+                  </Button>
+                </>
+              );
+            }
+            return null;
+          },
         }}
         form={{
           syncToUrl: (values) => values,
@@ -227,12 +347,29 @@ const ArticleList: React.FC = () => {
             新建文章
           </Button>,
         ]}
-        request={async (params) => {
+        request={async (params, sort, filter) => {
+          if (!categoriesLoadedRef.current) {
+            await new Promise(resolve => setTimeout(resolve, 50));
+          }
           const response = await queryArticles(params);
+          const articles = response?.records || [];
+          const transformedArticles = articles.map((article: any) => {
+            const category = categories.find((cat) => cat.id === article.categoryId);
+            const categoryName = category ? category.name : '未分类';
+            return {
+              ...article,
+              status: article.status,
+              tags: JSON.parse(article.tags) || [],
+              createTime: article.createdAt || article.createTime,
+              updateTime: article.updatedAt || article.updateTime,
+              authorName: article.authorName || '未知',
+              category: categoryName,
+            };
+          });
           return {
-            data: response.data || [],
-            total: response.total || 0,
-            success: response.code === 0,
+            data: transformedArticles,
+            total: response?.total || response?.size || 0,
+            success: true,
           };
         }}
         scroll={{ x: 1400 }}

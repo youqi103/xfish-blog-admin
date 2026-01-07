@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import MDEditor from '@uiw/react-md-editor';
 import { Modal, Form, Input, Select, message } from 'antd';
-import { queryCategories, queryTags } from '@/services/blog-api';
-import type { Article, Category, Tag } from '@/types/blog';
+import { queryCategories, queryTags } from '@/services/ant-design-pro/api';
+import { migrateTags} from '@/constants';
+import type { Article, Category,Tag } from '@/types/blog';
 
 interface ArticleEditorProps {
   open: boolean;
@@ -32,9 +33,14 @@ const ArticleEditor: React.FC<ArticleEditorProps> = ({
     setCategoriesLoading(true);
     try {
       const response = await queryCategories();
+      console.log('获取分类列表成功:', response);
+
       setCategories(response.data || []);
-    } catch (error) {
-      message.error('获取分类列表失败');
+    } catch (error: any) {
+      console.error('获取分类列表失败:', error);
+      const errorMsg = error?.message || error?.description || '获取分类列表失败';
+      message.error(errorMsg);
+      setCategories([]);
     } finally {
       setCategoriesLoading(false);
     }
@@ -46,8 +52,11 @@ const ArticleEditor: React.FC<ArticleEditorProps> = ({
     try {
       const response = await queryTags();
       setTags(response.data || []);
-    } catch (error) {
-      message.error('获取标签列表失败');
+    } catch (error: any) {
+      console.error('获取标签列表失败:', error);
+      const errorMsg = error?.message || error?.description || '获取标签列表失败';
+      message.error(errorMsg);
+      setTags([]);
     } finally {
       setTagsLoading(false);
     }
@@ -56,16 +65,16 @@ const ArticleEditor: React.FC<ArticleEditorProps> = ({
   useEffect(() => {
     if (open) {
       setContent(initialContent || '');
-      // 加载分类和标签列表
       fetchCategories();
       fetchTags();
       if (article) {
+        const tagsArray = migrateTags(article.tags);
         form.setFieldsValue({
           title: article.title,
-          category: article.category,
-          tags: article.tags,
+          categoryId: article.categoryId,
+          tags: tagsArray,
           summary: article.summary,
-          status: article.status,
+          status: article.status ? parseInt(String(article.status)) : 0,
         });
       } else {
         form.resetFields();
@@ -79,17 +88,26 @@ const ArticleEditor: React.FC<ArticleEditorProps> = ({
       setLoading(true);
 
       const articleData: Article = {
-        ...values,
+        id: article?.id || 0,
+        title: values.title,
         content: content,
-        contentHtml: content,
-        status: values.status || 0,
+        summary: values.summary || '',
+        categoryId: values.categoryId,
+        tags: values.tags || [],
+        status: values.status !== undefined ? String(values.status) : '0',
       };
 
       await onSubmit(articleData);
       setLoading(false);
-    } catch (error) {
+    } catch (error: any) {
       setLoading(false);
-      message.error('请完善表单信息');
+      console.error('提交文章失败:', error);
+      if (error?.errorFields) {
+        message.error('请完善表单信息');
+      } else {
+        const errorMsg = error?.message || error?.description || '提交失败，请稍后重试';
+        message.error(errorMsg);
+      }
     }
   };
 
@@ -118,13 +136,13 @@ const ArticleEditor: React.FC<ArticleEditorProps> = ({
           <Input placeholder="请输入文章标题" />
         </Form.Item>
 
-        <Form.Item name="category" label="分类" rules={[{ required: true, message: '请选择分类' }]}>
+        <Form.Item name="categoryId" label="分类" rules={[{ required: true, message: '请选择分类' }]}>
           <Select
             placeholder="请选择分类"
             loading={categoriesLoading}
             options={categories.map(category => ({
               label: category.name,
-              value: category.name
+              value: category.id
             }))}
             allowClear
           />

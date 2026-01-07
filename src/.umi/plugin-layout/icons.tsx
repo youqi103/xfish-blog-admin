@@ -4,6 +4,6 @@
 import CrownOutlined from 'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/icons/es/icons/CrownOutlined';
 import FileAddOutlined from 'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/icons/es/icons/FileAddOutlined';
 import MessageOutlined from 'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/icons/es/icons/MessageOutlined';
-import UserOutlined from 'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/icons/es/icons/UserOutlined';
 import BarChartOutlined from 'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/icons/es/icons/BarChartOutlined';
-export default { CrownOutlined, FileAddOutlined, MessageOutlined, UserOutlined, BarChartOutlined };
+import UserOutlined from 'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@ant-design/icons/es/icons/UserOutlined';
+export default { CrownOutlined, FileAddOutlined, MessageOutlined, BarChartOutlined, UserOutlined };

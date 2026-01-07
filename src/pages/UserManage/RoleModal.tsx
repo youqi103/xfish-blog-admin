@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Form, Select, message } from 'antd';
-import type { User } from '@/types/blog';
-import { queryRoles } from '@/services/blog-api';
+import { queryRoles } from '@/services/ant-design-pro/api';
 
 interface RoleModalProps {
   open: boolean;
-  user: User | null;
-  onSubmit: (id: number, roleId: number) => Promise<void>;
+  user: API.CurrentUser | null;
+  onSubmit: (id: number, role: string) => Promise<void>;
   onCancel: () => void;
 }
 
 const RoleModal: React.FC<RoleModalProps> = ({ open, user, onSubmit, onCancel }) => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-  const [roleOptions, setRoleOptions] = useState<{ label: string; value: number }[]>([]);
+  const [roleOptions, setRoleOptions] = useState<{ label: string; value: string }[]>([]);
 
   const fetchRoles = async () => {
     try {
@@ -27,9 +26,8 @@ const RoleModal: React.FC<RoleModalProps> = ({ open, user, onSubmit, onCancel })
       console.error('获取角色列表失败');
       // 如果获取角色列表失败，使用默认选项
       setRoleOptions([
-        { label: '普通用户', value: 0 },
-        { label: '管理员', value: 1 },
-        { label: '超级管理员', value: 2 },
+        { label: '普通用户', value: 'user' },
+        { label: '管理员', value: 'admin' },
       ]);
     }
   };
@@ -39,7 +37,7 @@ const RoleModal: React.FC<RoleModalProps> = ({ open, user, onSubmit, onCancel })
       fetchRoles();
       if (user) {
         form.setFieldsValue({
-          role: user.roleId,
+          role: user.role || 'user',
         });
       }
     }
@@ -89,13 +87,9 @@ const RoleModal: React.FC<RoleModalProps> = ({ open, user, onSubmit, onCancel })
               <strong>普通用户权限：</strong>
               <div style={{ color: '#666', fontSize: 12 }}>浏览文章、发表评论、点赞</div>
             </div>
-            <div style={{ marginBottom: 8 }}>
-              <strong>管理员权限：</strong>
-              <div style={{ color: '#666', fontSize: 12 }}>文章管理、评论审核、统计数据</div>
-            </div>
             <div>
-              <strong>超级管理员权限：</strong>
-              <div style={{ color: '#666', fontSize: 12 }}>用户管理、系统配置、所有权限</div>
+              <strong>管理员权限：</strong>
+              <div style={{ color: '#666', fontSize: 12 }}>文章管理、评论审核、统计数据、用户管理、系统配置、所有权限</div>
             </div>
           </div>
         </Form.Item>

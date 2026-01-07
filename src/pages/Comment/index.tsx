@@ -1,25 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   CheckCircleOutlined,
   CloseCircleOutlined,
   DeleteOutlined,
   ExclamationCircleOutlined,
   MessageOutlined,
+  PlusOutlined,
 } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable } from '@ant-design/pro-components';
-import { Badge, Button, Tag, Space, message, Modal, Drawer, Input, Tooltip, Checkbox } from 'antd';
+import { Badge, Button, Tag, Space, message, Modal, Drawer, Input, Tooltip, Checkbox, Select } from 'antd';
 import {
   queryComments,
   updateCommentStatus,
   deleteComment,
   handleReport,
   replyComment,
-} from '@/services/blog-api';
+} from '@/services/ant-design-pro/api';
 import AuditModal from './AuditModal';
 import type { Comment } from '@/types/blog';
 
-const { TextArea } = Input;
+const { TextArea = Input.TextArea } = Input;
 
 const CommentList: React.FC = () => {
   const actionRef = useRef<ActionType>();
@@ -30,7 +31,13 @@ const CommentList: React.FC = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const [tableData, setTableData] = useState<Comment[]>([]);
 
-  // 刷新表格数据
+  useEffect(() => {
+    return () => {
+      setCurrentComment(null);
+      setReplyContent('');
+    };
+  }, []);
+
   const refreshTable = () => {
     actionRef.current?.reload();
   };
@@ -41,7 +48,7 @@ const CommentList: React.FC = () => {
       content: status === 1 ? '确定通过这条评论的审核吗？' : '确定拒绝这条评论吗？',
       onOk: async () => {
         try {
-          await updateCommentStatus(record.id, status);
+          await updateCommentStatus({ id: record.id, status });
           message.success('审核操作成功');
           refreshTable();
         } catch (error) {
@@ -67,7 +74,6 @@ const CommentList: React.FC = () => {
     });
   };
 
-  // 批量审核功能
   const handleBatchAudit = (status: number) => {
     if (selectedRowKeys.length === 0) {
       message.warning('请先选择要审核的评论');
@@ -80,9 +86,8 @@ const CommentList: React.FC = () => {
       } 条评论吗？`,
       onOk: async () => {
         try {
-          // 使用 Promise.all 并行处理，提高效率
           await Promise.all(
-            selectedRowKeys.map(id => updateCommentStatus(Number(id), status))
+            selectedRowKeys.map(id => updateCommentStatus({ id: Number(id), status }))
           );
           message.success('批量审核成功');
           setSelectedRowKeys([]);
@@ -94,7 +99,6 @@ const CommentList: React.FC = () => {
     });
   };
 
-  // 批量删除功能
   const handleBatchDelete = () => {
     if (selectedRowKeys.length === 0) {
       message.warning('请先选择要删除的评论');
@@ -105,7 +109,6 @@ const CommentList: React.FC = () => {
       content: `确定要删除选中的 ${selectedRowKeys.length} 条评论吗？此操作不可恢复。`,
       onOk: async () => {
         try {
-          // 使用 Promise.all 并行处理，提高效率
           await Promise.all(
             selectedRowKeys.map(id => deleteComment(Number(id)))
           );
@@ -126,7 +129,14 @@ const CommentList: React.FC = () => {
     notifyUser?: boolean
   ) => {
     try {
-      await handleReport(record.id, handleType, reason);
+      // 转换参数为后端期望的格式
+      // handleType: 1-忽略举报, 2-删除评论, 3-警告用户
+      // 后端auditStatus: 1-忽略, 2-删除, 3-警告
+      await handleReport({
+        id: record.id,
+        handleType: handleType, // 添加handleType参数
+        handleResult: reason || ''
+      });
       message.success('举报处理成功');
       refreshTable();
     } catch (error) {
@@ -139,14 +149,17 @@ const CommentList: React.FC = () => {
     setReplyDrawerOpen(true);
   };
 
-  // 提交评论回复
   const submitReply = async () => {
     if (!currentComment || !replyContent.trim()) {
       message.warning('请输入回复内容');
       return;
     }
     try {
-      await replyComment(currentComment.id, { content: replyContent });
+      await replyComment({
+        commentId: currentComment.id,
+        articleId: currentComment.articleId, // 添加文章ID
+        content: replyContent
+      });
       message.success('回复成功');
       setReplyDrawerOpen(false);
       setReplyContent('');
@@ -154,19 +167,6 @@ const CommentList: React.FC = () => {
       refreshTable();
     } catch (error) {
       message.error('回复失败');
-    }
-  };
-
-  const getStatusTag = (status: number) => {
-    switch (status) {
-      case 0:
-        return <Badge status="warning" text="待审核" />;
-      case 1:
-        return <Badge status="success" text="已通过" />;
-      case 2:
-        return <Badge status="error" text="已拒绝" />;
-      default:
-        return <Tag>未知</Tag>;
     }
   };
 
@@ -186,7 +186,6 @@ const CommentList: React.FC = () => {
     }
   };
 
-  // 判断是否全选
   const isAllSelected = tableData.length > 0 && selectedRowKeys.length === tableData.length;
   const isIndeterminate = selectedRowKeys.length > 0 && selectedRowKeys.length < tableData.length;
 
@@ -211,35 +210,26 @@ const CommentList: React.FC = () => {
     {
       title: 'ID',
       dataIndex: 'id',
+      valueType: 'indexBorder',
       width: 80,
-      search: false,
     },
     {
       title: '评论内容',
       dataIndex: 'content',
-      width: 300,
+      width: 250,
       ellipsis: true,
-      search: {
-        type: 'text',
-      },
     },
     {
       title: '评论文章',
       dataIndex: 'articleTitle',
       width: 150,
       ellipsis: true,
-      search: {
-        type: 'text',
-      },
     },
     {
       title: '评论用户',
       dataIndex: 'userName',
       width: 100,
-      render: (_, record) => record.userName || record.authorName,
-      search: {
-        type: 'text',
-      },
+      render: (_, record) => record.userName || record.authorName || '-',
     },
     {
       title: '状态',
@@ -253,7 +243,10 @@ const CommentList: React.FC = () => {
       },
       render: (_, record) => (
         <Space>
-          {getStatusTag(record.status)}
+          {record.status === 0 && <Badge status="warning" text="待审核" />}
+          {record.status === 1 && <Badge status="success" text="已通过" />}
+          {record.status === 2 && <Badge status="error" text="已拒绝" />}
+          {record.status === 3 && <Badge status="default" text="已删除" />}
           {(record.reportCount ?? 0) > 0 && (
             <Tooltip title={`${record.reportCount}条举报`}>
               <Badge count={record.reportCount} size="small" />
@@ -281,6 +274,10 @@ const CommentList: React.FC = () => {
       width: 180,
       valueType: 'dateTimeRange',
       sorter: true,
+      render: (_, record) => {
+        if (!record.createTime) return '-';
+        return new Date(record.createTime).toLocaleString('zh-CN');
+      },
     },
     {
       title: '操作',
@@ -354,10 +351,12 @@ const CommentList: React.FC = () => {
           pageSize: 10,
           showSizeChanger: true,
           showQuickJumper: true,
+          showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,
         }}
         toolBarRender={() => [
           <Button
             key="batch-pass"
+            type="primary"
             icon={<CheckCircleOutlined />}
             onClick={() => handleBatchAudit(1)}
             disabled={selectedRowKeys.length === 0}
@@ -384,7 +383,7 @@ const CommentList: React.FC = () => {
         ]}
         rowSelection={{
           selectedRowKeys,
-          onChange: (keys) => setSelectedRowKeys(keys),
+          onChange: (keys: React.Key[]) => setSelectedRowKeys(keys),
         }}
         request={async (params) => {
           const response = await queryComments(params);
@@ -393,9 +392,10 @@ const CommentList: React.FC = () => {
           return {
             data,
             total: response.total || 0,
-            success: response.code === 0,
+            success: true,
           };
         }}
+        scroll={{ x: 1400 }}
       />
 
       <AuditModal
@@ -429,19 +429,20 @@ const CommentList: React.FC = () => {
         {currentComment && (
           <div>
             <div
-              style={{ marginBottom: 16, padding: '8px', background: '#f5f5f5', borderRadius: 4 }}
+              style={{ marginBottom: 16, padding: '12px', background: '#f5f5f5', borderRadius: 4 }}
             >
-              <div style={{ marginBottom: 8 }}>
-                <strong>原文评论：</strong>
-                {currentComment.userName || currentComment.authorName}
+              <div style={{ marginBottom: 8, color: '#666', fontSize: 12 }}>
+                原文评论：{currentComment.userName || currentComment.authorName || '匿名用户'}
               </div>
-              <div>{currentComment.content}</div>
+              <div style={{ fontSize: 14, lineHeight: 1.6 }}>{currentComment.content}</div>
             </div>
             <TextArea
               rows={4}
               placeholder="请输入回复内容"
               value={replyContent}
               onChange={(e) => setReplyContent(e.target.value)}
+              maxLength={1000}
+              showCount
             />
           </div>
         )}

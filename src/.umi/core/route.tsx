@@ -4,7 +4,7 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/user","layout":false,"id":"1"},"2":{"name":"login","path":"/user/login","parentId":"1","id":"2"},"3":{"name":"register","path":"/user/register","parentId":"1","id":"3"},"4":{"path":"/admin","name":"管理中心","icon":"crown","access":"canAdmin","parentId":"ant-design-pro-layout","id":"4"},"5":{"path":"/admin/article","name":"文章管理","icon":"FileAdd","parentId":"4","id":"5"},"6":{"path":"/admin/comment","name":"评论管理","icon":"Message","parentId":"4","id":"6"},"7":{"path":"/admin/user-manage","name":"用户管理","icon":"User","parentId":"4","id":"7"},"8":{"parentId":"4","id":"8"},"9":{"path":"/","name":"行为统计","icon":"BarChart","parentId":"ant-design-pro-layout","id":"9"},"10":{"path":"*","layout":false,"id":"10"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true},"umi/plugin/openapi":{"path":"/umi/plugin/openapi","id":"umi/plugin/openapi"}} as const;
+  const routes = {"1":{"path":"/user","layout":false,"id":"1"},"2":{"name":"login","path":"/user/login","parentId":"1","id":"2"},"3":{"name":"register","path":"/user/register","parentId":"1","id":"3"},"4":{"path":"/admin","name":"管理中心","icon":"crown","access":"canAdmin","parentId":"ant-design-pro-layout","id":"4"},"5":{"path":"/admin/article","name":"文章管理","icon":"FileAdd","parentId":"4","id":"5"},"6":{"path":"/admin/comment","name":"评论管理","icon":"Message","parentId":"4","id":"6"},"7":{"path":"/admin/user-list","name":"用户管理","parentId":"4","id":"7"},"8":{"parentId":"4","id":"8"},"9":{"path":"/","name":"行为统计","icon":"BarChart","parentId":"ant-design-pro-layout","id":"9"},"10":{"path":"/user-manage","name":"用户列表","icon":"User","parentId":"ant-design-pro-layout","id":"10"},"11":{"path":"*","layout":false,"id":"11"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true},"umi/plugin/openapi":{"path":"/umi/plugin/openapi","id":"umi/plugin/openapi"}} as const;
   return {
     routes,
     routeComponents: {
@@ -14,10 +14,11 @@ export async function getRoutes() {
 '4': React.lazy(() => import(/* webpackChunkName: "p__Admin" */'@/pages/Admin.tsx')),
 '5': React.lazy(() => import(/* webpackChunkName: "p__Article__index" */'@/pages/Article/index.tsx')),
 '6': React.lazy(() => import(/* webpackChunkName: "p__Comment__index" */'@/pages/Comment/index.tsx')),
-'7': React.lazy(() => import(/* webpackChunkName: "p__Admin__UserManage__index" */'@/pages/Admin/UserManage/index.tsx')),
+'7': React.lazy(() => import(/* webpackChunkName: "p__UserManage__index" */'@/pages/UserManage/index.tsx')),
 '8': React.lazy(() => import(/* webpackChunkName: "p__404" */'@/pages/404.tsx')),
 '9': React.lazy(() => import(/* webpackChunkName: "p__Statistics__index" */'@/pages/Statistics/index.tsx')),
-'10': React.lazy(() => import(/* webpackChunkName: "p__404" */'@/pages/404.tsx')),
+'10': React.lazy(() => import(/* webpackChunkName: "p__User__index" */'@/pages/User/index.tsx')),
+'11': React.lazy(() => import(/* webpackChunkName: "p__404" */'@/pages/404.tsx')),
 'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "umi__plugin-layout__Layout" */'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi/plugin-layout/Layout.tsx')),
 'umi/plugin/openapi': React.lazy(() => import(/* webpackChunkName: "umi__plugin-openapi__openapi" */'E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi/plugin-openapi/openapi.tsx')),
 },

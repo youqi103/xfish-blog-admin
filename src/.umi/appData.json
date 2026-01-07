@@ -151,7 +151,7 @@
             1
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "preset",
@@ -168,7 +168,7 @@
             0
           ]
         },
-        "register": 3
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -202,7 +202,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -216,10 +216,10 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            18
+            16
           ]
         },
-        "register": 19
+        "register": 15
       },
       "enableBy": "register",
       "type": "plugin",
@@ -232,7 +232,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -252,7 +252,7 @@
             0
           ]
         },
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -269,7 +269,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -282,7 +282,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -299,7 +299,7 @@
             0
           ]
         },
-        "register": 8
+        "register": 6
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1151,7 +1151,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1194,7 +1194,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 62
+        "register": 58
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1207,7 +1207,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 112
+        "register": 64
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1220,7 +1220,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 17
+        "register": 13
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1237,7 +1237,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1263,7 +1263,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1276,7 +1276,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 29
+        "register": 21
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/mock/mock.js",
@@ -1288,7 +1288,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1343,7 +1343,7 @@
             1
           ]
         },
-        "register": 2
+        "register": 1
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/polyfill/polyfill.js",
@@ -1355,7 +1355,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1368,7 +1368,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1407,7 +1407,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 3
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1445,7 +1445,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1458,7 +1458,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1471,7 +1471,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1497,7 +1497,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1510,7 +1510,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 5
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/apiRoute/apiRoute.js",
@@ -1522,7 +1522,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 17
+        "register": 15
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1547,7 +1547,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1573,7 +1573,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -1602,7 +1602,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1615,7 +1615,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/ui/ui.js",
@@ -1652,7 +1652,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/features/routePreloadOnLoad/routePreloadOnLoad.js",
@@ -1690,7 +1690,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 5
+        "register": 4
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1703,7 +1703,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 29
+        "register": 27
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1717,13 +1717,13 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            21
+            22
           ],
           "onStart": [
-            0
+            1
           ]
         },
-        "register": 32
+        "register": 28
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/preset-umi/dist/commands/dev/dev.js",
@@ -1787,7 +1787,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1813,7 +1813,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1852,7 +1852,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1865,7 +1865,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1878,7 +1878,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1904,7 +1904,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1917,7 +1917,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1930,7 +1930,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 2
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1943,7 +1943,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1956,7 +1956,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -1982,7 +1982,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2036,13 +2036,13 @@
       "time": {
         "hooks": {
           "modifyConfig": [
-            2
+            1
           ],
           "modifyAppData": [
             0
           ]
         },
-        "register": 4
+        "register": 3
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/antd.js",
@@ -2054,7 +2054,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 6
+        "register": 5
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2067,7 +2067,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2105,7 +2105,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 2
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2118,7 +2118,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 3
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2148,7 +2148,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2174,7 +2174,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 1
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/plugins/dist/qiankun/master.js",
@@ -2224,7 +2224,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 2
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2237,7 +2237,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 0
+        "register": 1
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2250,7 +2250,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 1
+        "register": 0
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2281,7 +2281,7 @@
       "time": {
         "hooks": {
           "modifyAppData": [
-            0
+            1
           ]
         },
         "register": 0
@@ -2301,7 +2301,7 @@
             0
           ]
         },
-        "register": 1
+        "register": 0
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2318,7 +2318,7 @@
             0
           ]
         },
-        "register": 0
+        "register": 1
       },
       "enableBy": "register",
       "type": "plugin",
@@ -2351,7 +2351,7 @@
             0
           ]
         },
-        "register": 181
+        "register": 111
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2364,7 +2364,7 @@
       "config": {},
       "time": {
         "hooks": {},
-        "register": 132
+        "register": 91
       },
       "enableBy": "config",
       "type": "plugin",
@@ -2405,10 +2405,10 @@
             0
           ],
           "modifyAppData": [
-            1
+            0
           ]
         },
-        "register": 41
+        "register": 44
       },
       "type": "plugin",
       "path": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/node_modules/@umijs/request-record/dist/cjs/index.js",
@@ -2474,10 +2474,9 @@
             "component": "./Comment"
           },
           {
-            "path": "/admin/user-manage",
+            "path": "/admin/user-list",
             "name": "用户管理",
-            "icon": "User",
-            "component": "./Admin/UserManage"
+            "component": "./UserManage"
           },
           {
             "component": "./404"
@@ -2489,6 +2488,12 @@
         "name": "行为统计",
         "icon": "BarChart",
         "component": "./Statistics"
+      },
+      {
+        "path": "/user-manage",
+        "name": "用户列表",
+        "icon": "User",
+        "component": "./User"
       },
       {
         "path": "*",
@@ -2638,10 +2643,9 @@
             "component": "./Comment"
           },
           {
-            "path": "/admin/user-manage",
+            "path": "/admin/user-list",
             "name": "用户管理",
-            "icon": "User",
-            "component": "./Admin/UserManage"
+            "component": "./UserManage"
           },
           {
             "component": "./404"
@@ -2653,6 +2657,12 @@
         "name": "行为统计",
         "icon": "BarChart",
         "component": "./Statistics"
+      },
+      {
+        "path": "/user-manage",
+        "name": "用户列表",
+        "icon": "User",
+        "component": "./User"
       },
       {
         "path": "*",
@@ -3652,7 +3662,7 @@
       "parentId": "1",
       "id": "2",
       "absPath": "/user/login",
-      "__content": "import { Footer } from '@/components';\nimport { SYSTEM_LOGO } from '@/constants';\nimport { login } from '@/services/ant-design-pro/api';\nimport { LockOutlined, UserOutlined } from '@ant-design/icons';\nimport { LoginForm, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';\nimport { Helmet, history, Link, useModel } from '@umijs/max';\nimport { Divider, message, Space, Tabs } from 'antd';\nimport { createStyles } from 'antd-style';\nimport React, { useState } from 'react';\nimport { flushSync } from 'react-dom';\nimport Settings from '../../../../config/defaultSettings';\n\nconst useStyles = createStyles(({ token }) => {\n  return {\n    action: {\n      marginLeft: '8px',\n      color: 'rgba(0, 0, 0, 0.2)',\n      fontSize: '24px',\n      verticalAlign: 'middle',\n      cursor: 'pointer',\n      transition: 'color 0.3s',\n      '&:hover': {\n        color: token.colorPrimaryActive,\n      },\n    },\n    lang: {\n      width: 42,\n      height: 42,\n      lineHeight: '42px',\n      position: 'fixed',\n      right: 16,\n      borderRadius: token.borderRadius,\n      ':hover': {\n        backgroundColor: token.colorBgTextHover,\n      },\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'column',\n      height: '100vh',\n      overflow: 'auto',\n      backgroundImage:\n        \"url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')\",\n      backgroundSize: '100% 100%',\n    },\n  };\n});\n\n\n\nconst Login: React.FC = () => {\n  const [type, setType] = useState<string>('account');\n  const { initialState, setInitialState } = useModel('@@initialState');\n  const { styles } = useStyles();\n  console.log('请输入用户名');\n  const fetchUserInfo = async () => {\n    const userInfo = await initialState?.fetchUserInfo?.();\n    if (userInfo) {\n      flushSync(() => {\n        setInitialState((s) => ({\n          ...s,\n          currentUser: userInfo,\n        }));\n      });\n    }\n  };\n\n  const handleSubmit = async (values: API.LoginParams) => {\n    try {\n      // 直接传递values给login函数，api.ts中会处理参数转换\n      const user = await login(values);\n\n      if (user) {\n        message.success('登录成功！');\n        await fetchUserInfo();\n        const urlParams = new URL(window.location.href).searchParams;\n        history.push(urlParams.get('redirect') || '/');\n        return;\n      }\n      message.error(user?.message || '登录失败，请重试！');\n    } catch (error) {\n      console.log(error);\n      message.error('登录失败，请重试！');\n    }\n  };\n\n  return (\n    <div className={styles.container}>\n      <Helmet>\n        <title>&apos;登录页&apos; - {Settings.title}</title>\n      </Helmet>\n\n      <div\n        style={{\n          flex: '1',\n          padding: '32px 0',\n        }}\n      >\n        <LoginForm\n          contentStyle={{\n            minWidth: 280,\n            maxWidth: '75vw',\n          }}\n          logo={<img alt=\"logo\" src={SYSTEM_LOGO} />}\n          title=\"小鱼博客后台管理中心\"\n          subTitle={\n            <a href=\"https://www.xfishblog.cn/\" target=\"_blank\" rel=\"noreferrer\">\n              欢迎登录小鱼博客后台管理中心\n            </a>\n          }\n          initialValues={{\n            autoLogin: true,\n          }}\n          onFinish={async (values) => {\n            await handleSubmit(values as API.LoginParams);\n          }}\n        >\n          <Tabs\n            activeKey={type}\n            onChange={setType}\n            centered\n            items={[\n              {\n                key: 'account',\n                label: '账户密码登录',\n              },\n            ]}\n          />\n          {type === 'account' && (\n            <>\n              <ProFormText\n                name=\"userAccount\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入账号\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入账号!',\n                  },\n                ]}\n              />\n              <ProFormText.Password\n                name=\"userPassword\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <LockOutlined />,\n                }}\n                placeholder=\"请输入密码\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入密码！',\n                  },\n                  {\n                    type: 'string',\n                    min: 4,\n                    message: '密码长度不能小于4位！',\n                  },\n                ]}\n              />\n            </>\n          )}\n\n          <div\n            style={{\n              marginBottom: 24,\n            }}\n          >\n            <Space split={<Divider type=\"vertical\" />}>\n              <ProFormCheckbox noStyle name=\"autoLogin\">\n                自动登录\n              </ProFormCheckbox>\n\n              <a\n                style={{\n                  float: 'right',\n                }}\n              >\n                忘记密码\n              </a>\n              <Link to=\"/user/register\">注册</Link>\n            </Space>\n          </div>\n        </LoginForm>\n      </div>\n      <Footer />\n    </div>\n  );\n};\n\nexport default Login;\n",
+      "__content": "import { Footer } from '@/components';\nimport { SYSTEM_LOGO } from '@/constants';\nimport { login } from '@/services/ant-design-pro/api';\nimport { LockOutlined, UserOutlined } from '@ant-design/icons';\nimport { LoginForm, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';\nimport { Helmet, history, Link, useModel } from '@umijs/max';\nimport { Divider, message, Space, Tabs } from 'antd';\nimport { createStyles } from 'antd-style';\nimport React, { useState } from 'react';\nimport { flushSync } from 'react-dom';\nimport Settings from '../../../../config/defaultSettings';\n\nconst useStyles = createStyles(({ token }) => {\n  return {\n    action: {\n      marginLeft: '8px',\n      color: 'rgba(0, 0, 0, 0.2)',\n      fontSize: '24px',\n      verticalAlign: 'middle',\n      cursor: 'pointer',\n      transition: 'color 0.3s',\n      '&:hover': {\n        color: token.colorPrimaryActive,\n      },\n    },\n    lang: {\n      width: 42,\n      height: 42,\n      lineHeight: '42px',\n      position: 'fixed',\n      right: 16,\n      borderRadius: token.borderRadius,\n      ':hover': {\n        backgroundColor: token.colorBgTextHover,\n      },\n    },\n    container: {\n      display: 'flex',\n      flexDirection: 'column',\n      height: '100vh',\n      overflow: 'auto',\n      backgroundImage:\n        \"url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')\",\n      backgroundSize: '100% 100%',\n    },\n  };\n});\n\n\n\nconst Login: React.FC = () => {\n  const [type, setType] = useState<string>('account');\n  const { initialState, setInitialState } = useModel('@@initialState');\n  const { styles } = useStyles();\n  console.log('请输入用户名');\n  const fetchUserInfo = async () => {\n    const userInfo = await initialState?.fetchUserInfo?.();\n    if (userInfo) {\n      flushSync(() => {\n        setInitialState((s) => ({\n          ...s,\n          currentUser: userInfo,\n        }));\n      });\n    }\n  };\n\n  const handleSubmit = async (values: API.LoginParams) => {\n    try {\n      // 直接传递values给login函数，api.ts中会处理参数转换\n      const user = await login(values);\n\n      if (user) {\n        message.success('登录成功！');\n        await fetchUserInfo();\n        const urlParams = new URL(window.location.href).searchParams;\n        history.push(urlParams.get('redirect') || '/');\n        return;\n      }\n      message.error(user?.description || '登录失败，请重试！');\n    } catch (error) {\n      console.log(error);\n      message.error('登录失败，请重试！');\n    }\n  };\n\n  return (\n    <div className={styles.container}>\n      <Helmet>\n        <title>&apos;登录页&apos; - {Settings.title}</title>\n      </Helmet>\n\n      <div\n        style={{\n          flex: '1',\n          padding: '32px 0',\n        }}\n      >\n        <LoginForm\n          contentStyle={{\n            minWidth: 280,\n            maxWidth: '75vw',\n          }}\n          logo={<img alt=\"logo\" src={SYSTEM_LOGO} />}\n          title=\"小鱼博客后台管理中心\"\n          subTitle={\n            <a href=\"https://www.xfishblog.cn/\" target=\"_blank\" rel=\"noreferrer\">\n              欢迎登录小鱼博客后台管理中心\n            </a>\n          }\n          initialValues={{\n            autoLogin: true,\n          }}\n          onFinish={async (values) => {\n            await handleSubmit(values as API.LoginParams);\n          }}\n        >\n          <Tabs\n            activeKey={type}\n            onChange={setType}\n            centered\n            items={[\n              {\n                key: 'account',\n                label: '账户密码登录',\n              },\n            ]}\n          />\n          {type === 'account' && (\n            <>\n              <ProFormText\n                name=\"userAccount\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <UserOutlined />,\n                }}\n                placeholder=\"请输入账号\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入账号!',\n                  },\n                ]}\n              />\n              <ProFormText.Password\n                name=\"userPassword\"\n                fieldProps={{\n                  size: 'large',\n                  prefix: <LockOutlined />,\n                }}\n                placeholder=\"请输入密码\"\n                rules={[\n                  {\n                    required: true,\n                    message: '请输入密码！',\n                  },\n                  {\n                    type: 'string',\n                    min: 4,\n                    message: '密码长度不能小于4位！',\n                  },\n                ]}\n              />\n            </>\n          )}\n\n          <div\n            style={{\n              marginBottom: 24,\n            }}\n          >\n            <Space split={<Divider type=\"vertical\" />}>\n              <ProFormCheckbox noStyle name=\"autoLogin\">\n                自动登录\n              </ProFormCheckbox>\n\n              <a\n                style={{\n                  float: 'right',\n                }}\n              >\n                忘记密码\n              </a>\n              <Link to=\"/user/register\">注册</Link>\n            </Space>\n          </div>\n        </LoginForm>\n      </div>\n      <Footer />\n    </div>\n  );\n};\n\nexport default Login;\n",
       "__isJSFile": true,
       "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/User/Login/index.tsx"
     },
@@ -3688,7 +3698,7 @@
       "parentId": "4",
       "id": "5",
       "absPath": "/admin/article",
-      "__content": "import React, { useState, useRef } from 'react';\nimport { PlusOutlined, EditOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable, TableDropdown } from '@ant-design/pro-components';\nimport { Button, Tag, Space, message, Drawer, Modal, Tooltip, Card } from 'antd';\nimport { MDEditor } from '@uiw/react-md-editor';\nimport {\n  queryArticles,\n  createArticle,\n  updateArticle,\n  deleteArticle,\n  updateArticleStatus,\n} from '@/services/blog-api';\nimport ArticleEditor from './Editor';\nimport type { Article } from '@/types/blog';\n\nconst ArticleList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);\n  const [editModalOpen, setEditModalOpen] = useState<boolean>(false);\n  const [previewDrawerOpen, setPreviewDrawerOpen] = useState<boolean>(false);\n  const [currentArticle, setCurrentArticle] = useState<Article | null>(null);\n  const [editorContent, setEditorContent] = useState('');\n\n  const handleCreate = async (values: Article) => {\n    try {\n      await createArticle(values);\n      message.success('创建成功');\n      setCreateModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('创建失败');\n    }\n  };\n\n  const handleUpdate = async (values: Article) => {\n    if (!currentArticle) return;\n    try {\n      await updateArticle(currentArticle.id, values);\n      message.success('更新成功');\n      setEditModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('更新失败');\n    }\n  };\n\n  const handleDelete = async (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这篇文章吗？此操作不可恢复。',\n      onOk: async () => {\n        try {\n          await deleteArticle(id);\n          message.success('删除成功');\n          actionRef.current?.reload();\n        } catch (error) {\n          message.error('删除失败');\n        }\n      },\n    });\n  };\n\n  const handleStatusChange = async (id: number, status: number) => {\n    try {\n      await updateArticleStatus(id, status);\n      message.success('状态更新成功');\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('状态更新失败');\n    }\n  };\n\n  const handlePreview = (record: Article) => {\n    setCurrentArticle(record);\n    setPreviewDrawerOpen(true);\n  };\n\n  const handleEdit = (record: Article) => {\n    setCurrentArticle(record);\n    setEditorContent(record.content || '');\n    setEditModalOpen(true);\n  };\n\n  const columns: ProColumns<Article>[] = [\n    {\n      title: 'ID',\n      dataIndex: 'id',\n      width: 80,\n      fixed: 'left',\n    },\n    {\n      title: '标题',\n      dataIndex: 'title',\n      fixed: 'left',\n      width: 200,\n      render: (_, record) => <a onClick={() => handlePreview(record)}>{record.title}</a>,\n    },\n    {\n      title: '分类',\n      dataIndex: 'category',\n      width: 100,\n    },\n    {\n      title: '标签',\n      dataIndex: 'tags',\n      width: 150,\n      render: (_, record) => (\n        <Space wrap>\n          {record.tags?.map((tag: string) => (\n            <Tag key={tag} color=\"blue\">\n              {tag}\n            </Tag>\n          ))}\n        </Space>\n      ),\n    },\n    {\n      title: '状态',\n      dataIndex: 'status',\n      width: 100,\n      valueEnum: {\n        0: { text: '草稿', status: 'default' },\n        1: { text: '已发布', status: 'success' },\n        2: { text: '已下架', status: 'error' },\n      },\n    },\n    {\n      title: '浏览量',\n      dataIndex: 'viewCount',\n      width: 80,\n      sorter: true,\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'likeCount',\n      width: 80,\n      sorter: true,\n    },\n    {\n      title: '创建时间',\n      dataIndex: 'createTime',\n      width: 180,\n      valueType: 'dateTime',\n      sorter: true,\n    },\n    {\n      title: '更新时间',\n      dataIndex: 'updateTime',\n      width: 180,\n      valueType: 'dateTime',\n      sorter: true,\n    },\n    {\n      title: '操作',\n      key: 'action',\n      width: 200,\n      fixed: 'right',\n      render: (_, record) => (\n        <Space size=\"small\">\n          <Tooltip title=\"预览\">\n            <Button type=\"text\" icon={<EyeOutlined />} onClick={() => handlePreview(record)} />\n          </Tooltip>\n          <Tooltip title=\"编辑\">\n            <Button type=\"text\" icon={<EditOutlined />} onClick={() => handleEdit(record)} />\n          </Tooltip>\n          <Tooltip title=\"删除\">\n            <Button\n              type=\"text\"\n              danger\n              icon={<DeleteOutlined />}\n              onClick={() => handleDelete(record.id)}\n            />\n          </Tooltip>\n          <TableDropdown\n            onSelect={(key) => {\n              if (key === 'publish') {\n                handleStatusChange(record.id, 1);\n              } else if (key === 'draft') {\n                handleStatusChange(record.id, 0);\n              } else if (key === 'unpublish') {\n                handleStatusChange(record.id, 2);\n              }\n            }}\n            menus={[\n              { key: 'publish', label: '发布' },\n              { key: 'draft', label: '设为草稿' },\n              { key: 'unpublish', label: '下架' },\n            ]}\n          />\n        </Space>\n      ),\n    },\n  ];\n\n  return (\n    <>\n      <ProTable<Article>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"文章管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"create\"\n            type=\"primary\"\n            icon={<PlusOutlined />}\n            onClick={() => {\n              setCurrentArticle(null);\n              setEditorContent('');\n              setCreateModalOpen(true);\n            }}\n          >\n            新建文章\n          </Button>,\n        ]}\n        request={async (params) => {\n          const response = await queryArticles(params);\n          return {\n            data: response.data || [],\n            total: response.total || 0,\n            success: response.code === 0,\n          };\n        }}\n        scroll={{ x: 1400 }}\n      />\n\n      <ArticleEditor\n        open={createModalOpen}\n        article={null}\n        initialContent={editorContent}\n        onSubmit={handleCreate}\n        onCancel={() => {\n          setCreateModalOpen(false);\n          setEditorContent('');\n        }}\n      />\n\n      <ArticleEditor\n        open={editModalOpen}\n        article={currentArticle}\n        initialContent={editorContent}\n        onSubmit={handleUpdate}\n        onCancel={() => {\n          setEditModalOpen(false);\n          setCurrentArticle(null);\n          setEditorContent('');\n        }}\n      />\n\n      <Drawer\n        title=\"文章预览\"\n        width={800}\n        open={previewDrawerOpen}\n        onClose={() => {\n          setPreviewDrawerOpen(false);\n          setCurrentArticle(null);\n        }}\n        footer={\n          <Space style={{ float: 'right' }}>\n            <Button onClick={() => setPreviewDrawerOpen(false)}>关闭</Button>\n          </Space>\n        }\n      >\n        {currentArticle && (\n          <div>\n            <Card bordered={false} style={{ marginBottom: 16 }}>\n              <h1 style={{ margin: 0, fontSize: 24, fontWeight: 'bold' }}>{currentArticle.title}</h1>\n              <Space style={{ margin: '16px 0' }}>\n                <Tag color=\"blue\">{currentArticle.category}</Tag>\n                {currentArticle.tags?.map((tag: string) => (\n                  <Tag key={tag}>{tag}</Tag>\n                ))}\n                <Tag color=\"green\">{currentArticle.viewCount || 0} 浏览</Tag>\n                <Tag color=\"red\">{currentArticle.likeCount || 0} 点赞</Tag>\n                <Tag color=\"orange\">{currentArticle.commentCount || 0} 评论</Tag>\n              </Space>\n              <div style={{ color: '#666', fontSize: 14, marginBottom: 16 }}>\n                <span>作者：{currentArticle.authorName || '未知'}</span>\n                <span style={{ margin: '0 8px' }}>|</span>\n                <span>创建时间：{currentArticle.createTime}</span>\n                {currentArticle.updateTime && (\n                  <>\n                    <span style={{ margin: '0 8px' }}>|</span>\n                    <span>更新时间：{currentArticle.updateTime}</span>\n                  </>\n                )}\n              </div>\n            </Card>\n            <Card title=\"文章内容\" bordered={false}>\n              <div data-color-mode=\"light\">\n                <MDEditor.Markdown\n                  source={currentArticle.content || ''}\n                  style={{\n                    padding: '16px',\n                    minHeight: '300px',\n                  }}\n                />\n              </div>\n            </Card>\n          </div>\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default ArticleList;\n",
+      "__content": "import React, { useState, useRef, useEffect } from 'react';\nimport { debounce } from 'lodash';\nimport { PlusOutlined, EditOutlined, DeleteOutlined, EyeOutlined, SearchOutlined } from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable, TableDropdown } from '@ant-design/pro-components';\nimport { Button, Tag, Space, message, Drawer, Modal, Tooltip, Card, Select, Badge } from 'antd';\nimport MDEditor from '@uiw/react-md-editor';\nimport {\n  queryArticles,\n  createArticle,\n  updateArticle,\n  deleteArticle,\n  updateArticleStatus,\n  queryAllCategories,\n  queryTagSuggestions,\n} from '@/services/ant-design-pro/api';\nimport ArticleEditor from './Editor';\nimport type { Article, Category } from '@/types/blog';\n\n\nconst ArticleList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [categoriesLoading, setCategoriesLoading] = useState(true);\n  const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);\n  const [editModalOpen, setEditModalOpen] = useState<boolean>(false);\n  const [previewDrawerOpen, setPreviewDrawerOpen] = useState<boolean>(false);\n  const [currentArticle, setCurrentArticle] = useState<Article | null>(null);\n  const [editorContent, setEditorContent] = useState('');\n  const [categories, setCategories] = useState<Category[]>([]);\n  const [tagSuggestions, setTagSuggestions] = useState<string[]>([]);\n  const [searchingTags, setSearchingTags] = useState(false);\n  const categoriesLoadedRef = useRef(false);\n  const initialDataLoadedRef = useRef(false);\n\n  const fetchCategories = async () => {\n    try {\n      setCategoriesLoading(true);\n      const response = await queryAllCategories();\n      const categoryData = response?.data || [];\n      setCategories(categoryData);\n      categoriesLoadedRef.current = true;\n    } catch (error) {\n      console.error('加载分类列表失败:', error);\n      setCategories([]);\n    } finally {\n      setCategoriesLoading(false);\n    }\n  };\n\n  useEffect(() => {\n    fetchCategories();\n  }, []);\n\n  useEffect(() => {\n    if (categoriesLoadedRef.current && !initialDataLoadedRef.current && actionRef.current) {\n      initialDataLoadedRef.current = true;\n      actionRef.current.reload();\n    }\n  }, [categoriesLoadedRef.current]);\n\n  const handleCreate = async (values: Article) => {\n    try {\n      await createArticle(values);\n      message.success('创建成功');\n      setCreateModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error: any) {\n      console.error('创建文章失败:', error);\n      const errorMsg = error?.message || error?.description || '创建失败，请稍后重试';\n      message.error(errorMsg);\n    }\n  };\n\n  const handleUpdate = async (values: Article) => {\n    if (!currentArticle) return;\n    try {\n      await updateArticle(currentArticle.id, values);\n      message.success('更新成功');\n      setEditModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error: any) {\n      console.error('更新文章失败:', error);\n      const errorMsg = error?.message || error?.description || '更新失败，请稍后重试';\n      message.error(errorMsg);\n    }\n  };\n\n  const handleDelete = async (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这篇文章吗？此操作不可恢复。',\n      onOk: async () => {\n        try {\n          await deleteArticle(id);\n          message.success('删除成功');\n          actionRef.current?.reload();\n        } catch (error: any) {\n          console.error('删除文章失败:', error);\n          const errorMsg = error?.message || error?.description || '删除失败，请稍后重试';\n          message.error(errorMsg);\n        }\n      },\n    });\n  };\n\n  const handleStatusChange = async (id: number, status: number) => {\n    try {\n      await updateArticleStatus(id, status);\n      message.success('状态更新成功');\n      actionRef.current?.reload();\n    } catch (error: any) {\n      console.error('更新文章状态失败:', error);\n      const errorMsg = error?.message || error?.description || '状态更新失败，请稍后重试';\n      message.error(errorMsg);\n    }\n  };\n\n  const handlePreview = (record: Article) => {\n    setCurrentArticle(record);\n    setPreviewDrawerOpen(true);\n  };\n\n  const handleEdit = (record: Article) => {\n    setCurrentArticle(record);\n    // 确保内容是字符串\n    setEditorContent(record.content || '');\n    setEditModalOpen(true);\n  };\n\n  // 加载标签搜索建议\n  const fetchTagSuggestions = async (keyword: string) => {\n    if (!keyword || keyword.trim().length === 0) {\n      setTagSuggestions([]);\n      return;\n    }\n\n    setSearchingTags(true);\n    try {\n      const response = await queryTagSuggestions(keyword.trim());\n      setTagSuggestions(response.data || []);\n    } catch (error) {\n      console.error('加载标签建议失败:', error);\n      setTagSuggestions([]);\n    } finally {\n      setSearchingTags(false);\n    }\n  };\n\n  const columns: ProColumns<Article>[] = [\n    {\n      title: 'ID',\n      dataIndex: 'id',\n      width: 80,\n    },\n    {\n      title: '标题',\n      dataIndex: 'title',\n      width: 200,\n      render: (_, record) => <a onClick={() => handlePreview(record)}>{record.title}</a>,\n    },\n    {\n      title: '分类',\n      dataIndex: 'category',\n      width: 100,\n    },\n    {\n      title: '标签',\n      dataIndex: 'tags',\n      width: 150,\n      render: (_, record) => (\n        <Space wrap>\n          {record.tags?.map((tag: string) => (\n            <Tag key={tag} color=\"blue\">\n              {tag}\n            </Tag>\n          ))}\n        </Space>\n      ),\n    },\n    {\n  title: '状态',\n  dataIndex: 'status',\n  width: 100,\n  render: (_, record) => {\n    const statusMap: Record<string, { color: string; text: string }> = {\n      'draft': { color: 'default', text: '草稿' },\n      'published': { color: 'success', text: '已发布' },\n      'unpublished': { color: 'error', text: '已下架' },\n    };\n    const config = statusMap[record.status] || { color: 'default', text: '未知' };\n    return (\n      <Badge status={config.color as any} text={config.text} />\n    );\n  },\n},\n    {\n      title: '浏览量',\n      dataIndex: 'viewCount',\n      width: 80,\n      sorter: true,\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'likeCount',\n      width: 80,\n      sorter: true,\n    },\n    {\n      title: '创建时间',\n      dataIndex: 'createTime',\n      width: 180,\n      valueType: 'dateTime',\n      sorter: true,\n    },\n    {\n      title: '更新时间',\n      dataIndex: 'updateTime',\n      width: 180,\n      valueType: 'dateTime',\n      sorter: true,\n    },\n    {\n      title: '操作',\n      key: 'action',\n      width: 200,\n      render: (_, record) => (\n        <Space size=\"small\">\n          <Tooltip title=\"预览\">\n            <Button type=\"text\" icon={<EyeOutlined />} onClick={() => handlePreview(record)} />\n          </Tooltip>\n          <Tooltip title=\"编辑\">\n            <Button type=\"text\" icon={<EditOutlined />} onClick={() => handleEdit(record)} />\n          </Tooltip>\n          <Tooltip title=\"删除\">\n            <Button\n              type=\"text\"\n              danger\n              icon={<DeleteOutlined />}\n              onClick={() => handleDelete(record.id)}\n            />\n          </Tooltip>\n          {/* <TableDropdown\n            onSelect={(key) => {\n              if (key === 'publish') {\n                handleStatusChange(record.id, 1);\n              } else if (key === 'draft') {\n                handleStatusChange(record.id, 0);\n              } else if (key === 'unpublish') {\n                handleStatusChange(record.id, 2);\n              }\n            }}\n            menu={{\n              items: [\n                { key: 'publish', label: '发布' },\n                { key: 'draft', label: '设为草稿' },\n                { key: 'unpublish', label: '下架' },\n              ],\n            }}\n          /> */}\n        </Space>\n      ),\n    },\n  ];\nconst debouncedFetchTags = useRef(\n  debounce((value: string) => fetchTagSuggestions(value), 300)\n).current;\n\n  return (\n    <>\n      <ProTable<Article>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"文章管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n          render: (_: any, __: any, type: string) => {\n            if (type === 'simple') {\n              return (\n                <>\n                  <Select\n                    style={{ width: 200, marginRight: 16 }}\n                    placeholder=\"选择分类\"\n                    allowClear\n                    showSearch\n                    options={categories.map(cat => ({\n                      label: cat.name,\n                      value: cat.id,\n                    }))}\n                    onChange={(value) => {\n                      _.setFieldsValue({ categoryId: value });\n                    }}\n                  />\n                  <Select\n                    mode=\"tags\"\n                    style={{ width: 300, marginRight: 16 }}\n                    placeholder=\"输入标签\"\n                    allowClear\n                    showSearch\n                    filterOption={false}\n                   onSearch={(value) => debouncedFetchTags(value)}\n                    notFoundContent={searchingTags ? <span>搜索中...</span> : null}\n                    options={tagSuggestions.map(tag => ({\n                      label: tag,\n                      value: tag,\n                    }))}\n                    onChange={(value) => {\n                      _.setFieldsValue({ tags: value });\n                    }}\n                  />\n                  <Button\n                    type=\"primary\"\n                    icon={<SearchOutlined />}\n                    onClick={() => {\n                      _.submit();\n                    }}\n                  >\n                    搜索\n                  </Button>\n                </>\n              );\n            }\n            return null;\n          },\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"create\"\n            type=\"primary\"\n            icon={<PlusOutlined />}\n            onClick={() => {\n              setCurrentArticle(null);\n              setEditorContent('');\n              setCreateModalOpen(true);\n            }}\n          >\n            新建文章\n          </Button>,\n        ]}\n        request={async (params, sort, filter) => {\n          if (!categoriesLoadedRef.current) {\n            await new Promise(resolve => setTimeout(resolve, 50));\n          }\n          const response = await queryArticles(params);\n          const articles = response?.records || [];\n          const transformedArticles = articles.map((article: any) => {\n            const category = categories.find((cat) => cat.id === article.categoryId);\n            const categoryName = category ? category.name : '未分类';\n            return {\n              ...article,\n              status: article.status,\n              tags: JSON.parse(article.tags) || [],\n              createTime: article.createdAt || article.createTime,\n              updateTime: article.updatedAt || article.updateTime,\n              authorName: article.authorName || '未知',\n              category: categoryName,\n            };\n          });\n          return {\n            data: transformedArticles,\n            total: response?.total || response?.size || 0,\n            success: true,\n          };\n        }}\n        scroll={{ x: 1400 }}\n      />\n\n      <ArticleEditor\n        open={createModalOpen}\n        article={null}\n        initialContent={editorContent}\n        onSubmit={handleCreate}\n        onCancel={() => {\n          setCreateModalOpen(false);\n          setEditorContent('');\n        }}\n      />\n\n      <ArticleEditor\n        open={editModalOpen}\n        article={currentArticle}\n        initialContent={editorContent}\n        onSubmit={handleUpdate}\n        onCancel={() => {\n          setEditModalOpen(false);\n          setCurrentArticle(null);\n          setEditorContent('');\n        }}\n      />\n\n      <Drawer\n        title=\"文章预览\"\n        width={800}\n        open={previewDrawerOpen}\n        onClose={() => {\n          setPreviewDrawerOpen(false);\n          setCurrentArticle(null);\n        }}\n        footer={\n          <Space style={{ float: 'right' }}>\n            <Button onClick={() => setPreviewDrawerOpen(false)}>关闭</Button>\n          </Space>\n        }\n      >\n        {currentArticle && (\n          <div>\n            <Card bordered={false} style={{ marginBottom: 16 }}>\n              <h1 style={{ margin: 0, fontSize: 24, fontWeight: 'bold' }}>{currentArticle.title}</h1>\n              <Space style={{ margin: '16px 0' }}>\n                <Tag color=\"blue\">{currentArticle.category}</Tag>\n                {currentArticle.tags?.map((tag: string) => (\n                  <Tag key={tag}>{tag}</Tag>\n                ))}\n                <Tag color=\"green\">{currentArticle.viewCount || 0} 浏览</Tag>\n                <Tag color=\"red\">{currentArticle.likeCount || 0} 点赞</Tag>\n                <Tag color=\"orange\">{currentArticle.commentCount || 0} 评论</Tag>\n              </Space>\n              <div style={{ color: '#666', fontSize: 14, marginBottom: 16 }}>\n                <span>作者：{currentArticle.authorName || '未知'}</span>\n                <span style={{ margin: '0 8px' }}>|</span>\n                <span>创建时间：{currentArticle.createTime}</span>\n                {currentArticle.updateTime && (\n                  <>\n                    <span style={{ margin: '0 8px' }}>|</span>\n                    <span>更新时间：{currentArticle.updateTime}</span>\n                  </>\n                )}\n              </div>\n            </Card>\n            <Card title=\"文章内容\" bordered={false}>\n              <div data-color-mode=\"light\">\n                <MDEditor.Markdown\n                  source={currentArticle.content || ''}\n                  style={{\n                    padding: '16px',\n                    minHeight: '300px',\n                  }}\n                />\n              </div>\n            </Card>\n          </div>\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default ArticleList;\n",
       "__isJSFile": true,
       "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Article/index.tsx"
     },
@@ -3700,21 +3710,20 @@
       "parentId": "4",
       "id": "6",
       "absPath": "/admin/comment",
-      "__content": "import React, { useState, useRef } from 'react';\nimport {\n  CheckCircleOutlined,\n  CloseCircleOutlined,\n  DeleteOutlined,\n  ExclamationCircleOutlined,\n  MessageOutlined,\n} from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { Badge, Button, Tag, Space, message, Modal, Drawer, Input, Tooltip, Checkbox } from 'antd';\nimport {\n  queryComments,\n  updateCommentStatus,\n  deleteComment,\n  handleReport,\n  replyComment,\n} from '@/services/blog-api';\nimport AuditModal from './AuditModal';\nimport type { Comment } from '@/types/blog';\n\nconst { TextArea } = Input;\n\nconst CommentList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [auditModalOpen, setAuditModalOpen] = useState<boolean>(false);\n  const [replyDrawerOpen, setReplyDrawerOpen] = useState<boolean>(false);\n  const [currentComment, setCurrentComment] = useState<Comment | null>(null);\n  const [replyContent, setReplyContent] = useState('');\n  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);\n  const [tableData, setTableData] = useState<Comment[]>([]);\n\n  // 刷新表格数据\n  const refreshTable = () => {\n    actionRef.current?.reload();\n  };\n\n  const handleAudit = (record: Comment, status: number) => {\n    Modal.confirm({\n      title: status === 1 ? '通过审核' : '拒绝审核',\n      content: status === 1 ? '确定通过这条评论的审核吗？' : '确定拒绝这条评论吗？',\n      onOk: async () => {\n        try {\n          await updateCommentStatus(record.id, status);\n          message.success('审核操作成功');\n          refreshTable();\n        } catch (error) {\n          message.error('审核操作失败');\n        }\n      },\n    });\n  };\n\n  const handleDelete = (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这条评论吗？',\n      onOk: async () => {\n        try {\n          await deleteComment(id);\n          message.success('删除成功');\n          refreshTable();\n        } catch (error) {\n          message.error('删除失败');\n        }\n      },\n    });\n  };\n\n  // 批量审核功能\n  const handleBatchAudit = (status: number) => {\n    if (selectedRowKeys.length === 0) {\n      message.warning('请先选择要审核的评论');\n      return;\n    }\n    Modal.confirm({\n      title: '批量审核',\n      content: `确定要批量${status === 1 ? '通过' : '拒绝'}选中的 ${\n        selectedRowKeys.length\n      } 条评论吗？`,\n      onOk: async () => {\n        try {\n          // 使用 Promise.all 并行处理，提高效率\n          await Promise.all(\n            selectedRowKeys.map(id => updateCommentStatus(Number(id), status))\n          );\n          message.success('批量审核成功');\n          setSelectedRowKeys([]);\n          refreshTable();\n        } catch (error) {\n          message.error('批量审核失败');\n        }\n      },\n    });\n  };\n\n  // 批量删除功能\n  const handleBatchDelete = () => {\n    if (selectedRowKeys.length === 0) {\n      message.warning('请先选择要删除的评论');\n      return;\n    }\n    Modal.confirm({\n      title: '批量删除评论',\n      content: `确定要删除选中的 ${selectedRowKeys.length} 条评论吗？此操作不可恢复。`,\n      onOk: async () => {\n        try {\n          // 使用 Promise.all 并行处理，提高效率\n          await Promise.all(\n            selectedRowKeys.map(id => deleteComment(Number(id)))\n          );\n          message.success('批量删除成功');\n          setSelectedRowKeys([]);\n          refreshTable();\n        } catch (error) {\n          message.error('批量删除失败');\n        }\n      },\n    });\n  };\n\n  const handleReportHandle = async (\n    record: Comment,\n    handleType: number,\n    reason?: string,\n    notifyUser?: boolean\n  ) => {\n    try {\n      await handleReport(record.id, handleType, reason);\n      message.success('举报处理成功');\n      refreshTable();\n    } catch (error) {\n      message.error('举报处理失败');\n    }\n  };\n\n  const handleReply = (record: Comment) => {\n    setCurrentComment(record);\n    setReplyDrawerOpen(true);\n  };\n\n  // 提交评论回复\n  const submitReply = async () => {\n    if (!currentComment || !replyContent.trim()) {\n      message.warning('请输入回复内容');\n      return;\n    }\n    try {\n      await replyComment(currentComment.id, { content: replyContent });\n      message.success('回复成功');\n      setReplyDrawerOpen(false);\n      setReplyContent('');\n      setCurrentComment(null);\n      refreshTable();\n    } catch (error) {\n      message.error('回复失败');\n    }\n  };\n\n  const getStatusTag = (status: number) => {\n    switch (status) {\n      case 0:\n        return <Badge status=\"warning\" text=\"待审核\" />;\n      case 1:\n        return <Badge status=\"success\" text=\"已通过\" />;\n      case 2:\n        return <Badge status=\"error\" text=\"已拒绝\" />;\n      default:\n        return <Tag>未知</Tag>;\n    }\n  };\n\n  const handleSelectAll = (checked: boolean) => {\n    if (checked) {\n      setSelectedRowKeys(tableData.map((item) => item.id));\n    } else {\n      setSelectedRowKeys([]);\n    }\n  };\n\n  const handleSelectRow = (record: Comment, checked: boolean) => {\n    if (checked) {\n      setSelectedRowKeys([...selectedRowKeys, record.id]);\n    } else {\n      setSelectedRowKeys(selectedRowKeys.filter((key) => key !== record.id));\n    }\n  };\n\n  // 判断是否全选\n  const isAllSelected = tableData.length > 0 && selectedRowKeys.length === tableData.length;\n  const isIndeterminate = selectedRowKeys.length > 0 && selectedRowKeys.length < tableData.length;\n\n  const columns: ProColumns<Comment>[] = [\n    {\n      title: (\n        <Checkbox\n          checked={isAllSelected}\n          indeterminate={isIndeterminate}\n          onChange={(e) => handleSelectAll(e.target.checked)}\n        />\n      ),\n      dataIndex: 'checkbox',\n      width: 50,\n      render: (_, record) => (\n        <Checkbox\n          checked={selectedRowKeys.includes(record.id)}\n          onChange={(e) => handleSelectRow(record, e.target.checked)}\n        />\n      ),\n    },\n    {\n      title: 'ID',\n      dataIndex: 'id',\n      width: 80,\n      search: false,\n    },\n    {\n      title: '评论内容',\n      dataIndex: 'content',\n      width: 300,\n      ellipsis: true,\n      search: {\n        type: 'text',\n      },\n    },\n    {\n      title: '评论文章',\n      dataIndex: 'articleTitle',\n      width: 150,\n      ellipsis: true,\n      search: {\n        type: 'text',\n      },\n    },\n    {\n      title: '评论用户',\n      dataIndex: 'userName',\n      width: 100,\n      render: (_, record) => record.userName || record.authorName,\n      search: {\n        type: 'text',\n      },\n    },\n    {\n      title: '状态',\n      dataIndex: 'status',\n      width: 100,\n      valueEnum: {\n        0: { text: '待审核', status: 'warning' },\n        1: { text: '已通过', status: 'success' },\n        2: { text: '已拒绝', status: 'error' },\n        3: { text: '已删除', status: 'default' },\n      },\n      render: (_, record) => (\n        <Space>\n          {getStatusTag(record.status)}\n          {(record.reportCount ?? 0) > 0 && (\n            <Tooltip title={`${record.reportCount}条举报`}>\n              <Badge count={record.reportCount} size=\"small\" />\n            </Tooltip>\n          )}\n        </Space>\n      ),\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'likeCount',\n      width: 80,\n      sorter: true,\n      search: false,\n    },\n    {\n      title: '回复数',\n      dataIndex: 'replyCount',\n      width: 80,\n      search: false,\n    },\n    {\n      title: '评论时间',\n      dataIndex: 'createTime',\n      width: 180,\n      valueType: 'dateTimeRange',\n      sorter: true,\n    },\n    {\n      title: '操作',\n      key: 'action',\n      width: 220,\n      render: (_, record) => (\n        <Space size=\"small\">\n          {record.status === 0 && (\n            <>\n              <Tooltip title=\"通过\">\n                <Button\n                  type=\"text\"\n                  icon={<CheckCircleOutlined style={{ color: '#52c41a' }} />}\n                  onClick={() => handleAudit(record, 1)}\n                />\n              </Tooltip>\n              <Tooltip title=\"拒绝\">\n                <Button\n                  type=\"text\"\n                  icon={<CloseCircleOutlined style={{ color: '#ff4d4f' }} />}\n                  onClick={() => handleAudit(record, 2)}\n                />\n              </Tooltip>\n            </>\n          )}\n          <Tooltip title=\"回复\">\n            <Button type=\"text\" icon={<MessageOutlined />} onClick={() => handleReply(record)} />\n          </Tooltip>\n          {(record.reportCount ?? 0) > 0 && (\n            <Tooltip title=\"处理举报\">\n              <Button\n                type=\"text\"\n                icon={<ExclamationCircleOutlined style={{ color: '#faad14' }} />}\n                onClick={() => {\n                  setCurrentComment(record);\n                  setAuditModalOpen(true);\n                }}\n              />\n            </Tooltip>\n          )}\n          <Tooltip title=\"删除\">\n            <Button\n              type=\"text\"\n              danger\n              icon={<DeleteOutlined />}\n              onClick={() => handleDelete(record.id)}\n            />\n          </Tooltip>\n        </Space>\n      ),\n      search: false,\n    },\n  ];\n\n  return (\n    <>\n      <ProTable<Comment>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"评论管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"batch-pass\"\n            icon={<CheckCircleOutlined />}\n            onClick={() => handleBatchAudit(1)}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量通过\n          </Button>,\n          <Button\n            key=\"batch-reject\"\n            icon={<CloseCircleOutlined />}\n            onClick={() => handleBatchAudit(2)}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量拒绝\n          </Button>,\n          <Button\n            key=\"batch-delete\"\n            icon={<DeleteOutlined />}\n            danger\n            onClick={handleBatchDelete}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量删除\n          </Button>,\n        ]}\n        rowSelection={{\n          selectedRowKeys,\n          onChange: (keys) => setSelectedRowKeys(keys),\n        }}\n        request={async (params) => {\n          const response = await queryComments(params);\n          const data = response.data || [];\n          setTableData(data);\n          return {\n            data,\n            total: response.total || 0,\n            success: response.code === 0,\n          };\n        }}\n      />\n\n      <AuditModal\n        open={auditModalOpen}\n        comment={currentComment}\n        onSubmit={handleReportHandle}\n        onCancel={() => {\n          setAuditModalOpen(false);\n          setCurrentComment(null);\n        }}\n      />\n\n      <Drawer\n        title=\"回复评论\"\n        width={500}\n        open={replyDrawerOpen}\n        onClose={() => {\n          setReplyDrawerOpen(false);\n          setReplyContent('');\n          setCurrentComment(null);\n        }}\n        footer={\n          <Space style={{ float: 'right' }}>\n            <Button onClick={() => setReplyDrawerOpen(false)}>取消</Button>\n            <Button type=\"primary\" onClick={submitReply}>\n              发送回复\n            </Button>\n          </Space>\n        }\n      >\n        {currentComment && (\n          <div>\n            <div\n              style={{ marginBottom: 16, padding: '8px', background: '#f5f5f5', borderRadius: 4 }}\n            >\n              <div style={{ marginBottom: 8 }}>\n                <strong>原文评论：</strong>\n                {currentComment.userName || currentComment.authorName}\n              </div>\n              <div>{currentComment.content}</div>\n            </div>\n            <TextArea\n              rows={4}\n              placeholder=\"请输入回复内容\"\n              value={replyContent}\n              onChange={(e) => setReplyContent(e.target.value)}\n            />\n          </div>\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default CommentList;\n",
+      "__content": "import React, { useState, useRef, useEffect } from 'react';\nimport {\n  CheckCircleOutlined,\n  CloseCircleOutlined,\n  DeleteOutlined,\n  ExclamationCircleOutlined,\n  MessageOutlined,\n  PlusOutlined,\n} from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { Badge, Button, Tag, Space, message, Modal, Drawer, Input, Tooltip, Checkbox, Select } from 'antd';\nimport {\n  queryComments,\n  updateCommentStatus,\n  deleteComment,\n  handleReport,\n  replyComment,\n} from '@/services/ant-design-pro/api';\nimport AuditModal from './AuditModal';\nimport type { Comment } from '@/types/blog';\n\nconst { TextArea = Input.TextArea } = Input;\n\nconst CommentList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [auditModalOpen, setAuditModalOpen] = useState<boolean>(false);\n  const [replyDrawerOpen, setReplyDrawerOpen] = useState<boolean>(false);\n  const [currentComment, setCurrentComment] = useState<Comment | null>(null);\n  const [replyContent, setReplyContent] = useState('');\n  const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);\n  const [tableData, setTableData] = useState<Comment[]>([]);\n\n  useEffect(() => {\n    return () => {\n      setCurrentComment(null);\n      setReplyContent('');\n    };\n  }, []);\n\n  const refreshTable = () => {\n    actionRef.current?.reload();\n  };\n\n  const handleAudit = (record: Comment, status: number) => {\n    Modal.confirm({\n      title: status === 1 ? '通过审核' : '拒绝审核',\n      content: status === 1 ? '确定通过这条评论的审核吗？' : '确定拒绝这条评论吗？',\n      onOk: async () => {\n        try {\n          await updateCommentStatus({ id: record.id, status });\n          message.success('审核操作成功');\n          refreshTable();\n        } catch (error) {\n          message.error('审核操作失败');\n        }\n      },\n    });\n  };\n\n  const handleDelete = (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这条评论吗？',\n      onOk: async () => {\n        try {\n          await deleteComment(id);\n          message.success('删除成功');\n          refreshTable();\n        } catch (error) {\n          message.error('删除失败');\n        }\n      },\n    });\n  };\n\n  const handleBatchAudit = (status: number) => {\n    if (selectedRowKeys.length === 0) {\n      message.warning('请先选择要审核的评论');\n      return;\n    }\n    Modal.confirm({\n      title: '批量审核',\n      content: `确定要批量${status === 1 ? '通过' : '拒绝'}选中的 ${\n        selectedRowKeys.length\n      } 条评论吗？`,\n      onOk: async () => {\n        try {\n          await Promise.all(\n            selectedRowKeys.map(id => updateCommentStatus({ id: Number(id), status }))\n          );\n          message.success('批量审核成功');\n          setSelectedRowKeys([]);\n          refreshTable();\n        } catch (error) {\n          message.error('批量审核失败');\n        }\n      },\n    });\n  };\n\n  const handleBatchDelete = () => {\n    if (selectedRowKeys.length === 0) {\n      message.warning('请先选择要删除的评论');\n      return;\n    }\n    Modal.confirm({\n      title: '批量删除评论',\n      content: `确定要删除选中的 ${selectedRowKeys.length} 条评论吗？此操作不可恢复。`,\n      onOk: async () => {\n        try {\n          await Promise.all(\n            selectedRowKeys.map(id => deleteComment(Number(id)))\n          );\n          message.success('批量删除成功');\n          setSelectedRowKeys([]);\n          refreshTable();\n        } catch (error) {\n          message.error('批量删除失败');\n        }\n      },\n    });\n  };\n\n  const handleReportHandle = async (\n    record: Comment,\n    handleType: number,\n    reason?: string,\n    notifyUser?: boolean\n  ) => {\n    try {\n      // 转换参数为后端期望的格式\n      // handleType: 1-忽略举报, 2-删除评论, 3-警告用户\n      // 后端auditStatus: 1-忽略, 2-删除, 3-警告\n      await handleReport({\n        id: record.id,\n        handleType: handleType, // 添加handleType参数\n        handleResult: reason || ''\n      });\n      message.success('举报处理成功');\n      refreshTable();\n    } catch (error) {\n      message.error('举报处理失败');\n    }\n  };\n\n  const handleReply = (record: Comment) => {\n    setCurrentComment(record);\n    setReplyDrawerOpen(true);\n  };\n\n  const submitReply = async () => {\n    if (!currentComment || !replyContent.trim()) {\n      message.warning('请输入回复内容');\n      return;\n    }\n    try {\n      await replyComment({\n        commentId: currentComment.id,\n        articleId: currentComment.articleId, // 添加文章ID\n        content: replyContent\n      });\n      message.success('回复成功');\n      setReplyDrawerOpen(false);\n      setReplyContent('');\n      setCurrentComment(null);\n      refreshTable();\n    } catch (error) {\n      message.error('回复失败');\n    }\n  };\n\n  const handleSelectAll = (checked: boolean) => {\n    if (checked) {\n      setSelectedRowKeys(tableData.map((item) => item.id));\n    } else {\n      setSelectedRowKeys([]);\n    }\n  };\n\n  const handleSelectRow = (record: Comment, checked: boolean) => {\n    if (checked) {\n      setSelectedRowKeys([...selectedRowKeys, record.id]);\n    } else {\n      setSelectedRowKeys(selectedRowKeys.filter((key) => key !== record.id));\n    }\n  };\n\n  const isAllSelected = tableData.length > 0 && selectedRowKeys.length === tableData.length;\n  const isIndeterminate = selectedRowKeys.length > 0 && selectedRowKeys.length < tableData.length;\n\n  const columns: ProColumns<Comment>[] = [\n    {\n      title: (\n        <Checkbox\n          checked={isAllSelected}\n          indeterminate={isIndeterminate}\n          onChange={(e) => handleSelectAll(e.target.checked)}\n        />\n      ),\n      dataIndex: 'checkbox',\n      width: 50,\n      render: (_, record) => (\n        <Checkbox\n          checked={selectedRowKeys.includes(record.id)}\n          onChange={(e) => handleSelectRow(record, e.target.checked)}\n        />\n      ),\n    },\n    {\n      title: 'ID',\n      dataIndex: 'id',\n      valueType: 'indexBorder',\n      width: 80,\n    },\n    {\n      title: '评论内容',\n      dataIndex: 'content',\n      width: 250,\n      ellipsis: true,\n    },\n    {\n      title: '评论文章',\n      dataIndex: 'articleTitle',\n      width: 150,\n      ellipsis: true,\n    },\n    {\n      title: '评论用户',\n      dataIndex: 'userName',\n      width: 100,\n      render: (_, record) => record.userName || record.authorName || '-',\n    },\n    {\n      title: '状态',\n      dataIndex: 'status',\n      width: 100,\n      valueEnum: {\n        0: { text: '待审核', status: 'warning' },\n        1: { text: '已通过', status: 'success' },\n        2: { text: '已拒绝', status: 'error' },\n        3: { text: '已删除', status: 'default' },\n      },\n      render: (_, record) => (\n        <Space>\n          {record.status === 0 && <Badge status=\"warning\" text=\"待审核\" />}\n          {record.status === 1 && <Badge status=\"success\" text=\"已通过\" />}\n          {record.status === 2 && <Badge status=\"error\" text=\"已拒绝\" />}\n          {record.status === 3 && <Badge status=\"default\" text=\"已删除\" />}\n          {(record.reportCount ?? 0) > 0 && (\n            <Tooltip title={`${record.reportCount}条举报`}>\n              <Badge count={record.reportCount} size=\"small\" />\n            </Tooltip>\n          )}\n        </Space>\n      ),\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'likeCount',\n      width: 80,\n      sorter: true,\n      search: false,\n    },\n    {\n      title: '回复数',\n      dataIndex: 'replyCount',\n      width: 80,\n      search: false,\n    },\n    {\n      title: '评论时间',\n      dataIndex: 'createTime',\n      width: 180,\n      valueType: 'dateTimeRange',\n      sorter: true,\n      render: (_, record) => {\n        if (!record.createTime) return '-';\n        return new Date(record.createTime).toLocaleString('zh-CN');\n      },\n    },\n    {\n      title: '操作',\n      key: 'action',\n      width: 220,\n      render: (_, record) => (\n        <Space size=\"small\">\n          {record.status === 0 && (\n            <>\n              <Tooltip title=\"通过\">\n                <Button\n                  type=\"text\"\n                  icon={<CheckCircleOutlined style={{ color: '#52c41a' }} />}\n                  onClick={() => handleAudit(record, 1)}\n                />\n              </Tooltip>\n              <Tooltip title=\"拒绝\">\n                <Button\n                  type=\"text\"\n                  icon={<CloseCircleOutlined style={{ color: '#ff4d4f' }} />}\n                  onClick={() => handleAudit(record, 2)}\n                />\n              </Tooltip>\n            </>\n          )}\n          <Tooltip title=\"回复\">\n            <Button type=\"text\" icon={<MessageOutlined />} onClick={() => handleReply(record)} />\n          </Tooltip>\n          {(record.reportCount ?? 0) > 0 && (\n            <Tooltip title=\"处理举报\">\n              <Button\n                type=\"text\"\n                icon={<ExclamationCircleOutlined style={{ color: '#faad14' }} />}\n                onClick={() => {\n                  setCurrentComment(record);\n                  setAuditModalOpen(true);\n                }}\n              />\n            </Tooltip>\n          )}\n          <Tooltip title=\"删除\">\n            <Button\n              type=\"text\"\n              danger\n              icon={<DeleteOutlined />}\n              onClick={() => handleDelete(record.id)}\n            />\n          </Tooltip>\n        </Space>\n      ),\n      search: false,\n    },\n  ];\n\n  return (\n    <>\n      <ProTable<Comment>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"评论管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n          showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"batch-pass\"\n            type=\"primary\"\n            icon={<CheckCircleOutlined />}\n            onClick={() => handleBatchAudit(1)}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量通过\n          </Button>,\n          <Button\n            key=\"batch-reject\"\n            icon={<CloseCircleOutlined />}\n            onClick={() => handleBatchAudit(2)}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量拒绝\n          </Button>,\n          <Button\n            key=\"batch-delete\"\n            icon={<DeleteOutlined />}\n            danger\n            onClick={handleBatchDelete}\n            disabled={selectedRowKeys.length === 0}\n          >\n            批量删除\n          </Button>,\n        ]}\n        rowSelection={{\n          selectedRowKeys,\n          onChange: (keys: React.Key[]) => setSelectedRowKeys(keys),\n        }}\n        request={async (params) => {\n          const response = await queryComments(params);\n          const data = response.data || [];\n          setTableData(data);\n          return {\n            data,\n            total: response.total || 0,\n            success: true,\n          };\n        }}\n        scroll={{ x: 1400 }}\n      />\n\n      <AuditModal\n        open={auditModalOpen}\n        comment={currentComment}\n        onSubmit={handleReportHandle}\n        onCancel={() => {\n          setAuditModalOpen(false);\n          setCurrentComment(null);\n        }}\n      />\n\n      <Drawer\n        title=\"回复评论\"\n        width={500}\n        open={replyDrawerOpen}\n        onClose={() => {\n          setReplyDrawerOpen(false);\n          setReplyContent('');\n          setCurrentComment(null);\n        }}\n        footer={\n          <Space style={{ float: 'right' }}>\n            <Button onClick={() => setReplyDrawerOpen(false)}>取消</Button>\n            <Button type=\"primary\" onClick={submitReply}>\n              发送回复\n            </Button>\n          </Space>\n        }\n      >\n        {currentComment && (\n          <div>\n            <div\n              style={{ marginBottom: 16, padding: '12px', background: '#f5f5f5', borderRadius: 4 }}\n            >\n              <div style={{ marginBottom: 8, color: '#666', fontSize: 12 }}>\n                原文评论：{currentComment.userName || currentComment.authorName || '匿名用户'}\n              </div>\n              <div style={{ fontSize: 14, lineHeight: 1.6 }}>{currentComment.content}</div>\n            </div>\n            <TextArea\n              rows={4}\n              placeholder=\"请输入回复内容\"\n              value={replyContent}\n              onChange={(e) => setReplyContent(e.target.value)}\n              maxLength={1000}\n              showCount\n            />\n          </div>\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default CommentList;\n",
       "__isJSFile": true,
       "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Comment/index.tsx"
     },
     "7": {
-      "path": "/admin/user-manage",
+      "path": "/admin/user-list",
       "name": "用户管理",
-      "icon": "User",
-      "file": "@/pages/Admin/UserManage/index.tsx",
+      "file": "@/pages/UserManage/index.tsx",
       "parentId": "4",
       "id": "7",
-      "absPath": "/admin/user-manage",
-      "__content": "import { searchUser } from '@/services/ant-design-pro/api';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { useRef } from 'react';\n\nconst columns: ProColumns<API.CurrentUser>[] = [\n  {\n    dataIndex: 'id',\n    valueType: 'indexBorder',\n    width: 48,\n  },\n  {\n    title: '用户名',\n    dataIndex: 'username',\n    copyable: true,\n  },\n  {\n    title: '用户角色',\n    dataIndex: 'role',\n    valueEnum: {\n      admin: { text: '管理员', status: 'success' },\n      user: { text: '普通用户', status: 'processing' },\n    },\n  },\n  {\n    title: '用户昵称',\n    dataIndex: 'nickname',\n    copyable: true,\n  },\n  {\n    title: '邮箱',\n    dataIndex: 'email',\n    copyable: true,\n  },\n  {\n    title: '状态',\n    dataIndex: 'status',\n    valueEnum: {\n      active: { text: '正常', status: 'success' },\n      frozen: { text: '冻结', status: 'error' },\n    },\n  },\n  {\n    title: '头像',\n    dataIndex: 'avatar',\n    render: (_, entity) => (\n      <img\n        src={entity.avatar || '/default-avatar.png'}\n        alt=\"avatar\"\n        style={{\n          width: 32,\n          height: 32,\n          borderRadius: '50%',\n        }}\n      />\n    ),\n  },\n  {\n    title: '注册时间',\n    dataIndex: 'registeredAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.registeredAt) return '-';\n      return new Date(entity.registeredAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '最后登录时间',\n    dataIndex: 'lastLoginAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.lastLoginAt) return '-';\n      return new Date(entity.lastLoginAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '创建时间',\n    dataIndex: 'createdAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.createdAt) return '-';\n      return new Date(entity.createdAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '更新时间',\n    dataIndex: 'updatedAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.updatedAt) return '-';\n      return new Date(entity.updatedAt).toLocaleString('zh-CN');\n    },\n  },\n];\n\nexport default () => {\n  const actionRef = useRef<ActionType>();\n\n  return (\n    <ProTable<API.CurrentUser>\n      columns={columns}\n      actionRef={actionRef}\n      cardBordered\n      rowSelection={{\n        // 复选框配置\n        alwaysShowAlert: false,\n        // 全选配置\n        getCheckboxProps: (record) => ({\n          disabled: !record, // 只禁用空记录\n        }),\n      }}\n      request={async (params = {}, sort = {}) => {\n        try {\n          // 提取搜索参数，排除分页和排序参数\n          const { current, pageSize, ...searchParams } = params;\n\n          // 构建查询参数\n          const queryParams: Record<string, any> = {\n            ...searchParams,\n            // 处理排序参数\n            sortField: Object.keys(sort)[0] || '',\n            sortOrder: sort[Object.keys(sort)[0]] || '',\n          };\n\n          // 只有在明确传递时才添加分页参数\n          if (current) queryParams.current = current;\n          if (pageSize) queryParams.pageSize = pageSize;\n\n          const userList: API.SearchUserResponse = await searchUser(queryParams);\n\n          // 错误处理\n          if (userList.code !== 0) {\n            return {\n              data: [],\n              total: 0,\n              success: false,\n            };\n          }\n\n          // 处理数据记录\n          const records = userList.data?.records || [];\n          const processedRecords = records.map(record => ({\n            ...record,\n            // 确保所有时间戳字段都有值\n            registeredAt: record.registeredAt || record.createdAt || '',\n            lastLoginAt: record.lastLoginAt || '',\n            createdAt: record.createdAt || record.createdAt || '',\n            updatedAt: record.updatedAt || record.updatedAt || '',\n          }));\n\n          return {\n            data: processedRecords,\n            total: userList.data?.total || records.length,\n            success: true,\n            current: userList.data?.current || current || 1,\n            pageSize: userList.data?.pageSize || pageSize || 10,\n          };\n        } catch (error) {\n          console.error('获取用户列表失败:', error);\n          return {\n            data: [],\n            total: 0,\n            success: false,\n          };\n        }\n      }}\n      rowKey=\"id\"\n      search={{\n        labelWidth: 'auto',\n      }}\n      options={{\n        setting: {\n          listsHeight: 400,\n        },\n      }}\n      form={{\n        syncToUrl: (values, type) => {\n          if (type === 'get') {\n            return {\n              ...values,\n              created_at: [values.startTime, values.endTime],\n            };\n          }\n          return values;\n        },\n      }}\n      pagination={{\n        pageSize: 10,\n        showSizeChanger: true,\n        showQuickJumper: true,\n        showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,\n      }}\n      dateFormatter=\"string\"\n      headerTitle=\"当前用户列表\"\n    />\n  );\n};\n",
+      "absPath": "/admin/user-list",
+      "__content": "import React, { useState, useRef } from 'react';\nimport { PlusOutlined} from '@ant-design/icons';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { Button,  message, Modal, Drawer, Timeline } from 'antd';\nimport {\n  createUser,\n  updateUser,\n  deleteUser,\n  updateUserRole,\n  disableUser,\n  enableUser,\n  getUserLogs,\n  getUser,\n} from '@/services/ant-design-pro/api';\nimport UserForm from './UserForm';\nimport RoleModal from './RoleModal';\nimport type {  UserLog } from '@/types/blog';\nimport { searchUser } from '@/services/ant-design-pro/api';\n\nconst UserList: React.FC = () => {\n  const actionRef = useRef<ActionType>();\n  const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);\n  const [editModalOpen, setEditModalOpen] = useState<boolean>(false);\n  const [roleModalOpen, setRoleModalOpen] = useState<boolean>(false);\n  const [logDrawerOpen, setLogDrawerOpen] = useState<boolean>(false);\n  const [currentUser, setCurrentUser] = useState<API.CurrentUser | null>(null);\n  const [userLogs, setUserLogs] = useState<UserLog[]>([]);\n  const [logLoading, setLogLoading] = useState<boolean>(false);\n  const [editLoading, setEditLoading] = useState<boolean>(false);\n\n  const handleCreate = async (values: Partial<API.CurrentUser> & { password?: string | undefined; }) => {\n    try {\n      let res = await createUser({\n        username: values.username || '',\n        password: values.password || '',\n        nickname: values.nickname || '',\n        email: values.email || '',\n        avatar: values.avatar || '',\n        role: String(values.role || 'user'),\n        status: String(values.status || 'active')\n      });\n      if(res)message.success('创建成功');\n      setCreateModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('创建失败');\n    }\n  };\n\n  const handleUpdate = async (values: Partial<API.CurrentUser>) => {\n    if (!currentUser) return;\n    try {\n      // 后端使用username查找用户，所以需要传递username\n      await updateUser({ username: currentUser.username, ...values } as any);\n      message.success('更新成功');\n      setEditModalOpen(false);\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('更新失败');\n    }\n  };\n\n  const handleDelete = (id: number) => {\n    Modal.confirm({\n      title: '确认删除',\n      content: '确定要删除这个用户吗？此操作不可恢复。',\n      onOk: async () => {\n        try {\n          await deleteUser(id);\n          message.success('删除成功');\n          actionRef.current?.reload();\n        } catch (error) {\n          message.error('删除失败');\n        }\n      },\n    });\n  };\n\nconst handleStatusChange = async (id: number, currentStatus: string) => {\n  // 根据当前状态调用不同的接口\n  try {\n    if (currentStatus === 'active') {\n      // 当前是正常状态，调用禁用接口\n      await disableUser(id);\n      message.success('用户已禁用');\n    } else {\n      // 当前是禁用或未激活状态，调用启用接口\n      await enableUser(id);\n      message.success('用户已启用');\n    }\n    actionRef.current?.reload();\n  } catch (error) {\n    message.error('状态更新失败');\n  }\n};\n\n  const handleRoleChange = async (id: number, role: string) => {\n    try {\n      await updateUserRole(id, role);\n      message.success('角色分配成功');\n      actionRef.current?.reload();\n    } catch (error) {\n      message.error('角色分配失败');\n    }\n  };\n\nconst handleViewLogs = async (record: API.CurrentUser) => {\n  setCurrentUser(record);\n  setLogDrawerOpen(true);\n  setLogLoading(true);\n  try {\n    const response = await getUserLogs({ userId: record.id });\n    // 后端返回的是BaseResponse结构，需要从data中获取records\n    const logs = response.data?.records || [];\n    // 转换日志数据格式以匹配前端显示需求\n    const formattedLogs = logs.map((log: any) => ({\n      userId: log.userId,\n      id: log.id,\n      action: log.action,\n      detail: log.details || log.content || '',\n      ip: log.ipAddress || log.ip || '',\n      createTime: log.createdAt || new Date().toLocaleString('zh-CN'),\n    }));\n    setUserLogs(formattedLogs);\n  } catch (error) {\n    message.error('获取日志失败');\n    setUserLogs([]);\n  } finally {\n    setLogLoading(false);\n  }\n};\n\nconst handleEdit = async (record: API.CurrentUser) => {\n  setCurrentUser(record);\n  setEditLoading(true);\n  setEditModalOpen(true);\n  try {\n    // getUser 现在返回 BaseResponse<CurrentUser> 结构\n    const response = await getUser(record.id);\n    const userData = response.data as API.CurrentUser;\n    if (userData) {\n      setCurrentUser(userData);\n    }\n  } catch (error) {\n    message.error('获取用户信息失败，将使用缓存数据');\n    console.error('获取用户详情失败:', error);\n  } finally {\n    setEditLoading(false);\n  }\n};\n\nconst handleRole = (record: API.CurrentUser) => {\n  setCurrentUser(record);\n  setRoleModalOpen(true);\n};\n\n  // getStatusTag 和 getRoleTag 函数已移除，状态和角色通过 columns 的 valueEnum 显示\n\n const columns: ProColumns<API.CurrentUser>[] = [\n  {\n    dataIndex: 'id',\n    valueType: 'indexBorder',\n    width: 48,\n  },\n  {\n    title: '用户名',\n    dataIndex: 'username',\n    copyable: true,\n  },\n  {\n    title: '用户角色',\n    dataIndex: 'role',\n    valueEnum: {\n      admin: { text: '管理员', status: 'success' },\n      user: { text: '普通用户', status: 'processing' },\n    },\n  },\n  {\n    title: '用户昵称',\n    dataIndex: 'nickname',\n    copyable: true,\n  },\n  {\n    title: '邮箱',\n    dataIndex: 'email',\n    copyable: true,\n  },\n  {\n    title: '状态',\n    dataIndex: 'status',\n    valueEnum: {\n      active: { text: '正常', status: 'success' },\n      inactive: { text: '未激活', status: 'warning' },\n      banned: { text: '已封禁', status: 'error' },\n    },\n  },\n  {\n    title: '头像',\n    dataIndex: 'avatar',\n    render: (_, entity) => (\n      <img\n        src={entity.avatar || '/default-avatar.png'}\n        alt=\"avatar\"\n        style={{\n          width: 32,\n          height: 32,\n          borderRadius: '50%',\n        }}\n      />\n    ),\n  },\n  {\n    title: '最后登录时间',\n    dataIndex: 'lastLoginAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.lastLoginAt) return '-';\n      return new Date(entity.lastLoginAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '创建时间',\n    dataIndex: 'createdAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.createdAt) return '-';\n      return new Date(entity.createdAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '更新时间',\n    dataIndex: 'updatedAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.updatedAt) return '-';\n      return new Date(entity.updatedAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '操作',\n    valueType: 'option',\n    render: (_, record) => [\n      <a\n        key=\"edit\"\n        onClick={() => handleEdit(record)}\n      >\n        编辑\n      </a>,\n      <a\n        key=\"role\"\n        onClick={() => handleRole(record)}\n      >\n        角色\n      </a>,\n      <a\n        key=\"status\"\n        onClick={() => handleStatusChange(record.id, String(record.status))}\n      >\n        {record.status === 'active' ? '禁用' : '启用'}\n      </a>,\n      <a\n        key=\"logs\"\n        onClick={() => handleViewLogs(record)}\n      >\n        日志\n      </a>,\n      <a\n        key=\"delete\"\n        onClick={() => handleDelete(record.id)}\n        style={{ color: '#ff4d4f' }}\n      >\n        删除\n      </a>,\n    ],\n  },\n];\n\n  return (\n    <>\n     <ProTable<API.CurrentUser>\n        columns={columns}\n        actionRef={actionRef}\n        rowKey=\"id\"\n        cardBordered\n        headerTitle=\"用户管理\"\n        search={{\n          labelWidth: 'auto',\n          span: 6,\n        }}\n        form={{\n          syncToUrl: (values) => values,\n        }}\n        pagination={{\n          pageSize: 10,\n          showSizeChanger: true,\n          showQuickJumper: true,\n        }}\n        toolBarRender={() => [\n          <Button\n            key=\"create\"\n            type=\"primary\"\n            icon={<PlusOutlined />}\n            onClick={() => {\n              setCurrentUser(null);\n              setCreateModalOpen(true);\n            }}\n          >\n            新建用户\n          </Button>,\n        ]}\n         request={async (params = {}, sort = {}, filter = {}) => {\n        try {\n          const { current, pageSize, ...searchParams } = params;\n\n          const sortKey = Object.keys(sort)[0] || '';\n          const sortOrder = sort[sortKey] || '';\n\n          // 时间字段映射（前端字段名 -> 后端字段名）\n          const fieldMapping: Record<string, string> = {\n            registeredAt: 'registered_at',\n            lastLoginAt: 'last_login_at',\n            createdAt: 'created_at',\n            updatedAt: 'updated_at',\n          };\n\n          // 构建查询参数\n          const queryParams: Record<string, any> = {\n            ...searchParams,\n            ...filter,\n            sortField: fieldMapping[sortKey] || sortKey,\n            sortOrder: sortOrder,\n          };\n\n          // 按需添加分页参数\n          if (current !== undefined && current !== null) {\n            queryParams.current = current;\n          }\n          if (pageSize !== undefined && pageSize !== null) {\n            queryParams.pageSize = pageSize;\n          }\n\n          // 发起请求\n          const userList: API.UserPageData = await searchUser(queryParams);\n          console.log('userList', userList);\n          if (!userList || !Array.isArray(userList.records)) {\n            const errorMsg = '获取用户列表失败:接口未返回有效数据';\n            message.warning(errorMsg);\n            return {\n              data: [],\n              total: 0,\n              success: false,\n            };\n          }\n\n          // 优化：增加类型断言，提升TS提示精准度\n         const processedRecords = userList.records.map(record => ({\n            ...record,\n            registeredAt: record.registeredAt || '',\n            lastLoginAt: record.lastLoginAt || '',\n            createdAt: record.createdAt || '',\n            updatedAt: record.updatedAt || '',\n            }));\n\n          // 修复：使用实际数据长度作为 total，避免后端返回 total: 0 导致的问题\n          const totalCount = userList.total || processedRecords.length;\n\n          // 返回 Pro Table 所需格式\n          return {\n            data: processedRecords,\n            total: totalCount,\n            success: true,\n            current: userList.current || current || 1,\n            pageSize: userList.size || pageSize || 10,\n          };\n        } catch (error) {\n          const errorMsg = '获取用户列表失败:网络异常';\n          message.error(errorMsg);\n          console.error(errorMsg, error);\n          return {\n            data: [],\n            total: 0,\n            success: false,\n          };\n        }\n      }}\n        scroll={{ x: 1500 }}\n      />\n\n      <UserForm\n        open={createModalOpen}\n        user={null}\n        onSubmit={handleCreate}\n        onCancel={() => {\n          setCreateModalOpen(false);\n        }}\n      />\n\n      <UserForm\n        open={editModalOpen}\n        user={currentUser}\n        onSubmit={handleUpdate}\n        onCancel={() => {\n          setEditModalOpen(false);\n          setCurrentUser(null);\n        }}\n      />\n\n      <RoleModal\n        open={roleModalOpen}\n        user={currentUser}\n        onSubmit={handleRoleChange}\n        onCancel={() => {\n          setRoleModalOpen(false);\n          setCurrentUser(null);\n        }}\n      />\n\n      <Drawer\n        title={`用户操作日志 - ${currentUser?.username}`}\n        width={600}\n        open={logDrawerOpen}\n        onClose={() => {\n          setLogDrawerOpen(false);\n          setCurrentUser(null);\n          setUserLogs([]);\n        }}\n      >\n        {logLoading ? (\n          <div style={{ textAlign: 'center', padding: '50px 0' }}>\n            加载中...\n          </div>\n        ) : (\n          <Timeline\n            mode=\"left\"\n            items={userLogs.map((log) => ({\n              color: log.action?.includes('登录')\n                ? 'green'\n                : log.action?.includes('删除')\n                ? 'red'\n                : 'blue',\n              label: log.createTime,\n              children: (\n                <div>\n                  <div style={{ fontWeight: 'bold', marginBottom: 4 }}>{log.action}</div>\n                  <div style={{ color: '#666', fontSize: 12 }}>{log.details}</div>\n                  <div style={{ color: '#999', fontSize: 12 }}>IP: {log.ip}</div>\n                </div>\n              ),\n            }))}\n          />\n        )}\n      </Drawer>\n    </>\n  );\n};\n\nexport default UserList;\n\n\n\n",
       "__isJSFile": true,
-      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Admin/UserManage/index.tsx"
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/UserManage/index.tsx"
     },
     "8": {
       "file": "@/pages/404.tsx",
@@ -3733,15 +3742,27 @@
       "parentId": "ant-design-pro-layout",
       "id": "9",
       "absPath": "/",
-      "__content": "import React, { useState, useEffect } from 'react';\nimport { Card, Row, Col, Statistic, Select, Table, Tag } from 'antd';\nimport {\n  ArrowUpOutlined,\n  EyeOutlined,\n  LikeOutlined,\n  MessageOutlined,\n  UserOutlined,\n} from '@ant-design/icons';\nimport { Line, Column, Pie } from '@ant-design/charts';\nimport {\n  getVisitStatistics,\n  getLikeStatistics,\n  getCommentStatistics,\n  getOverviewStatistics,\n  getVisitSources,\n} from '@/services/blog-api';\nimport type { VisitData, LikeItem, CommentStats, OverviewData, VisitSource } from '@/types/blog';\n\nconst StatisticsPage: React.FC = () => {\n  const [loading, setLoading] = useState(true);\n  const [timeRange, setTimeRange] = useState('7days');\n  const [overview, setOverview] = useState<OverviewData | null>(null);\n  const [visitData, setVisitData] = useState<VisitData[]>([]);\n  const [visitSources, setVisitSources] = useState<VisitSource[]>([]);\n  const [likeData, setLikeData] = useState<LikeItem[]>([]);\n  const [commentStats, setCommentStats] = useState<CommentStats | null>(null);\n\n  const fetchData = async () => {\n    setLoading(true);\n    try {\n      const [overviewRes, visitRes, visitSourceRes, likeRes, commentRes] = await Promise.all([\n        getOverviewStatistics(),\n        getVisitStatistics({ range: timeRange }),\n        getVisitSources({ range: timeRange }),\n        getLikeStatistics(),\n        getCommentStatistics(),\n      ]);\n\n      setOverview(overviewRes.data);\n      setVisitData(visitRes.data || []);\n      setVisitSources(visitSourceRes.data || []);\n      setLikeData(likeRes.data || []);\n      setCommentStats(commentRes.data);\n    } catch (error) {\n      console.error('获取统计数据失败:', error);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  useEffect(() => {\n    fetchData();\n  }, [timeRange]);\n\n  // 统一图表主题配置\n  const chartTheme = {\n    colors: ['#1890ff', '#52c41a', '#faad14', '#f5222d', '#722ed1'],\n    axis: {\n      label: { style: { fill: '#666' } },\n      tickLine: { style: { stroke: '#e8e8e8' } },\n      line: { style: { stroke: '#e8e8e8' } },\n    },\n    tooltip: {\n      backgroundColor: 'rgba(0, 0, 0, 0.85)',\n      textStyle: { color: '#fff' },\n      padding: [8, 12],\n      borderRadius: 4,\n    },\n  };\n\n  // 访问量趋势图配置\n  const visitChartConfig = {\n    data: visitData,\n    xField: 'date',\n    yField: 'visits',\n    smooth: true,\n    color: chartTheme.colors[0],\n    point: {\n      size: 3,\n      shape: 'circle',\n      style: {\n        fill: chartTheme.colors[0],\n        stroke: '#fff',\n        lineWidth: 2,\n      },\n    },\n    area: {\n      style: {\n        fill: `l(270) 0:#ffffff 1:${chartTheme.colors[0]}20`\n      }\n    },\n    xAxis: {\n      label: {\n        style: { fill: chartTheme.axis.label.style.fill },\n      },\n      tickLine: {\n        style: chartTheme.axis.tickLine.style,\n      },\n      line: {\n        style: chartTheme.axis.line.style,\n      },\n    },\n    yAxis: {\n      label: {\n        style: { fill: chartTheme.axis.label.style.fill },\n      },\n      tickLine: {\n        style: chartTheme.axis.tickLine.style,\n      },\n      line: {\n        style: chartTheme.axis.line.style,\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.date,\n          value: `${datum.visits} 次访问`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'path-in',\n        duration: 800,\n      },\n    },\n  };\n\n  // 评论状态分布饼图配置\n  const commentPieConfig = {\n    data: commentStats?.distribution || [\n      { type: '已发布', value: 60 },\n      { type: '待审核', value: 20 },\n      { type: '已拒绝', value: 10 },\n      { type: '已删除', value: 10 },\n    ],\n    angleField: 'value',\n    colorField: 'type',\n    color: chartTheme.colors,\n    radius: 0.8,\n    innerRadius: 0.6,\n    label: {\n      type: 'outer',\n      content: '{name}: {percentage}',\n      style: {\n        fill: '#666',\n        fontSize: 12,\n      },\n    },\n    legend: {\n      position: 'bottom',\n      itemName: {\n        style: { fill: '#666' },\n        fontSize: 12,\n      },\n    },\n    statistic: {\n      title: {\n        content: '评论总数',\n        style: { fontSize: 14, color: '#666' },\n      },\n      value: {\n        style: { fontSize: 24, fontWeight: 'bold' },\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.type,\n          value: `${datum.value} 条 (${datum.percentage})`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'scale-in',\n        duration: 600,\n      },\n    },\n  };\n\n  // 访问来源饼图配置\n  const visitSourcePieConfig = {\n    data: visitSources.map(source => ({\n      type: source.source,\n      value: source.count,\n    })) || [\n      { type: '直接访问', value: 50 },\n      { type: '搜索引擎', value: 30 },\n      { type: '外部链接', value: 20 },\n    ],\n    angleField: 'value',\n    colorField: 'type',\n    color: chartTheme.colors,\n    radius: 0.8,\n    innerRadius: 0.6,\n    label: {\n      type: 'outer',\n      content: '{name}: {percentage}',\n      style: {\n        fill: '#666',\n        fontSize: 12,\n      },\n    },\n    legend: {\n      position: 'bottom',\n      itemName: {\n        style: { fill: '#666' },\n        fontSize: 12,\n      },\n    },\n    statistic: {\n      title: {\n        content: '访问来源',\n        style: { fontSize: 14, color: '#666' },\n      },\n      value: {\n        style: { fontSize: 24, fontWeight: 'bold' },\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.type,\n          value: `${datum.value} 次访问 (${datum.percentage})`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'scale-in',\n        duration: 600,\n      },\n    },\n  };\n\n  const likeColumns = [\n    {\n      title: '排名',\n      dataIndex: 'rank',\n      width: 60,\n      render: (_, record, index) => <Tag color={index < 3 ? 'gold' : 'default'}>{index + 1}</Tag>,\n    },\n    {\n      title: '文章标题',\n      dataIndex: 'title',\n      ellipsis: true,\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'count',\n      width: 100,\n      sorter: (a: LikeItem, b: LikeItem) => b.count - a.count,\n    },\n  ];\n\n  return (\n    <div style={{ padding: 24 }}>\n      <Card\n        bordered={false}\n        style={{ marginBottom: 24 }}\n        extra={\n          <Select\n            value={timeRange}\n            onChange={setTimeRange}\n            style={{ width: 150 }}\n            options={[\n              { label: '最近7天', value: '7days' },\n              { label: '最近30天', value: '30days' },\n              { label: '最近90天', value: '90days' },\n            ]}\n          />\n        }\n      >\n        <Row gutter={[16, 16]}>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#e6f7ff' }}>\n              <Statistic\n                title=\"今日访问量\"\n                value={overview?.todayVisits || 0}\n                prefix={<EyeOutlined style={{ color: '#1890ff' }} />}\n                suffix=\"次\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.visitsGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#f6ffed' }}>\n              <Statistic\n                title=\"总点赞数\"\n                value={overview?.totalLikes || 0}\n                prefix={<LikeOutlined style={{ color: '#52c41a' }} />}\n                suffix=\"次\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.likesGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#fff7e6' }}>\n              <Statistic\n                title=\"总评论数\"\n                value={overview?.totalComments || 0}\n                prefix={<MessageOutlined style={{ color: '#fa8c16' }} />}\n                suffix=\"条\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.commentsGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#f9f0ff' }}>\n              <Statistic\n                title=\"活跃用户数\"\n                value={overview?.activeUsers || 0}\n                prefix={<UserOutlined style={{ color: '#722ed1' }} />}\n                suffix=\"人\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.usersGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n        </Row>\n      </Card>\n\n      <Row gutter={[24, 24]}>\n        <Col xs={24} lg={12}>\n          <Card title=\"访问量趋势\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Line {...visitChartConfig} />\n            </div>\n          </Card>\n        </Col>\n        <Col xs={24} lg={12}>\n          <Card title=\"点赞趋势\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Line\n                data={likeData.map(item => ({\n                  date: item.date,\n                  likes: item.likes,\n                })) || [\n                  { date: '2023-01-01', likes: 10 },\n                  { date: '2023-01-02', likes: 20 },\n                  { date: '2023-01-03', likes: 15 },\n                  { date: '2023-01-04', likes: 25 },\n                  { date: '2023-01-05', likes: 30 },\n                  { date: '2023-01-06', likes: 28 },\n                  { date: '2023-01-07', likes: 35 },\n                ]}\n                xField=\"date\"\n                yField=\"likes\"\n                smooth\n                color={chartTheme.colors[3]}\n                point={{\n                  size: 3,\n                  shape: 'circle',\n                  style: {\n                    fill: chartTheme.colors[3],\n                    stroke: '#fff',\n                    lineWidth: 2,\n                  },\n                }}\n                area={{\n                  style: {\n                    fill: `l(270) 0:#ffffff 1:${chartTheme.colors[3]}20`\n                  }\n                }}\n                xAxis={{\n                  label: {\n                    style: { fill: chartTheme.axis.label.style.fill },\n                  },\n                  tickLine: {\n                    style: chartTheme.axis.tickLine.style,\n                  },\n                  line: {\n                    style: chartTheme.axis.line.style,\n                  },\n                }}\n                yAxis={{\n                  label: {\n                    style: { fill: chartTheme.axis.label.style.fill },\n                  },\n                  tickLine: {\n                    style: chartTheme.axis.tickLine.style,\n                  },\n                  line: {\n                    style: chartTheme.axis.line.style,\n                  },\n                }}\n                tooltip={{\n                  formatter: (datum: any) => {\n                    return {\n                      name: datum.date,\n                      value: `${datum.likes} 个点赞`,\n                    };\n                  },\n                  backgroundColor: chartTheme.tooltip.backgroundColor,\n                  textStyle: chartTheme.tooltip.textStyle,\n                  padding: chartTheme.tooltip.padding,\n                  borderRadius: chartTheme.tooltip.borderRadius,\n                }}\n                animation={{\n                  appear: {\n                    animation: 'path-in',\n                    duration: 800,\n                  },\n                }}\n              />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24} lg={24}>\n          <Card title=\"评论状态分布\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Pie {...commentPieConfig} />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24} lg={12}>\n          <Card title=\"热门文章点赞排行\" bordered={false} loading={loading}>\n            <Table<LikeItem>\n              columns={likeColumns}\n              dataSource={likeData}\n              rowKey=\"id\"\n              pagination={false}\n              size=\"small\"\n            />\n          </Card>\n        </Col>\n        <Col xs={24} lg={12}>\n          <Card title=\"访问来源分析\" bordered={false} loading={loading}>\n            <div style={{ height: 300 }}>\n              <Pie {...visitSourcePieConfig} />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24}>\n          <Card title=\"评论活跃度分析\" bordered={false} loading={loading}>\n            <Row gutter={[16, 16]}>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"日均评论数\"\n                  value={commentStats?.dailyAverage || 0}\n                  suffix=\"条\"\n                  valueStyle={{ color: '#fa8c16' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"评论参与率\"\n                  value={commentStats?.participationRate || 0}\n                  suffix=\"%\"\n                  valueStyle={{ color: '#52c41a' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"平均回复数\"\n                  value={commentStats?.avgReplies || 0}\n                  suffix=\"条\"\n                  valueStyle={{ color: '#1890ff' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"评论热度指数\"\n                  value={commentStats?.heatIndex || 0}\n                  suffix=\"分\"\n                  valueStyle={{ color: '#722ed1' }}\n                />\n              </Col>\n            </Row>\n\n            <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n              <Col xs={24} lg={12}>\n                <h4 style={{ marginBottom: 16 }}>小时分布</h4>\n                <div style={{ height: 250 }}>\n                  <Column\n                  data={\n                    commentStats?.hourDistribution || Array.from({ length: 24 }, (_, i) => ({\n                      hour: i,\n                      count: Math.floor(Math.random() * 50) + 10,\n                    }))\n                  }\n                  xField=\"hour\"\n                  yField=\"count\"\n                  color={chartTheme.colors[2]}\n                  barSize={20}\n                  xAxis={{\n                    label: {\n                      style: { fill: chartTheme.axis.label.style.fill },\n                      formatter: (value: number) => `${value}:00`,\n                    },\n                    tickLine: {\n                      style: chartTheme.axis.tickLine.style,\n                    },\n                    line: {\n                      style: chartTheme.axis.line.style,\n                    },\n                    tickCount: 12,\n                  }}\n                  yAxis={{\n                    label: {\n                      style: { fill: chartTheme.axis.label.style.fill },\n                    },\n                    tickLine: {\n                      style: chartTheme.axis.tickLine.style,\n                    },\n                    line: {\n                      style: chartTheme.axis.line.style,\n                    },\n                  }}\n                  tooltip={{\n                    formatter: (datum: any) => {\n                      return {\n                        name: `${datum.hour}:00`,\n                        value: `${datum.count} 条评论`,\n                      };\n                    },\n                    backgroundColor: chartTheme.tooltip.backgroundColor,\n                    textStyle: chartTheme.tooltip.textStyle,\n                    padding: chartTheme.tooltip.padding,\n                    borderRadius: chartTheme.tooltip.borderRadius,\n                  }}\n                  animation={{\n                    appear: {\n                      animation: 'scale-in-y',\n                      duration: 800,\n                    },\n                  }}\n                />\n                </div>\n              </Col>\n              <Col xs={24} lg={12}>\n                <h4 style={{ marginBottom: 16 }}>热门评论文章</h4>\n                <Table\n                  columns={[\n                    {\n                      title: '排名',\n                      dataIndex: 'rank',\n                      width: 60,\n                      render: (_, record, index) => (\n                        <Tag color={index < 3 ? 'gold' : 'default'}>{index + 1}</Tag>\n                      ),\n                    },\n                    {\n                      title: '文章标题',\n                      dataIndex: 'title',\n                      ellipsis: true,\n                    },\n                    {\n                      title: '评论数',\n                      dataIndex: 'commentCount',\n                      width: 100,\n                      sorter: (a: any, b: any) => b.commentCount - a.commentCount,\n                    },\n                  ]}\n                  dataSource={\n                    commentStats?.topArticles || Array.from({ length: 5 }, (_, i) => ({\n                      id: i + 1,\n                      title: `测试文章 ${i + 1}`,\n                      commentCount: Math.floor(Math.random() * 100) + 10,\n                    }))\n                  }\n                  rowKey=\"id\"\n                  pagination={false}\n                  size=\"small\"\n                />\n              </Col>\n            </Row>\n          </Card>\n        </Col>\n      </Row>\n    </div>\n  );\n};\n\nexport default StatisticsPage;\n",
+      "__content": "import React, { useState, useEffect } from 'react';\nimport { Card, Row, Col, Statistic, Select, Table, Tag } from 'antd';\nimport {\n  ArrowUpOutlined,\n  EyeOutlined,\n  LikeOutlined,\n  MessageOutlined,\n  UserOutlined,\n} from '@ant-design/icons';\nimport { Line, Column, Pie } from '@ant-design/charts';\nimport {\n  getVisitStatistics,\n  getLikeStatistics,\n  getCommentStatistics,\n  getOverviewStatistics,\n  getVisitSources,\n} from '@/services/ant-design-pro/api';\nimport type { VisitData, LikeItem, CommentStats, OverviewData, VisitSource } from '@/types/blog';\n\nconst StatisticsPage: React.FC = () => {\n  const [loading, setLoading] = useState(true);\n  const [timeRange, setTimeRange] = useState('7days');\n  const [overview, setOverview] = useState<OverviewData | null>(null);\n  const [visitData, setVisitData] = useState<VisitData[]>([]);\n  const [visitSources, setVisitSources] = useState<VisitSource[]>([]);\n  const [likeData, setLikeData] = useState<LikeItem[]>([]);\n  const [commentStats, setCommentStats] = useState<CommentStats | null>(null);\n\n  const fetchData = async () => {\n    setLoading(true);\n    try {\n      const [overviewRes, visitRes, visitSourceRes, likeRes, commentRes] = await Promise.all([\n        getOverviewStatistics(),\n        getVisitStatistics({ range: timeRange }),\n        getVisitSources({ range: timeRange }),\n        getLikeStatistics(),\n        getCommentStatistics(),\n      ]);\n\n      setOverview(overviewRes.data);\n      setVisitData(visitRes.data || []);\n      setVisitSources(visitSourceRes.data || []);\n      setLikeData(likeRes.data || []);\n      setCommentStats(commentRes.data);\n    } catch (error) {\n      console.error('获取统计数据失败:', error);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  useEffect(() => {\n    fetchData();\n  }, [timeRange]);\n\n  // 统一图表主题配置\n  const chartTheme = {\n    colors: ['#1890ff', '#52c41a', '#faad14', '#f5222d', '#722ed1'],\n    axis: {\n      label: { style: { fill: '#666' } },\n      tickLine: { style: { stroke: '#e8e8e8' } },\n      line: { style: { stroke: '#e8e8e8' } },\n    },\n    tooltip: {\n      backgroundColor: 'rgba(0, 0, 0, 0.85)',\n      textStyle: { color: '#fff' },\n      padding: [8, 12],\n      borderRadius: 4,\n    },\n  };\n\n  // 访问量趋势图配置\n  const visitChartConfig = {\n    data: visitData,\n    xField: 'date',\n    yField: 'visits',\n    smooth: true,\n    color: chartTheme.colors[0],\n    point: {\n      size: 3,\n      shape: 'circle',\n      style: {\n        fill: chartTheme.colors[0],\n        stroke: '#fff',\n        lineWidth: 2,\n      },\n    },\n    area: {\n      style: {\n        fill: `l(270) 0:#ffffff 1:${chartTheme.colors[0]}20`\n      }\n    },\n    xAxis: {\n      label: {\n        style: { fill: chartTheme.axis.label.style.fill },\n      },\n      tickLine: {\n        style: chartTheme.axis.tickLine.style,\n      },\n      line: {\n        style: chartTheme.axis.line.style,\n      },\n    },\n    yAxis: {\n      label: {\n        style: { fill: chartTheme.axis.label.style.fill },\n      },\n      tickLine: {\n        style: chartTheme.axis.tickLine.style,\n      },\n      line: {\n        style: chartTheme.axis.line.style,\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.date,\n          value: `${datum.visits} 次访问`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'path-in',\n        duration: 800,\n      },\n    },\n  };\n\n  // 评论状态分布饼图配置\n  const commentPieConfig = {\n    data: commentStats?.distribution || [\n      { type: '已发布', value: 60 },\n      { type: '待审核', value: 20 },\n      { type: '已拒绝', value: 10 },\n      { type: '已删除', value: 10 },\n    ],\n    angleField: 'value',\n    colorField: 'type',\n    color: chartTheme.colors,\n    radius: 0.8,\n    innerRadius: 0.6,\n    label: {\n      type: 'outer',\n      content: '{name}: {percentage}',\n      style: {\n        fill: '#666',\n        fontSize: 12,\n      },\n    },\n    legend: {\n      position: 'bottom',\n      itemName: {\n        style: { fill: '#666' },\n        fontSize: 12,\n      },\n    },\n    statistic: {\n      title: {\n        content: '评论总数',\n        style: { fontSize: 14, color: '#666' },\n      },\n      value: {\n        style: { fontSize: 24, fontWeight: 'bold' },\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.type,\n          value: `${datum.value} 条 (${datum.percentage})`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'scale-in',\n        duration: 600,\n      },\n    },\n  };\n\n  // 访问来源饼图配置\n  const visitSourcePieConfig = {\n    data: visitSources.map(source => ({\n      type: source.source,\n      value: source.count,\n    })) || [\n      { type: '直接访问', value: 50 },\n      { type: '搜索引擎', value: 30 },\n      { type: '外部链接', value: 20 },\n    ],\n    angleField: 'value',\n    colorField: 'type',\n    color: chartTheme.colors,\n    radius: 0.8,\n    innerRadius: 0.6,\n    label: {\n      type: 'outer',\n      content: '{name}: {percentage}',\n      style: {\n        fill: '#666',\n        fontSize: 12,\n      },\n    },\n    legend: {\n      position: 'bottom',\n      itemName: {\n        style: { fill: '#666' },\n        fontSize: 12,\n      },\n    },\n    statistic: {\n      title: {\n        content: '访问来源',\n        style: { fontSize: 14, color: '#666' },\n      },\n      value: {\n        style: { fontSize: 24, fontWeight: 'bold' },\n      },\n    },\n    tooltip: {\n      formatter: (datum: any) => {\n        return {\n          name: datum.type,\n          value: `${datum.value} 次访问 (${datum.percentage})`,\n        };\n      },\n      backgroundColor: chartTheme.tooltip.backgroundColor,\n      textStyle: chartTheme.tooltip.textStyle,\n      padding: chartTheme.tooltip.padding,\n      borderRadius: chartTheme.tooltip.borderRadius,\n    },\n    animation: {\n      appear: {\n        animation: 'scale-in',\n        duration: 600,\n      },\n    },\n  };\n\n  const likeColumns = [\n    {\n      title: '排名',\n      dataIndex: 'rank',\n      width: 60,\n      render: (_, record, index) => <Tag color={index < 3 ? 'gold' : 'default'}>{index + 1}</Tag>,\n    },\n    {\n      title: '文章标题',\n      dataIndex: 'title',\n      ellipsis: true,\n    },\n    {\n      title: '点赞数',\n      dataIndex: 'count',\n      width: 100,\n      sorter: (a: LikeItem, b: LikeItem) => b.count - a.count,\n    },\n  ];\n\n  return (\n    <div style={{ padding: 24 }}>\n      <Card\n        bordered={false}\n        style={{ marginBottom: 24 }}\n        extra={\n          <Select\n            value={timeRange}\n            onChange={setTimeRange}\n            style={{ width: 150 }}\n            options={[\n              { label: '最近7天', value: '7days' },\n              { label: '最近30天', value: '30days' },\n              { label: '最近90天', value: '90days' },\n            ]}\n          />\n        }\n      >\n        <Row gutter={[16, 16]}>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#e6f7ff' }}>\n              <Statistic\n                title=\"今日访问量\"\n                value={overview?.todayVisits || 0}\n                prefix={<EyeOutlined style={{ color: '#1890ff' }} />}\n                suffix=\"次\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.visitsGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#f6ffed' }}>\n              <Statistic\n                title=\"总点赞数\"\n                value={overview?.totalLikes || 0}\n                prefix={<LikeOutlined style={{ color: '#52c41a' }} />}\n                suffix=\"次\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.likesGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#fff7e6' }}>\n              <Statistic\n                title=\"总评论数\"\n                value={overview?.totalComments || 0}\n                prefix={<MessageOutlined style={{ color: '#fa8c16' }} />}\n                suffix=\"条\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.commentsGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n          <Col xs={24} sm={12} md={6}>\n            <Card bordered={false} style={{ background: '#f9f0ff' }}>\n              <Statistic\n                title=\"活跃用户数\"\n                value={overview?.activeUsers || 0}\n                prefix={<UserOutlined style={{ color: '#722ed1' }} />}\n                suffix=\"人\"\n              />\n              <div style={{ marginTop: 8, fontSize: 12, color: '#52c41a' }}>\n                <ArrowUpOutlined /> 较昨日 +{overview?.usersGrowth || 0}%\n              </div>\n            </Card>\n          </Col>\n        </Row>\n      </Card>\n\n      <Row gutter={[24, 24]}>\n        <Col xs={24} lg={12}>\n          <Card title=\"访问量趋势\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Line {...visitChartConfig} />\n            </div>\n          </Card>\n        </Col>\n        <Col xs={24} lg={12}>\n          <Card title=\"点赞趋势\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Line\n                data={likeData.map(item => ({\n                  date: item.date,\n                  likes: item.likes,\n                })) || [\n                  { date: '2023-01-01', likes: 10 },\n                  { date: '2023-01-02', likes: 20 },\n                  { date: '2023-01-03', likes: 15 },\n                  { date: '2023-01-04', likes: 25 },\n                  { date: '2023-01-05', likes: 30 },\n                  { date: '2023-01-06', likes: 28 },\n                  { date: '2023-01-07', likes: 35 },\n                ]}\n                xField=\"date\"\n                yField=\"likes\"\n                smooth\n                color={chartTheme.colors[3]}\n                point={{\n                  size: 3,\n                  shape: 'circle',\n                  style: {\n                    fill: chartTheme.colors[3],\n                    stroke: '#fff',\n                    lineWidth: 2,\n                  },\n                }}\n                area={{\n                  style: {\n                    fill: `l(270) 0:#ffffff 1:${chartTheme.colors[3]}20`\n                  }\n                }}\n                xAxis={{\n                  label: {\n                    style: { fill: chartTheme.axis.label.style.fill },\n                  },\n                  tickLine: {\n                    style: chartTheme.axis.tickLine.style,\n                  },\n                  line: {\n                    style: chartTheme.axis.line.style,\n                  },\n                }}\n                yAxis={{\n                  label: {\n                    style: { fill: chartTheme.axis.label.style.fill },\n                  },\n                  tickLine: {\n                    style: chartTheme.axis.tickLine.style,\n                  },\n                  line: {\n                    style: chartTheme.axis.line.style,\n                  },\n                }}\n                tooltip={{\n                  formatter: (datum: any) => {\n                    return {\n                      name: datum.date,\n                      value: `${datum.likes} 个点赞`,\n                    };\n                  },\n                  backgroundColor: chartTheme.tooltip.backgroundColor,\n                  textStyle: chartTheme.tooltip.textStyle,\n                  padding: chartTheme.tooltip.padding,\n                  borderRadius: chartTheme.tooltip.borderRadius,\n                }}\n                animation={{\n                  appear: {\n                    animation: 'path-in',\n                    duration: 800,\n                  },\n                }}\n              />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24} lg={24}>\n          <Card title=\"评论状态分布\" bordered={false} loading={loading}>\n            <div style={{ height: 350 }}>\n              <Pie {...commentPieConfig} />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24} lg={12}>\n          <Card title=\"热门文章点赞排行\" bordered={false} loading={loading}>\n            <Table<LikeItem>\n              columns={likeColumns}\n              dataSource={likeData}\n              rowKey=\"id\"\n              pagination={false}\n              size=\"small\"\n            />\n          </Card>\n        </Col>\n        <Col xs={24} lg={12}>\n          <Card title=\"访问来源分析\" bordered={false} loading={loading}>\n            <div style={{ height: 300 }}>\n              <Pie {...visitSourcePieConfig} />\n            </div>\n          </Card>\n        </Col>\n      </Row>\n\n      <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n        <Col xs={24}>\n          <Card title=\"评论活跃度分析\" bordered={false} loading={loading}>\n            <Row gutter={[16, 16]}>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"日均评论数\"\n                  value={commentStats?.dailyAverage || 0}\n                  suffix=\"条\"\n                  valueStyle={{ color: '#fa8c16' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"评论参与率\"\n                  value={commentStats?.participationRate || 0}\n                  suffix=\"%\"\n                  valueStyle={{ color: '#52c41a' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"平均回复数\"\n                  value={commentStats?.avgReplies || 0}\n                  suffix=\"条\"\n                  valueStyle={{ color: '#1890ff' }}\n                />\n              </Col>\n              <Col xs={24} sm={12} md={6}>\n                <Statistic\n                  title=\"评论热度指数\"\n                  value={commentStats?.heatIndex || 0}\n                  suffix=\"分\"\n                  valueStyle={{ color: '#722ed1' }}\n                />\n              </Col>\n            </Row>\n\n            <Row gutter={[24, 24]} style={{ marginTop: 24 }}>\n              <Col xs={24} lg={12}>\n                <h4 style={{ marginBottom: 16 }}>小时分布</h4>\n                <div style={{ height: 250 }}>\n                  <Column\n                  data={\n                    commentStats?.hourDistribution || Array.from({ length: 24 }, (_, i) => ({\n                      hour: i,\n                      count: Math.floor(Math.random() * 50) + 10,\n                    }))\n                  }\n                  xField=\"hour\"\n                  yField=\"count\"\n                  color={chartTheme.colors[2]}\n                  barSize={20}\n                  xAxis={{\n                    label: {\n                      style: { fill: chartTheme.axis.label.style.fill },\n                      formatter: (value: number) => `${value}:00`,\n                    },\n                    tickLine: {\n                      style: chartTheme.axis.tickLine.style,\n                    },\n                    line: {\n                      style: chartTheme.axis.line.style,\n                    },\n                    tickCount: 12,\n                  }}\n                  yAxis={{\n                    label: {\n                      style: { fill: chartTheme.axis.label.style.fill },\n                    },\n                    tickLine: {\n                      style: chartTheme.axis.tickLine.style,\n                    },\n                    line: {\n                      style: chartTheme.axis.line.style,\n                    },\n                  }}\n                  tooltip={{\n                    formatter: (datum: any) => {\n                      return {\n                        name: `${datum.hour}:00`,\n                        value: `${datum.count} 条评论`,\n                      };\n                    },\n                    backgroundColor: chartTheme.tooltip.backgroundColor,\n                    textStyle: chartTheme.tooltip.textStyle,\n                    padding: chartTheme.tooltip.padding,\n                    borderRadius: chartTheme.tooltip.borderRadius,\n                  }}\n                  animation={{\n                    appear: {\n                      animation: 'scale-in-y',\n                      duration: 800,\n                    },\n                  }}\n                />\n                </div>\n              </Col>\n              <Col xs={24} lg={12}>\n                <h4 style={{ marginBottom: 16 }}>热门评论文章</h4>\n                <Table\n                  columns={[\n                    {\n                      title: '排名',\n                      dataIndex: 'rank',\n                      width: 60,\n                      render: (_, record, index) => (\n                        <Tag color={index < 3 ? 'gold' : 'default'}>{index + 1}</Tag>\n                      ),\n                    },\n                    {\n                      title: '文章标题',\n                      dataIndex: 'title',\n                      ellipsis: true,\n                    },\n                    {\n                      title: '评论数',\n                      dataIndex: 'commentCount',\n                      width: 100,\n                      sorter: (a: any, b: any) => b.commentCount - a.commentCount,\n                    },\n                  ]}\n                  dataSource={\n                    commentStats?.topArticles || Array.from({ length: 5 }, (_, i) => ({\n                      id: i + 1,\n                      title: `测试文章 ${i + 1}`,\n                      commentCount: Math.floor(Math.random() * 100) + 10,\n                    }))\n                  }\n                  rowKey=\"id\"\n                  pagination={false}\n                  size=\"small\"\n                />\n              </Col>\n            </Row>\n          </Card>\n        </Col>\n      </Row>\n    </div>\n  );\n};\n\nexport default StatisticsPage;\n",
       "__isJSFile": true,
       "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/Statistics/index.tsx"
     },
     "10": {
+      "path": "/user-manage",
+      "name": "用户列表",
+      "icon": "User",
+      "file": "@/pages/User/index.tsx",
+      "parentId": "ant-design-pro-layout",
+      "id": "10",
+      "absPath": "/user-manage",
+      "__content": "import { searchUser } from '@/services/ant-design-pro/api';\nimport type { ActionType, ProColumns } from '@ant-design/pro-components';\nimport { ProTable } from '@ant-design/pro-components';\nimport { useRef } from 'react';\nimport { message } from 'antd'; // 导入消息提示组件\n\n// 表格列配置（完全保留你的原有配置）\nconst columns: ProColumns<API.CurrentUser>[] = [\n  {\n    dataIndex: 'id',\n    valueType: 'indexBorder',\n    width: 48,\n  },\n  {\n    title: '用户名',\n    dataIndex: 'username',\n    copyable: true,\n  },\n  {\n    title: '用户角色',\n    dataIndex: 'role',\n    valueEnum: {\n      admin: { text: '管理员', status: 'success' },\n      user: { text: '普通用户', status: 'processing' },\n    },\n  },\n  {\n    title: '用户昵称',\n    dataIndex: 'nickname',\n    copyable: true,\n  },\n  {\n    title: '邮箱',\n    dataIndex: 'email',\n    copyable: true,\n  },\n  {\n    title: '状态',\n    dataIndex: 'status',\n    valueEnum: {\n      active: { text: '正常', status: 'success' },\n      frozen: { text: '冻结', status: 'error' },\n    },\n  },\n  {\n    title: '头像',\n    dataIndex: 'avatar',\n    render: (_, entity) => (\n      <img\n        src={entity.avatar || '/default-avatar.png'}\n        alt=\"avatar\"\n        style={{\n          width: 32,\n          height: 32,\n          borderRadius: '50%',\n        }}\n      />\n    ),\n  },\n  {\n    title: '最后登录时间',\n    dataIndex: 'lastLoginAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.lastLoginAt) return '-';\n      return new Date(entity.lastLoginAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '创建时间',\n    dataIndex: 'createdAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.createdAt) return '-';\n      return new Date(entity.createdAt).toLocaleString('zh-CN');\n    },\n  },\n  {\n    title: '更新时间',\n    dataIndex: 'updatedAt',\n    valueType: 'dateTime',\n    sorter: true,\n    render: (_, entity) => {\n      if (!entity.updatedAt) return '-';\n      return new Date(entity.updatedAt).toLocaleString('zh-CN');\n    },\n  },\n];\n\nexport default () => {\n  const actionRef = useRef<ActionType>();\n\n  return (\n    <ProTable<API.CurrentUser>\n      columns={columns}\n      actionRef={actionRef}\n      cardBordered\n      rowSelection={{\n        alwaysShowAlert: false,\n        getCheckboxProps: (record) => ({\n          disabled: !record,\n        }),\n        onChange: () => {}, // 兜底空函数，避免警告\n      }}\n      request={async (params = {}, sort = {}, filter = {}) => {\n        try {\n          const { current, pageSize, ...searchParams } = params;\n\n          const sortKey = Object.keys(sort)[0] || '';\n          const sortOrder = sort[sortKey] || '';\n\n          // 时间字段映射（前端字段名 -> 后端字段名）\n          const fieldMapping: Record<string, string> = {\n            registeredAt: 'registered_at',\n            lastLoginAt: 'last_login_at',\n            createdAt: 'created_at',\n            updatedAt: 'updated_at',\n          };\n\n          // 构建查询参数\n          const queryParams: Record<string, any> = {\n            ...searchParams,\n            ...filter,\n            sortField: fieldMapping[sortKey] || sortKey,\n            sortOrder: sortOrder,\n          };\n\n          // 按需添加分页参数\n          if (current !== undefined && current !== null) {\n            queryParams.current = current;\n          }\n          if (pageSize !== undefined && pageSize !== null) {\n            queryParams.pageSize = pageSize;\n          }\n\n          // 发起请求\n          const userList: API.UserPageData = await searchUser(queryParams);\n          console.log('userList', userList);\n          if (!userList || !Array.isArray(userList.records)) {\n            const errorMsg = '获取用户列表失败:接口未返回有效数据';\n            message.warning(errorMsg);\n            return {\n              data: [],\n              total: 0,\n              success: false,\n            };\n          }\n\n          // 优化：增加类型断言，提升TS提示精准度\n         const processedRecords = userList.records.map(record => ({\n            ...record,\n            registeredAt: record.registeredAt || '',\n            lastLoginAt: record.lastLoginAt || '',\n            createdAt: record.createdAt || '',\n            updatedAt: record.updatedAt || '',\n            }));\n\n          // 修复：使用实际数据长度作为 total，避免后端返回 total: 0 导致的问题\n          const totalCount = userList.total || processedRecords.length;\n\n          // 返回 Pro Table 所需格式\n          return {\n            data: processedRecords,\n            total: totalCount,\n            success: true,\n            current: userList.current || current || 1,\n            pageSize: userList.size || pageSize || 10,\n          };\n        } catch (error) {\n          const errorMsg = '获取用户列表失败:网络异常';\n          message.error(errorMsg);\n          console.error(errorMsg, error);\n          return {\n            data: [],\n            total: 0,\n            success: false,\n          };\n        }\n      }}\n      rowKey=\"id\"\n      search={{\n        labelWidth: 'auto',\n      }}\n      options={{\n        setting: {\n          listsHeight: 400,\n        },\n      }}\n      form={{\n        syncToUrl: (values, type) => {\n          if (type === 'get') {\n            // 修正：先判断 startTime/endTime 存在，再传递 created_at\n            const returnValues = { ...values };\n            if (values.startTime || values.endTime) {\n              returnValues.created_at = [values.startTime, values.endTime];\n            }\n            // 删除冗余的 startTime/endTime，避免重复传参\n            delete returnValues.startTime;\n            delete returnValues.endTime;\n            return returnValues;\n          }\n          return values;\n        },\n      }}\n      pagination={{\n        pageSize: 10,\n        showSizeChanger: true,\n        showQuickJumper: true,\n        showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,\n      }}\n      dateFormatter=\"string\"\n      headerTitle=\"当前用户列表\"\n    />\n  );\n};\n",
+      "__isJSFile": true,
+      "__absFile": "E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/pages/User/index.tsx"
+    },
+    "11": {
       "path": "*",
       "layout": false,
       "file": "@/pages/404.tsx",
-      "id": "10",
+      "id": "11",
       "absPath": "/*",
       "__content": "import { history } from '@umijs/max';\nimport { Button, Result } from 'antd';\nimport React from 'react';\n\nconst NoFoundPage: React.FC = () => (\n  <Result\n    status=\"404\"\n    title=\"404\"\n    subTitle=\"抱歉，您访问的页面不存在。\"\n    extra={\n      <Button type=\"primary\" onClick={() => history.push('/')}>\n        返回首页\n      </Button>\n    }\n  />\n);\n\nexport default NoFoundPage;\n",
       "__isJSFile": true,
@@ -3802,6 +3823,7 @@
   ],
   "overridesCSS": [],
   "bundler": "webpack",
+  "git": {},
   "framework": "react",
   "typescript": {
     "tsVersion": "5.8.3",
@@ -3810,7 +3832,7 @@
   "faviconFiles": [],
   "port": 8000,
   "host": "0.0.0.0",
-  "ip": "10.21.250.189",
+  "ip": "10.21.233.218",
   "antd": {
     "pkgPath": "E:\\Project portfolio\\XFishBlog\\blog-admin\\frontedUserCenter\\node_modules\\antd",
     "version": "5.25.2"

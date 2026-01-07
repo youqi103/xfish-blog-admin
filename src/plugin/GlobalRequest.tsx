@@ -32,7 +32,8 @@ request.interceptors.response.use(async (response) => {
   } else {
     message.error(res.message || res.description || '请求失败');
   }
-  return res.data;
+  // 抛出错误，让调用者能够捕获
+  throw new Error(res.message || res.description || '请求失败');
 });
 
 export default request;

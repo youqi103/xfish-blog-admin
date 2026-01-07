@@ -14,7 +14,7 @@ import {
   getCommentStatistics,
   getOverviewStatistics,
   getVisitSources,
-} from '@/services/blog-api';
+} from '@/services/ant-design-pro/api';
 import type { VisitData, LikeItem, CommentStats, OverviewData, VisitSource } from '@/types/blog';
 
 const StatisticsPage: React.FC = () => {

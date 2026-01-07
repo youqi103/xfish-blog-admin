@@ -2,18 +2,44 @@
 /* eslint-disable */
 
 declare namespace API {
+  // 使用统一的User类型，确保类型一致性
   type CurrentUser = {
     id: number;
     username: string;
     nickname?: string;
     email?: string;
-    avatar?: string;
-    role: string;
-    status: string;
+    phone?: string;
+    avatar?: string | null;
+    avatarUrl?: string | null;
+    role: string | number;
+    roleId?: number;
+    status: string | number;
     registeredAt?: string;
     lastLoginAt?: string;
     createdAt?: string;
+    createTime?: string;
     updatedAt?: string;
+    updateTime?: string;
+  };
+
+  // 统一的User类型，与src/types/blog.ts中的User接口保持兼容
+  type User = {
+    id: number;
+    username: string;
+    userAccount: string;
+    nickname?: string;
+    gender?: number;
+    phone?: string;
+    email?: string;
+    status: number; // 0-禁用 1-启用
+    avatarUrl?: string;
+    roleId?: number;
+    role?: number; // 兼容role属性，与roleId同义
+    roleName?: string;
+    createTime?: string;
+    updateTime?: string;
+    password?: string; // 用于创建用户
+    [key: string]: any;
   };
 
   type BaseResponse<T = any> = {
@@ -21,6 +47,7 @@ declare namespace API {
     data: T;
     message: string;
     description?: string;
+    success: boolean;
   };
 
   type LoginResult = BaseResponse<CurrentUser>;
@@ -94,10 +121,27 @@ declare namespace API {
   type SearchUserResponse = BaseResponse<{
     records: CurrentUser[];
     total: number;
+    size: number;
     current: number;
-    pageSize: number;
+    orders: [];
+    optimizeCountSql: boolean;
+    searchCount: boolean;
+    maxLimit: number | null;
+    countId: number | null;
+    pages: number; // 接口返回的总页数，新增该字段
   }>;
-
+type UserPageData = {
+  records: CurrentUser[];
+  total: number;
+  size: number;
+  current: number;
+  orders: [];
+  optimizeCountSql: boolean;
+  searchCount: boolean;
+  maxLimit: number | null;
+  countId: number | null;
+  pages: number; // 删除重复的 size 字段
+};
   type NoticeIconItemType = 'notification' | 'message' | 'event';
 
   type NoticeIconItem = {
@@ -210,37 +254,26 @@ declare namespace API {
     userCount: number;
   };
 
-  type User = {
-  id: number;
-  username: string;
-  email: string;
-  passwordHash: string;
-  nickname: string;
-  avatar?: string; // 可选（允许为 undefined 或 null）
-  role: 'admin' | 'user';
-  status: 'active' | 'inactive' | 'banned';
-  registeredAt: string;
-  lastLoginAt?: string; // 可选（从未登录时可能为 null/undefined）
-  createdAt: string;
-  updatedAt: string;
-};
-
   type UserListResponse = {
     data: User[];
     total: number;
     success: boolean;
+    // 添加code属性，用于判断请求是否成功
+    code?: number;
   };
 
   type LogListResponse = {
     data: Array<{
       id: number;
       userId: number;
-      username: string;
       action: string;
-      content: string;
-      ipAddress: string;
-      userAgent: string;
-      createTime: string;
+      details?: string;
+      content?: string;
+      ipAddress?: string;
+      ip?: string;
+      userAgent?: string;
+      createdAt?: string;
+      createTime?: string;
     }>;
     total: number;
     success: boolean;

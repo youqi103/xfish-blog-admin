@@ -46,23 +46,29 @@ export default [
         icon: 'Message',
         component: './Comment',
       },
+
       {
-        path: '/admin/user-manage',
+        path: '/admin/user-list',
         name: '用户管理',
-        icon: 'User',
-        component: './Admin/UserManage',
+        component: './UserManage',
       },
       {
         component: './404',
       },
     ],
   },
-   {
-        path: '/',
-        name: '行为统计',
-        icon: 'BarChart',
-        component: './Statistics',
-    },
+  {
+    path: '/',
+    name: '行为统计',
+    icon: 'BarChart',
+    component: './Statistics',
+  },
+  {
+    path: '/user-manage',
+    name: '用户列表',
+    icon: 'User',
+    component: './User',
+  },
   {
     path: '*',
     layout: false,

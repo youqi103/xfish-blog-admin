@@ -4,7 +4,7 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/user","layout":false,"id":"1"},"2":{"name":"login","path":"/user/login","parentId":"1","id":"2"},"3":{"name":"register","path":"/user/register","parentId":"1","id":"3"},"4":{"path":"/admin","name":"admin","icon":"crown","access":"canAdmin","parentId":"ant-design-pro-layout","id":"4"},"5":{"path":"/admin/article","name":"文章管理","icon":"FileAdd","parentId":"4","id":"5"},"6":{"path":"/admin/comment","name":"评论管理","icon":"Message","parentId":"4","id":"6"},"7":{"path":"/admin/user-manage","name":"用户管理","icon":"User","parentId":"4","id":"7"},"8":{"parentId":"4","id":"8"},"9":{"path":"/","name":"行为统计","icon":"BarChart","parentId":"ant-design-pro-layout","id":"9"},"10":{"path":"*","layout":false,"id":"10"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/user","layout":false,"id":"1"},"2":{"name":"login","path":"/user/login","parentId":"1","id":"2"},"3":{"name":"register","path":"/user/register","parentId":"1","id":"3"},"4":{"path":"/admin","name":"管理中心","icon":"crown","access":"canAdmin","parentId":"ant-design-pro-layout","id":"4"},"5":{"path":"/admin/article","name":"文章管理","icon":"FileAdd","parentId":"4","id":"5"},"6":{"path":"/admin/comment","name":"评论管理","icon":"Message","parentId":"4","id":"6"},"7":{"path":"/admin/user-list","name":"用户管理","parentId":"4","id":"7"},"8":{"parentId":"4","id":"8"},"9":{"path":"/","name":"行为统计","icon":"BarChart","parentId":"ant-design-pro-layout","id":"9"},"10":{"path":"/user-manage","name":"用户列表","icon":"User","parentId":"ant-design-pro-layout","id":"10"},"11":{"path":"*","layout":false,"id":"11"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
@@ -14,10 +14,11 @@ export async function getRoutes() {
 '4': require('@/pages/Admin.tsx').default,
 '5': require('@/pages/Article/index.tsx').default,
 '6': require('@/pages/Comment/index.tsx').default,
-'7': require('@/pages/Admin/UserManage/index.tsx').default,
+'7': require('@/pages/UserManage/index.tsx').default,
 '8': require('@/pages/404.tsx').default,
 '9': require('@/pages/Statistics/index.tsx').default,
-'10': require('@/pages/404.tsx').default,
+'10': require('@/pages/User/index.tsx').default,
+'11': require('@/pages/404.tsx').default,
 'ant-design-pro-layout': require('E:/Project portfolio/XFishBlog/blog-admin/frontedUserCenter/src/.umi-test/plugin-layout/Layout.tsx').default,
 },
   };

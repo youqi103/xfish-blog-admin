@@ -77,7 +77,7 @@ const Login: React.FC = () => {
         history.push(urlParams.get('redirect') || '/');
         return;
       }
-      message.error(user?.message || '登录失败，请重试！');
+      message.error(user?.description || '登录失败，请重试！');
     } catch (error) {
       console.log(error);
       message.error('登录失败，请重试！');
